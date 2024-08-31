@@ -94,7 +94,7 @@ $$
 
 这里推荐大家使用 `Visual Studio Code` 编辑器，先到其[官网下载](https://code.visualstudio.com/)安装。选择适合自己电脑的发行版进行安装。windows就一条龙到底就行了。记得选择添加到PATH中，这样方便以后在终端直接 `code .`打开这个项目文件夹。桌面快捷方式可以自行选择是否创建。
 
-<img src="file:////home/asice-cloud/.config/QQ/nt_qq_84aeb657cd7aefe6cae59ed118656127/nt_data/Pic/2024-08/Ori/4db79ce448bbc7ce6be65e148495387c.png" width = 500px>
+<img src="vsc1.png" width = 500px>
 
 > <img src="awesomeface.png" width="25px">有关 vscode 可以看我们B站的一个视频了解一下。为什么 Visual Studio Code 被誉为 IDE 中最强的男人：https://www.bilibili.com/video/BV13v411w7Fb
 
@@ -159,10 +159,10 @@ vscode 的命令面板能让我们快速方便地执行很多功能与命令，�
 
 我们经常需要将某些路径添加到系统变量中，这样方便我们可以快速调用它们。下面以windows平台为例，演示如何添加环境变量。
 
-<img src="file:////home/asice-cloud/.config/QQ/nt_qq_84aeb657cd7aefe6cae59ed118656127/nt_data/Pic/2024-08/Thumb/441719610a5ce4dd844e9068e047b31e_720.png" width=800px>
+<img src="sys1.png" width=800px>
 
 点击“环境变量”选项后，可以设置变量名和值。
 
-<img src="file:////home/asice-cloud/.config/QQ/nt_qq_84aeb657cd7aefe6cae59ed118656127/nt_data/Pic/2024-08/Ori/65875d7c2a0a4b09d8f3a482d7afdc48.png" width=800px> 
+<img src="sys2.png" width=800px> 
 
 完成以后点击确定，就可以保存到环境变量了:blush:
