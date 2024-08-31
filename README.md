@@ -69,7 +69,7 @@
 <h5>编译器，编辑器和IDE</h5>
 
 
-$$ {<img src="warning.png}
+$$
 编译器 \neq IDE！
 $$
 
