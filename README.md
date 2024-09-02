@@ -458,24 +458,20 @@ func main(){
 }
 ```
 
+上面是go语言的Hello World示例，在学习过程中遇到问题可以参阅<a href="https://golang.google.cn/doc/">go语言的官方文档</a>
 
-
-##### go语言的代码结构
+###### go语言的代码结构
 
 一个go语言项目的代码由不同的包组成，其中`main`包中包含主函数，即程序运行的起点
 
 go语言的文件后缀是`.go`，每个文件必须在开头声明包，比如上例`Hello World`中，必须先声明此文件在`main`包中
 
-然后需要引用此文件依赖的包，这部分vscode会帮你自动补全，比如，你只要在`main`函数中写`fmt.Println`，然后`Ctrl+S`保存此文件，那么`import`部分就会自动生成。一个文件有可能不依赖任何包，也有可能依赖于标准库（比如`fmt`），或者一些第三方包（比如`gin`）
+然后需要引用此文件依赖的包，这部分vscode会帮你自动补全，比如，你只要在`main`函数中写`fmt.Println`，然后Ctrl+S保存此文件，那么`import`部分就会自动生成。一个文件有可能不依赖任何包，也有可能依赖于标准库（比如`fmt`），或者一些第三方包（比如`gin`）
 
-
-
-##### 定义变量
-
+###### 定义变量
 使用`var`关键字定义变量
 
 `var`关键字既可以在函数内又可以在函数外定义变量，在函数外定义的变量为全局变量，可以在此包内或者包外使用在函数内定义的变量为局部变量，只能在函数内部使用
-
 ```go
 package main
 
@@ -488,10 +484,9 @@ func main(){
     localVar = "local"
 }
 ```
-> <img src="warning.png" width=25px>go语言对变量的命名有较严格的要求。在函数外定义的变量，若变量名首字母为大写，则可以既可以在包内使用，也可以在包外使用，比如上例中的`GlobalVar`，若首字母为小写，那么只能在包内使用，比如上例中的`intVar`，
+> go语言对变量的命名有较严格的要求。在函数外定义的变量，若变量名首字母为大写，则可以既可以在包内使用，也可以在包外使用，比如上例中的`GlobalVar`，若首字母为小写，那么只能在包内使用，比如上例中的`intVar`，
 
-> <img src="warning.png" width=25px>为了规范和合法，请遵循以下的命名规范
->
+> 为了规范和合法，请遵循以下的命名规范
 > + 大驼峰命名法：变量名中每个单词的首字母大写，比如`UserName`,`InterviewTime`
 > + 小驼峰命名法：变量名中第一个单词的首字母小写，其他单词的首字母大写，比如`accessToken`,`timeLimit`
 > + 变量名不以数字开头，不使用中文
@@ -503,22 +498,20 @@ func main(){
 使用`:=`符号定义变量
 
 `:=`只能在函数内定义变量，这种定义方法不需要声明类型。请使用和上面相同的命名规范
-
 ```go
-func foo(){
+package main
+
+func main(){
     num := 25
 }
 ```
 
 
-
-##### go语言的基本数据类型
-
+###### go语言的基本数据类型
 **`int`**:用来存储整数，可以进行基本数学运算，在64位的电脑上，其长度为64位，在32位的电脑上，其长度为32位，以64位电脑为例，其存储范围为
 $$
--2^{63} \sim 2^{63}
+-2^{63} \sim 2^{63}-1
 $$
-
 其他长度的`int`如下：`int8`,`int16`,`int32`,`int64`，长度分别为：8位，16位，32位，64位，其存储范围仿照上例
 
 相应的，不存储符号的整数类型如下：`uint`,`uint8`,`uint16`,`uint32`,`uint64`以`uint64`为例，其存储范围是
@@ -526,19 +519,22 @@ $$
 0 \sim 2^{64}
 $$
 
-
 **`float32`和`float64`**:用来存储浮点数类型，显然`float64`会比`float32`更加精确
+
 ```go
 var percent float32 = 0.11253
 ```
 
-
 **`string`**:用来存储字符串，定义字符串时，内容请使用双引号`"`或者反引号 ` 括起来。字符串可以进行加法操作，如下
+
 ```go
+
 var a = "hello"
 b := "world"
 fmt.Println(a+b)
-// 输出 Hello World
+// 输出
+// Hello World
+
 ```
 可以进行索引查询操作来获取字符串中的某一个字符，如下（注意，计算机中的索引都是从0开始）
 
@@ -546,7 +542,9 @@ fmt.Println(a+b)
 str := "Hello World"
 char := string(str[6])
 fmt.Println(char)
-// 输出 W
+// 输出
+// W
+
 ```
 **`bool`**:表示真和假，只有`true`,`false`，go语言中不能使用0和1来作为布尔值
 ```go
@@ -554,7 +552,7 @@ condition1 := true
 condition2 := false
 ```
 
-**数组** go语言支持动态数组，数组支持
+**`切片`** go语言支持动态数组，并且提供了一些常用方法。
 ```go
 a := []int{1,2,3,4,5}
 type Stu struct{
@@ -562,36 +560,45 @@ type Stu struct{
     Age int
 }
 stus := []Stu{}
+
+stus = append(stus,Stu{
+    Name:"wjj",
+    Age:80,
+})
+// 向切片追加值
 ```
 
-
 **`map`**:映射，用来存储键值对，可以将一个类型映射到另一个类型，如下：
+
 ```go
 MyMap := map[string]string{
     "name":"wjj",
     "password":"123456",
 }
+
+delete(MyMap,"name")
+// 删除映射中的某个键值对
 ```
-根据键查值的用法，如果键在map中存储了，那么value会被赋值，ok为`true`
-如果键不存在，则value不会被赋值，ok为`false`
+根据键查值的用法，如果键在map中存储了，那么value会被赋值，`ok`为`true`
+如果键不存在，则value不会被赋值，`ok`为`false`
+
 ```go
 value,ok := MyMap["name"]
 ```
 
+###### **fmt**
 
-
-##### **fmt**
-
-fmt包为我们提供了非常常用的输出函数
+fmt包为我们提供了几个非常常用的输出函数
 ```go
-fmt.Println("What can I say")
+fmt.Println("Why?")
 ```
 `fmt.Println`接受多个参数，将它们都输出出来，参数之间用空格分开，输出的末尾会自动切换到下一行
 ```go
 name := "wjj"
 age := 80
 fmt.Printf("My name is %s,and my age is %d",name,age)
-// 输出 My name is wjj,and my age is 80
+// 输出结果是
+// My name is wjj,and my age is 80
 ```
 `fmt.Printf`接受多个参数，第一个参数中的`%s``%d`为占位符，后面的`name``age`会去填充前面的占位符。显然，你前面有多少占位符，后面就应该有多少参数
 ```go
@@ -607,10 +614,7 @@ info := fmt.Sprintf("Our project is %s",status)
 > + 浮点数（小数） `%f`
 > + 通配符 `%v`
 
-
-
-##### 运算符
-
+###### 运算符
 |运算符|意义|
 |--|--|
 |`+`|加法|
@@ -618,13 +622,11 @@ info := fmt.Sprintf("Our project is %s",status)
 |`*`|乘法|
 |`/`|除法|
 |`%`|取余|
-|\||或，按位或|
+|`|`|或，按位或|
 |`&`|与，按位与|
 |`^`|按位异或|
 
-
-
-go语言的运算符要求两个变量的类型相同，比如下面这个例子
+ <img src="warning.png" width="25px">go语言的运算符要求两个变量的类型相同，比如下面这个例子 
 
 ```go
 a := 10
@@ -638,10 +640,7 @@ e := a / int(b)
 // e是int类型，值为5
 ```
 
-
-
-##### 分支结构
-
+###### 分支结构
 使用`if`关键字来进行分支结构，`if`的主要用法如下
 ```go
 a := 100
@@ -685,9 +684,7 @@ func main(){
 ```
 
 
-
-##### 循环结构
-
+###### 循环结构
 go语言使用`for`关键字进行循环结构，值得注意的是，go语言并没有`while`关键字，常见用法如下
 ```go
 sum := 0
@@ -711,10 +708,7 @@ for key,value := range a{
 // 使用range关键字遍历map或者数组
 ```
 
-
-
-##### 定义函数
-
+###### 定义函数
 使用`func`关键字来定义函数，函数的传入值和传出值得类型可以是任意的，甚至连函数本身都可以作为参数传递给另一个函数。定义函数的范式如下：
 ```go
 func UserInfo(name,password string,id int)string{
@@ -732,10 +726,7 @@ go语言提供函数匿名函数，这使得在某些函数接受或者返回的
 Anony := func(id int)string
 ```
 
-
-
-##### 定义结构体
-
+###### 定义结构体
 结构体可以将多个字段放在一个类型下方便使用，就像面向对象中的类一样，使用`struct`关键字创建结构体实例
 ```go
 userInfo := struct{
@@ -765,10 +756,11 @@ func MyFunc(){
     fmt.Println(info)
 }
 ```
-结构体的字段我们也称之为结构体的属性。此外，我们可以像定义函数那样为结构体定义一些方法，这也是面向对象的思想
+结构体的字段我们也称之为结构体的属性。此外，我们可以像定义函数那样为结构体定义一些方法，这也是面向对象的思想。结构体的字段和方法可以继承，下面`Student`继承了`UserInfo`的属性
 
 ```go
 type Student struct{
+    UserInfo
     Name string
     password string
     Hometon string
@@ -784,6 +776,322 @@ func (s Student) Login(password string)bool{
 func (s Student) Say(){
     fmt.Printf("Hello,my name is %s",s.Name)
 }
+```
+<img src="warning.png" width="25px">请注意结构体字段的命名，像变量的命名那样，小写字母开头的字段只能在结构体内部的方法中使用，比如上例中的`password`；而大写字母开头的字段可以在外部使用，比如`Name`
+
+###### 指针
+
+go语言的指针比较自由，向C语言一样，使用`&`来取变量的地址，使用`*`来对指针变量解引用，空指针的值为`nil`
+
+<img src="warning.png" width=25>请尽可能避免空指针的出现，这个错误在结构体的字段为切片或者`map`类型的时候尤其容易出现
+
+```go
+type MyType struct{
+    Info map[string]string
+    Id int
+}
+
+func main(){
+    data := MyType{}
+    data.Info = make(map[string]string,0)
+}
+```
+
+##### go语言进阶
+
+###### panic和recover
+
+**`defer`关键字**
+
+`defer`关键字后面紧跟的代码，会在当前函数的其他部分执行完后最后执行。多个`defer`关键字时，按照先进后出原则，即越早出现的`defer`越晚执行
+
+```go
+func main(){
+    fmt.Println(1)
+    defer fmt.Println(2)
+	defer fmt.Println(3)
+}
+```
+
+> 会先输出1，再输出3，最后输出2
+
+**`panic`和`recover`**
+
+`panic`用于触发一个错误，`recover`用于捕获和恢复一个错误，当一个函数执行到`panic`时，会立刻终止，并逐层向上返回，知道程序退出运行或者被`recover`捕获，<img src="warning.png" width=25>值得注意的是，`recover`只在`defer`关键字中使用有效，并且这个`defer`定义在`panic`之前
+
+`panic`接受和`recover`返回都是`interface{}`类型，所以可以向其中传入任意类型的参数
+
+```go
+func Sub() {
+	fmt.Println("Hello World")
+	panic("AN ERROR")
+    fmt.Println("Ahhhhhhhhh")
+}
+
+func main() {
+	defer func() {
+		if r := recover(); r != nil {
+			fmt.Println("Recovered:", r)
+		}
+	}()
+	Sub()
+}
+```
+
+> `Sub`函数中触发的`panic`会向上返回，被主函数中定义的`defer`中的`recover`捕获，然后被恢复，所以这个程序输出是：
+>
+> Hello World
+>
+> Recovered:AN ERROR
+
+###### 文件操作
+
+**`byte`和`[]byte`类型**
+
+`byte`是字节类型，一个`byte`类型的变量空间大小就是一个字节，也即8位。在特定的编码方式下，每个字符都有自己的字节码，在`UTF-8`编码中，一个英文字符占一个字节，一个汉字通常占3个字节，在不同的编码方式中则会有所差别。
+
+<img src="warning.png" width=25> 一个文件使用什么编码方式保存，就应使用什么编码方式打开，否则就会出现乱码。现在大部分文件的编码方式都是`UTF-8`，你可以尝试用其他的编码方式打开你电脑中的文件，看看会出现什么结果
+
+`[]byte`类型即`byte`的切片，在go语言中，`string`和 `[]byte`之间可以互相转换。go语言存储和打开文件都是通过字节码。
+
+ <img src="question.png" width=25> go语言还提供了`rune`类型，可自行查阅
+
+**文件的打开和关闭**
+
+`os`包为我们提供了打开和关闭文件的方法
+
+```go
+func main(){
+    f, err := os.Open("./hello.txt")
+	if err != nil {
+		panic(err)
+	}
+	defer f.Close()
+	body, err := io.ReadAll(f)
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println(string(body))
+}
+```
+
+> `os.Open`会返回一个`os.File`的指针类型，同时返回一个错误，`os.File` 可以作为`io.Reader`和`io.Writer`类型，于是我们使用`io.ReadAll`来读取文件的全部字节，这里以`.txt`类型为例，将它的全部字节转化为字符串输出出来。使用`Close`方法来关闭文件，请及时关闭文件
+
+<img src="warning.png" width=25> `io.ReadAll`会把文件一次性读取出来，如果文件很大的话，将整个文件加载到内存当中可能会导致内存不足或者性能下降问题。对于较大的文件，更推荐使用`bufio`包来逐步读取文件
+
+```go
+func main(){
+    f, err := os.Open("./hello.txt")
+	if err != nil {
+		panic(err)
+	}
+	defer f.Close()
+	r := bufio.NewReader(f)
+	buf := make([]byte, 1024)
+	for {
+		n, err := r.Read(buf)
+		if err != nil && err.Error() != "EOF" {
+			panic(err)
+		}
+		if n == 0 {
+			break
+		}
+		fmt.Println(buf[:n])
+	}
+}
+```
+
+> `n`表示每次读取文件读出来的字节数，如果读取数量为0，那么说明文件读取完毕，可以退出循环
+
+<img src="question.png" width=25>  `os`包提供了一种更一般性的打开文件的方式：`os.OpenFile`，可自行查阅
+
+**文件和目录的创建**
+
+`os`包为我们提供了创建文件和目录的方法，其中，在前缀目录不存在的时候`Mkdir`会报错，`MkdirAll`则会将不存在的前缀目录全部创建，`os.ModeDir`的类型请自行参阅官方文档
+
+```go
+func CreateAFile() {
+	f, err := os.Create("./dir/test.go")
+	defer f.Close()
+	if err != nil {
+		panic(err)
+	}
+}
+
+func CreateADir() {
+	err := os.Mkdir("./test", os.ModeDir)
+	if err != nil {
+		panic(err)
+	}
+}
+
+func CreateAllDir() {
+	err := os.MkdirAll("./dir/hello", os.ModeDir)
+	if err != nil {
+		panic(err)
+	}
+}
 
 ```
-> 请注意结构体字段的命名，像变量的命名那样，小写字母开头的字段只能在结构体内部的方法中使用，比如上例中的`password`而大写字母开头的字段可以在外部使用，比如`Name`
+
+###### 接口
+
+go语言提供了`interface`类型用来实现空接口，我们可以在接口中声明一些方法，然后实现了这些方法的结构体都可以称为这个接口。在函数中传入或者传出参数的时候，使用合适的接口类型可以让参数的类型更加多样化，因此，如果一个参数想要接受任意类型的参数，我们既可以使用`any`类型，也可以使用空接口`interface{}`
+
+接口类型使得go语言能够更好的面向对象编程，这种编程思想在后端的开发中有很重要的指导意义
+
+<img src="question.png" width="25px"> 可以在一些社区文档或者教程中看到面向对象的思想，这种思想能让你更好得理解一些源代码
+
+```go
+type Human interface {
+	Say(msg string)
+	Eat(food string) (ok bool)
+}
+
+type Student struct {
+	Name string
+}
+
+func (s Student) Say(msg string) {
+	fmt.Printf("My name is %s,I want to say %s\n", s.Name, msg)
+}
+
+func (s Student) Eat(food string) (ok bool) {
+	if food == "apple" {
+		fmt.Println("delicious")
+		return true
+	}
+	fmt.Println("Ahhhhhhhh No!!!")
+	return false
+}
+
+func (s Student) Sleep(){
+    fmt.Println("I'm sleeping")
+}
+
+func Do(human Human) {
+	human.Say("hello")
+	human.Eat("U-235")
+}
+
+func main() {
+	a := Student{Name: "wjj"}
+	Do(a)
+}
+```
+> 如上例，我们把能`Say`和`Eat`的对象成为`Human`，对于`Student`结构体来说，它实现了这两个方法，此外它还有自己独特的方法`Sleep`，所以它可以作为一个`Human`，因此可以作为参数传递给`Do`函数
+
+接口可以继承，我们可以继承上面的`Human`接口来定义一个`Child`接口。于是，实现了`Say`,`Eat`,`Cry`方法的结构体都可以称为`Child`，显然`Student`由于没有实现`Cry`方法，所以不能称为`Child`
+```go
+type Child interface{
+    Human
+    Cry()
+}
+```
+接口类型的变量可以承接任意类型的变量，这在后面的开发中会非常使用。我们可以对接口类型的变量进行类型断言，进而使用它的一些属性和方法
+
+```go
+var stu interface{}
+data,ok := stu.(Student)
+if ok{
+    fmt.Println("It's a student")
+} else {
+    fmt.Println("It's not a student")
+}
+```
+
+> 这里的`stu`变量显然是一个空接口，不能作为`student`类型，所以`ok`的值是`false`，如果类型断言成功，`ok`的值为`true` ，那么就可以使用`student`类型的属性和方法
+
+<img src="question.png" width="25px"> 在go语言中有两个接口很重要`io.Reader`和`io.Writer`，建议查资料了解一下，对于后面 `gin` 框架的编写很有帮助 
+
+######   并发编程
+
+**<img src="question.png" width=25>进程，线程和协程** 
+
+进程的定义如下
+
+> 进程是一个具有一定独立功能的程序在一个数据集合上依次动态执行的**过程**。进程是一个正在执行的程序的实例，包括程序计数器、寄存器和程序变量的当前值。
+
+进程是操作系统资源分配的基本单位，拥有独立的地址空间，你可以在任务管理器中查看自己的电脑正在运行的进程。通常情况下一个进程崩溃后，并不会影响到其他进程
+
+线程是进程的一部分，一个进程至少拥有一个线程，线程是处理器任务调度和执行的基本单位。一个进程的线程之间共享它们的进程的地址空间，一个线程的崩溃有可能导致整个进程的崩溃
+
+go语言天然支持并发编程。值得注意的是，go语言的进程是一种轻量级的goroutine，并且在go语言中进行协程管理非常便捷，这使得`gin`框架在后端的并发情景处理中有着独特的优势
+
+**`go func`**
+
+go语言提供的go关键字可以很方便的开协程，配合匿名函数，完成一些并发编程就变得十分容易
+
+```go
+func main(){
+    go func(){
+        for i := 0;i<5;i++{
+        	fmt.Println("Hello World")
+        }
+    }()
+    time.Sleep(5*time.Second)
+}
+```
+
+<img src="warning.png" width=25> `time.Sleep(5*time.Second)`指让程序休眠5秒，因为`main`包中的`main`函数所在的协程为主协程，主协程结束运行之后，其他的协程也会立即结束，所以在这里我们通过让程序休眠的方式来让`go`关键字开的协程执行完毕，在后面我们有一些其他方法来达到这个目的
+
+这种开启协程的方式常用且方便，比如在后端程序运行的过程中想要定时发送消息，就可以通过开一个协程来实现
+
+**`sync`包**
+
+`sync`包是一个go的标准库，它包含的一些类型和函数可以让我们很方便的进行协程管理
+
+```go
+func main() {
+	wg := sync.WaitGroup{}
+	wg.Add(2)
+	go func() {
+		for i := 0; i < 100; i++ {
+			fmt.Println("Hello")
+
+		}
+		wg.Done()
+	}()
+	go func() {
+		for i := 0; i < 100; i++ {
+			fmt.Println("World")
+		}
+		wg.Done()
+	}()
+	wg.Wait()
+}
+```
+
+> 使用`sync.WaitGroup`类型及其方法可以让主协程等待子协程执行完毕之后在结束主协程，可以看到输出结果是`Hello`和`World`加菩提出现，但是它们并没有一个明确的顺序，这说明这两个循环是同时执行的
+>
+> <img src="warning.png" width=25> 请务必保证`wg.Add` 增加的数量和`wg.Done`的数量相同，否则会导致线程阻塞
+
+##### net/http包
+
+##### gin框架基础
+
+gin框架是在`net/http`包的基础上搭建起来的，简单易上手，支持中间件，下面是一个简单的示例代码
+
+```go
+func main() {
+	r := gin.Default()
+	r.GET("/example", func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{
+			"msg": "hello gin!",
+		})
+	})
+	r.Run("127.0.0.1:8080")
+}
+```
+
+> 变量`r`是一个路由处理器，我们定义了一个`GET`方式的接口，通过匿名函数的方式为它分配了路由处理函数。gin框架中的路由处理函数是`func(*gin.Context)`类型，`gin,Context`是上下文，后面会讲到。这个应用运行在`127.0.0.1:8080`上，可以通过Apifox或者其他调试工具来进行测试
+
+##### 数据库，SQL和gorm基础
+
+##### 使用tz-gin开发
+
+##### gorm进阶 
+
+##### 其他的常用包 
+
+**`errors`**
