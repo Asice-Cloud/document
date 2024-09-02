@@ -272,7 +272,7 @@ vscode 的命令面板能让我们快速方便地执行很多功能与命令，�
 | uint         | 32位系统4字节64位系统8字节 | 0~2^32-1 或 0 ~ 2^64-1           |
 | char         | 1字节                      | 存储ASCII字符                    |
 
-<img src="bulb.png" width=25px>另外还有类似int8，int64，string等类型，大家可以自行搜索做了解。
+<img src="question.png" width=25px>另外还有类似int8，int64，string等类型，大家可以自行搜索做了解。
 
 当我们知道了如何表示数据后，就可以来尝试来一段代码了：这里就用c语言来演示
 定义变量的方式： [变量类型] 变量名 = 某个值或者表达式
@@ -1056,6 +1056,18 @@ func main(){
 }
 ```
 
+###### go的包管理
+
+对于一个多文件的项目来说，运行起来必须有`go.mod`和`go.sum`文件，`go.mod`记录了项目依赖的第三方包，`go.sum`记录了第三方包的版本信息。使用`go mod init <包名>`为你的项目新建`go.mod`文件，然后你可以使用`go get`来获取所依赖的第三方包。当然，更简单的方式是用`go mod tidy`来直接下载所需要的包，并且会删除没有使用的包
+
+```shell
+go mod init <包名>
+go mod tidy
+go get <url>@latest
+```
+
+
+
 ##### go语言进阶
 
 ###### panic和recover
@@ -1345,6 +1357,187 @@ func main() {
 
 > 变量`r`是一个路由处理器，我们定义了一个`GET`方式的接口，通过匿名函数的方式为它分配了路由处理函数。gin框架中的路由处理函数是`func(*gin.Context)`类型，`gin,Context`是上下文，后面会讲到。这个应用运行在`127.0.0.1:8080`上，可以通过Apifox或者其他调试工具来进行测试
 
+###### 写一个接口
+
+为一个后端程序定义接口，我们需要为它写一个路由处理函数。一般一个路由处理函数有以下过程：获取参数及校验，编写业务逻辑，错误处理，返回值。
+
+我们从获取**参数及校验**开始。前端向后端发送请求，携带的参数可能在URL，或者请求体中，但是我们gin框架提供了一个统一的函数来接受参数，如下
+
+```go
+func Example(c *gin.Context){
+    var info interface{}
+    if err := c.ShouldBind(&info);err != nil{
+        // 错误处理
+    }
+}
+```
+
+使用空接口当然可以接受任意的参数，但是在实际的开发中，我们需要的参数类型是都是设定好的，我们通过结构体来实现这一点，比如，前端会向我们传递一个登录信息
+
+```go
+type LoginInfo struct{
+    UserName string
+    Password string
+}
+
+func Example(c *gin.Context){
+    var info LoginInfo
+    if err := c.ShouldBind(&info);err != nil{
+        // 错误处理
+    }
+}
+```
+
+这样，我们可以精准的拿到前端传参中字段名为`username`和`password`的数据，并进一步处理。
+
+<img src="warning.png" width=25> 在获取数据的同时我们可以进行数据有效性的校验，从安全性来说，后端务必要进行数据校验。对于无法在获取时就进行校验的数据，很有必要进行单独的校验。
+
+gin框架为我们提供了很多设定好的标签，通过为结构体的字段打标签的方式，我们就足够完成很多情况的校验了
+
+```go
+type LoginInfo struct{
+    UserName string `json:"username" binding:"required"`
+    Password string `json:"password" binding:"required,numeric"`
+}
+```
+
+> 在数据类型之后使用反引号\` 来为字段打标签，已`UserName`字段为例：`json`标签的意义是：在`ShouldBind`接受参数时，仅接受键名为`username`的`json`传参，`binding`标签内部的标签：`required`指这个字段在传参的时候是必填的，`numeric`指这个字符串字段应该是纯数字的
+
+`binding`标签内部的常见标签如下表
+
+| 标签名 | 意义 |
+| ------ | ---- |
+|  required | 必填     |
+|omitempty|选填|
+|len=10|字符串长度为10|
+|min=10|字符串的最小长度为10，或者整数的最小值为10|
+|max=100|字符串的最大长度为100，或者整数的最大值为100|
+|numeric|字符串应该为纯数字|
+|oneof=技术部 视频部 美工部|字符串的值应当是`技术部`,`视频部`,`美工部`之一|
+|url|字符串应该是一个合法的url|
+|ip|字符串应该是一个合法的ip地址|
+|email|字符串应该是一个合法的email地址|
+
+ <img src="question.png" width=25> gin框架提供了非常丰富的标签用来校验，可自行参考gin框架官方文档
+
+在结构体的字段类型是切片的时候，使用`dive`标签来对切片的每个元素进行校验
+
+```go
+type Info struct{
+    Age int `json:"age" binding:"required,min=0,max=100"`
+    Hometon string `json:"hometon" binding:"required"`
+}
+
+type UserInfo struct{
+    DepartmentName string `json:"department_name" binding:"required"`
+    Info []Info `json:"info" binding:"required,dive"`
+}
+```
+
+> 使用`dive`标签可以对`UserInfo` 的`Info`切片的每个元素进行校验
+
+对于`Query`参数，只要把上面的`json`标签全部改成`form`标签就可以了
+
+<img src="warning.png" width=25> `json`参数存在于请求体中，`form`参数存在于`URL`中，故而在写`GET`请求的路由处理函数的时候，请不要尝试使用`json`标签来接受参数，尽管在某些测试工具中，可能不会出现问题
+
+在`URL`中，还存在着`Param`参数，使用专门的方法来获取
+
+```go
+func Example(c *gin.Context){
+    id := c.Param("id")
+}
+```
+
+> 通过`Param`方法来获取字段名为`id`的`Param`参数，此时变量`id`的值默认为`string`类型，请自行处理并进行校验
+
+接下来我们来说**返回值**，作为后端，在绝大部分情况下，我们的返回值都是`JSON` 。示例如下：
+
+```go
+c.JSON(http.StatusOK,gin.H{
+    "msg":"Hello Wolrd"
+})
+```
+
+> `http.StatusOK`就是状态码200，`gin.H`就是`map[string]any`类型的别称，其他的状态码自行查阅`net/http`包文档
+>
+> <img src="awesomeface.png" width=25> 记得不要使用中文作为键的名称哦，不然前端的代码会非常离谱的 
+
+下面是**错误处理**，在处理错误的时候，我们需要向上下文报告错误，对返回值进行一些修改报告错误只需要用`Error`方法即可
+
+```go
+err := c.Error(errors.New("An Error"))
+```
+
+> `Error`方法会向上下文报告错误，并且返回一个包装过的`err`，你可以使用这个`err`来进行一些后续的处理
+
+###### 写一个中间件
+
+在写中间件之前，我们先来看看如何使用中间件
+
+```go
+func Middleware(c *gin.Context){
+    // code
+}
+
+r := gin.Default()
+r.User(Middleware)
+```
+
+可以看到，中间件的类型和路由处理函数一样，都是 `func (*gin.Context)`类型，通过 `Use`方法，可以让路由处理函数使用中间件。中间件会在路由处理函数的之前和之后运行，如果一个路由使用了多个中间件，那么这些中间件的执行顺序会按照参数传入的顺序。对于一个特定的中间件，你可能并不想让你的每个路由都使用它，你可以按照下面的方式来更加自由的使用中间件
+
+```go
+r.GET("/info",function1)
+r.DELETE("/info",function3,Midware3)
+r.Use(Midware1)
+r.POST("/info",function2,Midware2)
+```
+
+> 这里的`GET`请求不会使用任何中间件，`DELETE`会使用`Midware3`，`POST`会使用`Midware1`和`Midware3`
+
+中间件时路由处理过程的一部分，其函数中获取参数的方法和上面写到的相同，我们通常用中间件来进行鉴权，错误处理等。中间件和路由处理函数的地位时等同的，接下来我们会用`handlerFunc`来称它们。`gin.Context`有两个特殊的方法`Next`和`Abort`，`Next`方法会暂停当前`handlerFunc`的运行，等待其他`handlerFunc`运行完毕之后再继续运行，而`Abort`方法会立即结束当前的路由处理，即后面的`handlerFunc`都不会再执行了，但是之前被`c.Next`搁置的`handlerFunc`会继续执行完毕。当然了，有多个`handlerFunc`被`c.Next`搁置之后，会按照倒序执行
+
+现在我们来写一个错误处理中间件
+
+```go
+func Error(c *gin.Context){
+    c.Next()
+    if len(c.Errors) > 0{
+        err := c.Errors.Last().Err
+        c.JSON(http.StatusOK,gin.H{
+            "success":false,
+            "err":err,
+        })
+    }
+}
+
+r.User(Error)
+```
+
+> 在所有的路由之前使用这个中间件，然后使用`c.Next`方法，使得错误处理在路由处理的最后执行，这个错误处理会向前端返回一个面对错误时的`json`，这样我们在写路由处理函数的时候，就只需要向上下文报告错误就可以了
+
+<img src="question.png" width=25> 值得注意的是，`handlerFunc`之间是可以通过`gin.Context`通信的， gin框架为我们预留了这些函数，请参考gin框架官方文档
+
+###### 管理你的路由
+
+上面定义接口的方式会让代码变得冗杂，为了能使接口和路由更加的简洁易读，可以使用`Group`方法对路由进行分组。使用合适的分组，让路由更加直观易读，并且可以让中间件的使用更加准确
+
+```go
+r := gin.Default()
+
+apiRouter := r.Group("/api")
+{
+    apiRouter.GET("/info",func(){})
+    apiRouter.POST("/login",func(){})
+    stuRouter := apiRouter.Group("/stu")
+    stuRouter.Use(Midware)
+    {
+        stuRouter.GET("info",func(){})
+    }
+}
+```
+
+
+
 ##### 数据库，SQL和gorm基础
 
 ##### 使用tz-gin开发
@@ -1353,4 +1546,7 @@ func main() {
 
 ##### 其他的常用包 
 
-**`errors`**
+###### errors
+
+**`errors.New`** 返回一个新的`error`类型，接受的参数为错误信息
+
