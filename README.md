@@ -42,7 +42,7 @@
 
 1. 进入代码(下):指针和自定义类型，更多特性
 2. 编程思想浅谈
-3. 了解网络和协议
+3. 网络沉思录
 4. 同步与异步
 
 <h6><b>实战篇</b></h6>
@@ -371,7 +371,7 @@ a>>1; // = a/(2^1)
 
 
 
-#### 进阶篇其3-了解网络和协议
+#### 进阶篇其3-网络沉思录
 
 ##### 什么是计算机网络
 
@@ -601,6 +601,7 @@ fmt.Printf("My name is %s,and my age is %d",name,age)
 // My name is wjj,and my age is 80
 ```
 `fmt.Printf`接受多个参数，第一个参数中的`%s``%d`为占位符，后面的`name``age`会去填充前面的占位符。显然，你前面有多少占位符，后面就应该有多少参数
+
 ```go
 status := "on going"
 info := fmt.Sprintf("Our project is %s",status)
