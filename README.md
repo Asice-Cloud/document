@@ -58,6 +58,8 @@
 
 ## 施工中
 
+
+
 #### 入门篇其2-网页是什么(上):元素
 
 > [!NOTE]
@@ -76,7 +78,7 @@
 
 丰富多彩的图像是美化网页必不可少的元素，用于网页上的图像一般为JPG格式和GIF格式。网页中的图像主要用于点缀标题的小图片，介绍性的图片，代表企业形象或栏目内容的标志性图片，用于宣传广告等多种形式。
 
-<img src="tenzor.svg" alt="img" width="20px">这个挑战logo就是由以下代码生成的
+<img src="tenzor.svg" alt="img" width="20px">这个挑战logo就是由以下代码导入的
 
 ```html
 <img src="tenzor.svg" alt="img" width="25px">
@@ -122,9 +124,7 @@
 <input type='radio' name="gender" style="background-color:white">女
 ```
 
-##### 参考网站
 
->https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element
 
 #### 入门篇其3-开发环境和基础平台配置
 
