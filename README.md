@@ -590,7 +590,7 @@ int array[10]=(int *)malloc(10*sizeof(int))
 
 > [!NOTE]
 >
-> 本章作者：挑战以往资料
+> 本章作者：挑战以往资料+syl
 
 
 
@@ -896,7 +896,7 @@ http://api.example.com/v1/draw
 
 > [!NOTE]
 >
-> 本章作者：wjj
+> 本章作者：wjj+syl
 
 
 
@@ -1736,7 +1736,7 @@ mysql -u <用户名> -p
 
 `mysql`创建数据库
 
-```my
+```mysql
 CREATE DATABASE <数据库名>
 ```
 
@@ -1748,7 +1748,7 @@ MySQL的具体操作可自查<a href="https://www.runoob.com">菜鸟教程</a>
 
  **获取`gorm`**
 
-```she
+```shell
 go get -u gorm.io/gorm
 go get -u gorm.io/driver/sqlite
 ```
@@ -1764,7 +1764,7 @@ tz-gin-cli的热更新`tz-gin run`
 
 **快速预览**
 
-```
+```shell
 tz-gin run
 ```
 
@@ -1880,11 +1880,13 @@ const (
 	}
 
 
-	// 翻译函数
-	func timingTransZh(ut ut.Translator) error {
-		return ut.Add("timing", "{0}输入的时间不符合要求", true) // {0}表示会替代加了该校验的字段
-	}
-	```
+~~~go
+// 翻译函数
+func timingTransZh(ut ut.Translator) error {
+	return ut.Add("timing", "{0}输入的时间不符合要求", true) // {0}表示会替代加了该校验的字段
+}
+```
+~~~
 
 - 自定义校验的注册应放在 `service/validator/init.go` 的 `validatorHandleRouter` 中，`key` 值表示的是自定义校验的名称
 
