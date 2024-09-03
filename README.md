@@ -66,7 +66,8 @@
 >
 > 本章作者：cjx
 
-网页是构成网站的基本元素，是承载各种网站应用的平台。通俗地说，网站就是由网页组成的。网页是一个包含HTML标签的纯文本文件，它可以存放在世界某个角落的某一台计算机中，是万维网中的一“页”，是超文本标记语言格式（标准通用标记语言的一个应用，文件扩展名为.html或.htm）。
+网页是构成网站的基本元素，是承载各种网站应用的平台。通俗地说，网站就是由网页组成的。网页是一个包含HTML标签的纯文本文件，它可以存放在世界某个角落的某一台计算机中，是万维网中的一“页”，是超文本标记语言格式（标准通用标记语言的一个应用，文件扩展名为`.html`或`.htm`）。
+
 
 网页由多个元素构成，每个元素都有其独特的功能和作用。
 
@@ -76,12 +77,30 @@
 
 ##### 图像
 
-丰富多彩的图像是美化网页必不可少的元素，用于网页上的图像一般为JPG格式和GIF格式。网页中的图像主要用于点缀标题的小图片，介绍性的图片，代表企业形象或栏目内容的标志性图片，用于宣传广告等多种形式。
+丰富多彩的图像是美化网页必不可少的元素，用于网页上的图像一般为JPG格式和GIF格式(当然还有无限缩放而不失去清晰度的SVG格式)。网页中的图像主要用于点缀标题的小图片，介绍性的图片，代表企业形象或栏目内容的标志性图片，用于宣传广告等多种形式。
 
-<img src="tenzor.svg" alt="img" width="20px">这个挑战logo就是由以下代码导入的
+<img src="tenzor.svg" alt="img" width="18px">这个挑战logo就是由以下代码导入的
 
 ```html
+<!-- .html文件 -->
 <img src="tenzor.svg" alt="img" width="25px">
+```
+
+<img src="question.png" alt="q" width="25px">上面的一串代码中，img标签被添加了三个属性，其中src属性规定了图像的路径、alt属性规定了图像无法显示时的替代文本、width属性规定了图像的宽度。除此之外，img标签还有height、draggable等属性，大家在后续学习中会逐渐接触到。
+
+<img src="bulb.png" alt="b" width="25px">说起图像路径，我们就不得不提到两个名词：绝对路径和相对路径。
+
+```
+绝对路径是从硬盘的根目录或者Web站点的根目录开始，指明文件的真实位置，路径单一，不易更改。
+相对路径是从当前工作目录出发，指定一个文件的路径。使用相对路径时，路径是相对于当前目录的，这样可以使得文件在不同的目录下可以被访问。
+
+例：
+F盘的绝对文件（夹）                      F:\Riot Games\VALORANT 
+指向当前目录的子目录中的文件的相对路径   Genshin Impact Game\YuanShen.exe
+指向从上一层目录开始的文件的相对路径     ..\osu!\scores.db
+
+在相对路径中， .\ 指当前目录, ..\ 指当前目录的上一级目录, 后者可以嵌套使用, 如 ..\..\HMCL.exe
+
 ```
 
 ##### 超链接
@@ -91,6 +110,7 @@
 <a href='https://www.tiaozhan.com/'>跳转至挑战网首页</a>
 
 ```html
+<!-- .html文件 -->
 <a href='https://www.tiaozhan.com/'>跳转至挑战网首页</a>
 ```
 
@@ -101,6 +121,7 @@
 <img src="question.png" alt="q" width="25px">下面的代码定义了一个动画，实现了一个元素颜色的变化。
 
 ```css
+/* .css文件 */
 @keyframes animation {
   from {
     color: red;
@@ -119,6 +140,7 @@
 性别：<input type='radio' name="gender" style="background-color:white">男 <input type='radio' name="gender" style="background-color:white">女
 
 ```html
+<!-- .html文件 -->
 <input placeholder="请输入你的姓名" style="background-color:white">
 <input type='radio' name="gender" style="background-color:white">男
 <input type='radio' name="gender" style="background-color:white">女
