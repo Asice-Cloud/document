@@ -718,6 +718,10 @@ func main(){
 
 上面是go语言的Hello World示例，在学习过程中遇到问题可以参阅<a href="https://golang.google.cn/doc/">go语言的官方文档</a>
 
+go语言作为新兴的编程语言，近年来变得越来越流行，在2024年8月的TIOBE排行榜中，go语言排名第9名
+
+<img src="tiobeindex.png">
+
 ###### go语言的代码结构
 
 一个go语言项目的代码由不同的包组成，其中`main`包中包含主函数，即程序运行的起点
@@ -1036,6 +1040,8 @@ go get <url>@latest
 
 
 ##### go语言进阶
+
+<img src="gogogo.jpeg">
 
 ###### panic和recover
 
