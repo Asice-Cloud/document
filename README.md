@@ -364,7 +364,7 @@ arr[2] = 10; //给对应位置赋值/修改值
 int a3=arr1[3]; //出界啦！
 ```
 
-
+<img src="question.png" width=25> 课外阅读：<a href="https://mp.weixin.qq.com/s?__biz=MzA5NDIzNzY1OQ==&mid=2735628657&idx=1&sn=379a9423f2a449ab5b94d795cedaff93&chksm=b7fab396327572047b4749532f4e901311efe16820cf52440aea3f717da440bc93ef75f7e27f&mpshare=1&scene=23&srcid=0909tArK7FVSGAARjnU7qOHP&sharer_shareinfo=e08c8cede59f8c572ad27f13b09e7726&sharer_shareinfo_first=e08c8cede59f8c572ad27f13b09e7726#rd">编程语言是怎么被实现出来的？</a> 这篇文章用生动的语言简述了编程的底层逻辑，有精力的话推荐阅读下。
 
 ##### 表达式
 
@@ -1298,15 +1298,42 @@ git push <remote name> <分支>
 
 ##### 前端技术栈
 
-**`html`,`css`,`js`**三件套，使用他们可以设计网页界面，交互逻辑，及向后端发数据
+**`html`,`css`,`js`**三件套，使用他们可以设计网页界面，交互逻辑，及向后端发数据。`html`和`css`都有着简单的语法，容易上手进行开发。
 
-**`vue.js`**  由尤雨溪开发的基于`javascript`的前端框架，轻量且高效，不会对项目造成过大的负担，并且支持组件化开发， 使得代码容易维护。
+`html`也很容易嵌入到其他的一些标记语言中，比如你正在看的这篇文档，是使用`markdown`编写的，就支持内嵌的`html`语句。
+
+`css`，中文名叫层叠样式表，可以修改`html`中元素的样式，提高代码的可读性和可维护性。
+
+快速开始编写一个网页页面很简单，在`vscode`中安装好相关插件之后，在空的`.html`文件中输入`!`，然后代码提示的第一个就会为你自动生成一个`html`模板。
+
+具体的三件套教程可参考<a href="https://www.runoob.com">菜鸟教程</a>和<a href="https://www.w3school.com.cn/">w3school</a>，里面有很详细的讲解和示例。
+
+<img src="hcj.png" width=400>
+
+**`vue.js`**  `Vue.js`是一套用于构建用户界面的渐进式框架。它与其他大型框架不同，被设计为可以自底向上逐层应用。`Vue` 的核心库只关注视图层，易于上手，且便于与第三方库或既有项目整合。当与现代化的工具链以及各种支持类库结合使用时，`Vue` 也完全能够为复杂的单页应用提供驱动。
+
+`Vue.js`还有一个十分强大的组件库，`element plus`，它是基于`vue` 开发的一套ui组件库，提供丰富的网页开发组件，可用快速开发网站，降低前端开发成本
+
+<a href="https://cn.vuejs.org/">`Vue.js`官方文档</a>
+
+<a href="https://element-plus.org/zh-CN/">`emelent plus`官方文档</a>
+
+如果你对前端开发有浓厚的兴趣，我们也推荐你更加广泛的学习，这里我们列举一些例子：
+
+<a href="https://zh-hans.react.dev/learn">`React`文档</a>
+
+<a href="https://www.webpackjs.com/">`Webpack`中文文档</a>
+
+> <img src="awesomeface.png" width=25> -*你知道回答的人是谁吗，哈哈哈*
+>        -*我知道啊，一个不懂vue的胖子*
 
 ##### 后端技术栈
 
 后端将使用**`go`**语言进行开发，它是由谷歌推出的新兴的开发语言，在2024年8月的语言流行度排名中，位列第9。`go`语言是一种强类型语言，其运行速度接近C语言，同时又具有简单的语法，易于上手。其最大特点莫过于提供了一种简洁且高效的方式来处理并发事务，这使得它非常适合用来开发一些有高并发场景的服务，比如Web后端。
 
 <img src="tiobeindex.png">
+
+<img src="question.png" width=25> 推荐阅读：<a href="https://mp.weixin.qq.com/s?__biz=MzIxMzgyNTQyOA==&mid=2247487919&idx=1&sn=20e3b80796c6abd995af55ad1cd2007d&chksm=96715836363d799f3b3b5df2608256f033362e8d351d6ebac6279e522b6d87d144c94cd3a50e&mpshare=1&scene=23&srcid=0909d0ju8PpaT7dGiaJrsEQ6&sharer_shareinfo=1fa7d4e29ed415209d630b05d85f1edf&sharer_shareinfo_first=1fa7d4e29ed415209d630b05d85f1edf#rd">Go 语言中不可不知的语法糖</a> 这篇文章提到了很多`go`语言可以用来简化开发的用法， 在对`go`基础有一定的了解之后，可以阅读下这篇文章。
 
 更具体地，我们将使用基于`go`语言的`gin`框架来进行后端开发，~~应该有人的面试题就是这个吧~~，使用`gorm`来操作数据库。`gin`框架的优点包括高性能、支持中间件、路由管理方便、数据验证方便等等。而`gorm`的语法接近`MySQL`，易于掌握。在这些技术的加持下，我们就可以进行一些后端的开发了。
 
@@ -1326,4 +1353,54 @@ git push <remote name> <分支>
 
 <a href="https://oi-wiki.org/">oi wiki</a>
 
-##### 一些开发规范
+##### 开发规范 Restful API
+
+`Rest`是一种软件架构风格，并不是一种标准，相应的`Restful API`是一种接口设计风格，规范。前后端在开发过程中都会遇到路由管理的问题，遵循一些规范能让后端的接口设计更加合理， 便于前端使用，也能让前端对资源的管理更加直观。
+
+这种规范下的URL的path是需要认真考虑的，通常其组成如下
+
+```url
+/{version}/{resources}/{resource_id}
+```
+
+并且遵循下面的约定
+
++ 不用大写字母，所有单词使用英文且小写。
+
++ 连字符用中杠"-"而不用下杠"_"
+
++ 正确使用 "/"表示层级关系,URL 的层级不要过深，并且越靠前的层级应该相对越稳定
+
++ 结尾不要包含正斜杠分隔符"/"
+
++ URL 中不出现动词，用请求方式表示动作
+
++ 资源表示用复数不要用单数
+
++ 不要使用文件扩展名
+
+对于动词(请求方式)的使用，遵循下面的约定:
+
++ GET：从服务器查询
+
++ POST：在服务器创建新的资源
+
++ PUT：更新服务器资源
+
++ DELETE：从服务器删除资源
+
+<img src="question.png" width=25>关于`Restful API`的文章推荐：
+
+<a href="http://www.ruanyifeng.com/blog/2014/05/restful_api.html">RESTful API 设计指南 - 阮一峰的网络日志</a>
+
+<a href="https://www.cnblogs.com/bigsai/p/14099154.html">一文搞懂RESTful API</a>
+
+##### 开发规范 git提交信息
+
+当你使用`git`向仓库进行提交的时候，你可以附带提交信息，如下：
+
+```shell
+git commit -m "<提交信息>"
+```
+
+在提交信息部分，你应当遵守<a href="https://devdiv.github.io/school/tools/dev/git/commit-message.html#commit-规范化">这样</a>的规范
