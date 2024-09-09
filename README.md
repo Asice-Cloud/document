@@ -1233,877 +1233,97 @@ http://api.example.com/v1/draw
 
 ##### 进程、线程
 
+#### 实践篇其1-通用工具介绍
 
+##### <img src="gitlogo.jpg" width=30>git
 
+在介绍`git`之前，我们不妨先从**代码托管平台**开始说起。世界上最大最热门的代码托管平台，当然要数`github`，你可以从上面下载项目源代码、一些课程资料等等等等。国内也有类似的平台比如`gitee(码云)`，`gitcode`等。
 
+<img src="bulb.png" width=25> 你可以为自己注册`github`账号，并通过平台的学生认证，然后你就可以免费试用一些付费软件或者网站了，比如`jetbrains`系列，`overleaf`。  
 
-#### 实践篇其4-后端学习浅谈和开发规范
+想要在这些平台上下载资源，我们就需要使用到`git`工具。事实上，`git`是一个版本控制工具，概括起来，就是实现开发者本地仓库与远程仓库之间的文件互传等操作。你可以在<a href="https://git-scm.com/downloads">这个网址</a>来下载`git`，然后按照下面推荐的流程进行安装（仅以windows为例）
 
-> [!NOTE]
->
-> 本章作者：wjj+syl
+<img src="setup1.png" width=400>
 
+<img src="setup2.png" width=400>
 
+<img src="setup3.png" width=400>
 
-##### go语言基础
+关于`git`的使用教学，我们在这里只举一个简单的例子，深入的学习可以参考<a href="https://git-scm.com/docs">推荐文档</a>来进行学习，当然，网上相关的教程也是很多的。
 
+当你想要创建一个新项目的时候，在`powershell`中按照如下流程：
 
-```go
-package main
+```shell
+cd <你的项目文件夹目录>
+git init
+git config user.name <你的用户名>
+git config user.email <你的邮箱>
+git remote add <你的仓库url>.git
 
-import "fmt"
-
-func main(){
-    fmt.Println("Hello World!")
-}
+// 然后你对你的项目进行了更新，想要提交到仓库
+git add ./
+git commit -m "<你的提交信息>"
+git push <remote name> <分支>
 ```
 
-上面是go语言的Hello World示例，在学习过程中遇到问题可以参阅<a href="https://golang.google.cn/doc/">go语言的官方文档</a>
+<img src="awesomeface.png" width=25> 文档看得太累了怎么办，还是打会儿<a href="https://learngitbranching.js.org/?locale=zh_CN">游戏</a>吧
 
-go语言作为新兴的编程语言，近年来变得越来越流行，在2024年8月的TIOBE排行榜中，go语言排名第9名
+##### <img src="apifoxlogo.png" width=30>apifox
+
+`apifox`是一个国内开发的免费的接口调试工具，非常适合个人和团体使用。前后端都可以使用它来检查接口是否能正常运行，处理返回值。在项目中开发过程中，合适的接口调试工具会让开发轻松很多，类似的工具还有`postman`，`swagger`等等。你可以在<a href="https://apifox.com/">apifox的官网来获取</a>
+
+`apifox`提供了一个示例项目用于学习，同时你也可以参阅<a href="https://apifox.com/help/">官方文档</a>获取帮助，~~他们甚至提供了视频~~
+
+##### <img src="navicatlogo.png" width=30> Navicat
+
+`Navicat`是一个可以图形化操作`MySQL`的工具，在命令行操作数据库毕竟是一件比较费眼睛的事情，图形化的界面会方便很多。我们在后端的开发和部署时会频繁地用到它。此外`Navicat`支持操作多种数据库，比如`MongoDB`，`SQL Server`，`Redis`等等。这样强大的工具是需要付费的，所以我们也推荐一些其他的工具，如<a href="https://dbeaver.io/download/">`DbServer`</a>，它提供了免费的社区版。
+
+你可以在<a href="https://navicat.com.cn/products">官网</a>来下载`Navicat`。
+
+在你第一次下载`Navicat`之后，需要和你原先的`MySQL`建立连接，如图所示：~~请忽略掉我已经建立的连接~~
+
+<img src="cat2.png" width=400>
+
+然后你可以在一个连接中建立数据库，如图所示。对于一个独立的项目来说，建立独立的数据库显然是很有必要的
+
+<img src="cat1.png" width=400>
+
+如果你要使用`MySQL`来进行一些操作，在上方菜单中点击查询，然后新建查询，就可以了，如图所示
+
+<img src="cat3.png" width=400>
+
+具体的使用方法，可以参考<a href="https://www.navicat.com.cn/manual/online_manual/cn/navicat_16/win_manual/">官方文档</a>获取帮助。
+
+#### 实践篇其2 前后端学习浅谈和开发规范
+
+##### 前端技术栈
+
+**`html`,`css`,`js`**三件套，使用他们可以设计网页界面，交互逻辑，及向后端发数据
+
+**`vue.js`**  由尤雨溪开发的基于`javascript`的前端框架，轻量且高效，不会对项目造成过大的负担，并且支持组件化开发， 使得代码容易维护。
+
+##### 后端技术栈
+
+后端将使用**`go`**语言进行开发，它是由谷歌推出的新兴的开发语言，在2024年8月的语言流行度排名中，位列第9。`go`语言是一种强类型语言，其运行速度接近C语言，同时又具有简单的语法，易于上手。其最大特点莫过于提供了一种简洁且高效的方式来处理并发事务，这使得它非常适合用来开发一些有高并发场景的服务，比如Web后端。
 
 <img src="tiobeindex.png">
 
-###### go语言的代码结构
+更具体地，我们将使用基于`go`语言的`gin`框架来进行后端开发，~~应该有人的面试题就是这个吧~~，使用`gorm`来操作数据库。`gin`框架的优点包括高性能、支持中间件、路由管理方便、数据验证方便等等。而`gorm`的语法接近`MySQL`，易于掌握。在这些技术的加持下，我们就可以进行一些后端的开发了。
 
-一个go语言项目的代码由不同的包组成，其中`main`包中包含主函数，即程序运行的起点
+<img src="bulb.png" width=25>在这些技术的学习中，`go`语言基础毫无疑问是最重要的，我们会在后续的课程中详细讲解。我们希望你能拥有扎实的语言基础，这样在使用框架的时候会更加的得心应手。我们更推荐你在使用框架的过程中，能逐渐地了解这个框架的架构，学习到更本质的东西，而不是仅停留在调包的水平。
 
-go语言的文件后缀是`.go`，每个文件必须在开头声明包，比如上例`Hello World`中，必须先声明此文件在`main`包中
+<a href="https://golang.google.cn/doc/">`go`语言官方文档</a>
 
-然后需要引用此文件依赖的包，这部分vscode会帮你自动补全，比如，你只要在`main`函数中写`fmt.Println`，然后Ctrl+S保存此文件，那么`import`部分就会自动生成。一个文件有可能不依赖任何包，也有可能依赖于标准库（比如`fmt`），或者一些第三方包（比如`gin`）
-
-###### 定义变量
-使用`var`关键字定义变量
-
-`var`关键字既可以在函数内又可以在函数外定义变量，在函数外定义的变量为全局变量，可以在此包内或者包外使用在函数内定义的变量为局部变量，只能在函数内部使用
-```go
-package main
-
-var GlobalVar string = "global"
-
-var intVar int = 5
-
-func main(){
-    var localVar string
-    localVar = "local"
-}
-```
-> go语言对变量的命名有较严格的要求。在函数外定义的变量，若变量名首字母为大写，则可以既可以在包内使用，也可以在包外使用，比如上例中的`GlobalVar`，若首字母为小写，那么只能在包内使用，比如上例中的`intVar`，
-
-> 为了规范和合法，请遵循以下的命名规范
-> + 大驼峰命名法：变量名中每个单词的首字母大写，比如`UserName`,`InterviewTime`
-> + 小驼峰命名法：变量名中第一个单词的首字母小写，其他单词的首字母大写，比如`accessToken`,`timeLimit`
-> + 变量名不以数字开头，不使用中文
-> + 变量名不和go语言的关键字冲突，比如`for`,`func`
-
-
-
-
-使用`:=`符号定义变量
-
-`:=`只能在函数内定义变量，这种定义方法不需要声明类型。请使用和上面相同的命名规范
-```go
-package main
-
-func main(){
-    num := 25
-}
-```
-
-
-###### go语言的基本数据类型
-**`int`**:用来存储整数，可以进行基本数学运算，在64位的电脑上，其长度为64位，在32位的电脑上，其长度为32位，以64位电脑为例，其存储范围为
-$$
--2^{63} \sim 2^{63}-1
-$$
-其他长度的`int`如下：`int8`,`int16`,`int32`,`int64`，长度分别为：8位，16位，32位，64位，其存储范围仿照上例
-
-相应的，不存储符号的整数类型如下：`uint`,`uint8`,`uint16`,`uint32`,`uint64`以`uint64`为例，其存储范围是
-$$
-0 \sim 2^{64}
-$$
-
-**`float32`和`float64`**:用来存储浮点数类型，显然`float64`会比`float32`更加精确
-
-```go
-var percent float32 = 0.11253
-```
-
-**`string`**:用来存储字符串，定义字符串时，内容请使用双引号`"`或者反引号 ` 括起来。字符串可以进行加法操作，如下
-
-```go
-
-var a = "hello"
-b := "world"
-fmt.Println(a+b)
-// 输出
-// Hello World
-
-```
-可以进行索引查询操作来获取字符串中的某一个字符，如下（注意，计算机中的索引都是从0开始）
-
-```go
-str := "Hello World"
-char := string(str[6])
-fmt.Println(char)
-// 输出
-// W
-
-```
-**`bool`**:表示真和假，只有`true`,`false`，go语言中不能使用0和1来作为布尔值
-```go
-condition1 := true
-condition2 := false
-```
-
-**`切片`** go语言支持动态数组，并且提供了一些常用方法。
-```go
-a := []int{1,2,3,4,5}
-type Stu struct{
-    Name string
-    Age int
-}
-stus := []Stu{}
-
-stus = append(stus,Stu{
-    Name:"wjj",
-    Age:80,
-})
-// 向切片追加值
-```
-
-**`map`**:映射，用来存储键值对，可以将一个类型映射到另一个类型，如下：
-
-```go
-MyMap := map[string]string{
-    "name":"wjj",
-    "password":"123456",
-}
-
-delete(MyMap,"name")
-// 删除映射中的某个键值对
-```
-根据键查值的用法，如果键在map中存储了，那么value会被赋值，`ok`为`true`
-如果键不存在，则value不会被赋值，`ok`为`false`
-
-```go
-value,ok := MyMap["name"]
-```
-
-###### **fmt**
-
-fmt包为我们提供了几个非常常用的输出函数
-```go
-fmt.Println("Why?")
-```
-`fmt.Println`接受多个参数，将它们都输出出来，参数之间用空格分开，输出的末尾会自动切换到下一行
-```go
-name := "wjj"
-age := 80
-fmt.Printf("My name is %s,and my age is %d",name,age)
-// 输出结果是
-// My name is wjj,and my age is 80
-```
-`fmt.Printf`接受多个参数，第一个参数中的`%s``%d`为占位符，后面的`name``age`会去填充前面的占位符。显然，你前面有多少占位符，后面就应该有多少参数
-
-```go
-status := "on going"
-info := fmt.Sprintf("Our project is %s",status)
-```
-`fmt.Sprintf` 和 `fmt.Printf`的用法一样，但是会把本来应该的输出作为`string`类型返回出来
-
-> 不同的类型有不同的占位符，请为每个类型使用正确的占位符，常用占位符如下
-
-> + 十进制整数  `%d`
-> + 字符串 `%s`
-> + 浮点数（小数） `%f`
-> + 通配符 `%v`
-
-###### 运算符
-|运算符|意义|
-|--|--|
-|`+`|加法|
-|`-`|减法|
-|`*`|乘法|
-|`/`|除法|
-|`%`|取余|
-|`|`|或，按位或|
-|`&`|与，按位与|
-|`^`|按位异或|
-
- <img src="warning.png" width="25px">go语言的运算符要求两个变量的类型相同，比如下面这个例子 
-
-```go
-a := 10
-b := 2.2
-c := float64(a) + b
-// 那么c是float64类型，值为12.2
-
-d := float(a) / b
-e := a / int(b)
-// d是float64类型，值为4.5454.....
-// e是int类型，值为5
-```
-
-###### 简单语句
-使用`if`关键字来进行分支结构，`if`的主要用法如下
-```go
-a := 100
-if a < 100{
-    fmt.Println("Hello World")
-} else if a < 50 {
-    fmt.Println("Hello Tenzor")
-} else {
-    fmt.Println("Ahhhhhh")
-}
-```
-> 不同于其他语言，条件语句不需要加括号，但是`else`关键字必须紧跟在 `}` 所在的行
-
-```go
-var a int = 100
-if a += 80;a < 200{
-    fmt.Println(a)
-}
-```
-> `if`关键字之后可以跟一个需要执行的语句，然后再跟上布尔值
-
-<img src="question.png" width=25> 可自行查找`switch`关键字的控制语句
-
-go语言使用`for`关键字进行循环结构，值得注意的是，go语言并没有`while`关键字，常见用法如下
-
-```go
-sum := 0
-for i := 0;i<50;i++{
-    sum += i
-}
-// 分号前第一个语句可以省略，中间是结束条件，后面是每次循环结束之后执行的语句
-
-for {
-    // infinite loop
-}
-// 可以用这个来执行无限循环
-a := map[string]string{
-    "name":"wjj",
-    "password":"123456"
-}
-
-for key,value := range a{
-    // code
-}
-// 使用range关键字遍历map或者数组
-```
-
-###### 定义函数
-使用`func`关键字来定义函数，函数的传入值和传出值得类型可以是任意的，甚至连函数本身都可以作为参数传递给另一个函数。定义函数的范式如下：
-```go
-func UserInfo(name,password string,id int)string{
-    // code
-}
-
-func Register(infos map[string]string,vip bool)(data string,ok bool){
-    // code
-}
-```
-go语言提供函数匿名函数，这使得在某些函数接受或者返回的类型也是函数时，能够很方便地编写，如下
-```go
-Anony := func(id int)string
-```
-
-###### 定义结构体
-使用`type`和`struct`关键字来定义结构体，然后可以像前面定义变量那样来实例化结构体
-
-```go
-type UserInfo struct{
-    Name string
-    College string
-    Age int
-}
-
-func MyFunc(){
-    info := UserInfo{
-        Name:"syl".
-        College:"Qian",
-        Age:79,
-    }
-    fmt.Println(info)
-}
-```
-结构体的字段我们也称之为结构体的属性。此外，我们可以像定义函数那样为结构体定义一些方法，这也是面向对象的思想。结构体的字段和方法可以继承，下面`Student`继承了`UserInfo`的属性
-
-```go
-type Student struct{
-    UserInfo
-    Name string
-    password string
-    Hometon string
-}
-
-func (s Student) Login(password string)bool{
-    if password == s.password{
-        return true
-    }    
-    return false
-}
-
-func (s Student) Say(){
-    fmt.Printf("Hello,my name is %s",s.Name)
-}
-```
-<img src="warning.png" width="25px">请注意结构体字段的命名，像变量的命名那样，小写字母开头的字段只能在结构体内部的方法中使用，比如上例中的`password`；而大写字母开头的字段可以在外部使用，比如`Name`
-
-
-
-###### 引用
-
-go语言的引用比较自由，使用`&`来取变量的地址，使用`*`来对指针变量解引用，空指针的值为`nil`
-
-<img src="warning.png" width=25>请尽可能避免空指针的出现，这个错误在结构体的字段为切片或者`map`类型的时候尤其容易出现
-
-```go
-type MyType struct{
-    Info map[string]string
-    Id int
-}
-
-func main(){
-    data := MyType{}
-    data.Info = make(map[string]string,0)
-}
-```
-
-
-
-###### go的包管理
-
-对于一个多文件的项目来说，运行起来必须有`go.mod`和`go.sum`文件，`go.mod`记录了项目依赖的第三方包，`go.sum`记录了第三方包的版本信息。使用`go mod init <包名>`为你的项目新建`go.mod`文件，然后你可以使用`go get`来获取所依赖的第三方包。当然，更简单的方式是用`go mod tidy`来直接下载所需要的包，并且会删除没有使用的包
-
-```shell
-go mod init <包名>
-go mod tidy
-go get <url>@latest
-```
-
-
-
-##### go语言进阶
+<a href="https://gorm.io/zh_CN/docs/index.html">`gorm`官方文档</a>
 
 <img src="gogogo.jpeg">
 
-###### panic和recover
+如果你对后端开发的兴趣浓厚，那么也可以考虑进一步学习，我们在这里给出一些例子，仅供参考
 
-**`defer`关键字**
+<a href="https://nodejs.cn/api/">Node.js官方文档</a>
 
-`defer`关键字后面紧跟的代码，会在当前函数的其他部分执行完后最后执行。多个`defer`关键字时，按照先进后出原则，即越早出现的`defer`越晚执行
+<a href="https://flask.palletsprojects.com/en/3.0.x/">Flask(python)官方文档</a>
 
-```go
-func main(){
-    fmt.Println(1)
-    defer fmt.Println(2)
-	defer fmt.Println(3)
-}
-```
+<a href="https://oi-wiki.org/">oi wiki</a>
 
-> 会先输出1，再输出3，最后输出2
-
-**`panic`和`recover`**
-
-`panic`用于触发一个错误，`recover`用于捕获和恢复一个错误，当一个函数执行到`panic`时，会立刻终止，并逐层向上返回，知道程序退出运行或者被`recover`捕获，<img src="warning.png" width=25>值得注意的是，`recover`只在`defer`关键字中使用有效，并且这个`defer`定义在`panic`之前
-
-`panic`接受和`recover`返回都是`interface{}`类型，所以可以向其中传入任意类型的参数
-
-```go
-func Sub() {
-	fmt.Println("Hello World")
-	panic("AN ERROR")
-    fmt.Println("Ahhhhhhhhh")
-}
-
-func main() {
-	defer func() {
-		if r := recover(); r != nil {
-			fmt.Println("Recovered:", r)
-		}
-	}()
-	Sub()
-}
-```
-
-> `Sub`函数中触发的`panic`会向上返回，被主函数中定义的`defer`中的`recover`捕获，然后被恢复，所以这个程序输出是：
->
-> Hello World
->
-> Recovered:AN ERROR
-
-###### 文件操作
-
-**`byte`和`[]byte`类型**
-
-`byte`是字节类型，一个`byte`类型的变量空间大小就是一个字节，也即8位。在特定的编码方式下，每个字符都有自己的字节码，在`UTF-8`编码中，一个英文字符占一个字节，一个汉字通常占3个字节，在不同的编码方式中则会有所差别。
-
-<img src="warning.png" width=25> 一个文件使用什么编码方式保存，就应使用什么编码方式打开，否则就会出现乱码。现在大部分文件的编码方式都是`UTF-8`，你可以尝试用其他的编码方式打开你电脑中的文件，看看会出现什么结果
-
-`[]byte`类型即`byte`的切片，在go语言中，`string`和 `[]byte`之间可以互相转换。go语言存储和打开文件都是通过字节码。
-
- <img src="question.png" width=25> go语言还提供了`rune`类型，可自行查阅
-
-**文件的打开和关闭**
-
-`os`包为我们提供了打开和关闭文件的方法
-
-```go
-func main(){
-    f, err := os.Open("./hello.txt")
-	if err != nil {
-		panic(err)
-	}
-	defer f.Close()
-	body, err := io.ReadAll(f)
-	if err != nil {
-		panic(err)
-	}
-	fmt.Println(string(body))
-}
-```
-
-> `os.Open`会返回一个`os.File`的指针类型，同时返回一个错误，`os.File` 可以作为`io.Reader`和`io.Writer`类型，于是我们使用`io.ReadAll`来读取文件的全部字节，这里以`.txt`类型为例，将它的全部字节转化为字符串输出出来。使用`Close`方法来关闭文件，请及时关闭文件
-
-<img src="warning.png" width=25> `io.ReadAll`会把文件一次性读取出来，如果文件很大的话，将整个文件加载到内存当中可能会导致内存不足或者性能下降问题。对于较大的文件，更推荐使用`bufio`包来逐步读取文件
-
-```go
-func main(){
-    f, err := os.Open("./hello.txt")
-	if err != nil {
-		panic(err)
-	}
-	defer f.Close()
-	r := bufio.NewReader(f)
-	buf := make([]byte, 1024)
-	for {
-		n, err := r.Read(buf)
-		if err != nil && err.Error() != "EOF" {
-			panic(err)
-		}
-		if n == 0 {
-			break
-		}
-		fmt.Println(buf[:n])
-	}
-}
-```
-
-> `n`表示每次读取文件读出来的字节数，如果读取数量为0，那么说明文件读取完毕，可以退出循环
-
-<img src="question.png" width=25>  `os`包提供了一种更一般性的打开文件的方式：`os.OpenFile`，可自行查阅
-
-**文件和目录的创建**
-
-`os`包为我们提供了创建文件和目录的方法，其中，在前缀目录不存在的时候`Mkdir`会报错，`MkdirAll`则会将不存在的前缀目录全部创建，`os.ModeDir`的类型请自行参阅官方文档
-
-```go
-func CreateAFile() {
-	f, err := os.Create("./dir/test.go")
-	defer f.Close()
-	if err != nil {
-		panic(err)
-	}
-}
-
-func CreateADir() {
-	err := os.Mkdir("./test", os.ModeDir)
-	if err != nil {
-		panic(err)
-	}
-}
-
-func CreateAllDir() {
-	err := os.MkdirAll("./dir/hello", os.ModeDir)
-	if err != nil {
-		panic(err)
-	}
-}
-
-```
-
-###### 接口
-
-go语言提供了`interface`类型用来实现空接口，我们可以在接口中声明一些方法，然后实现了这些方法的结构体都可以称为这个接口。在函数中传入或者传出参数的时候，使用合适的接口类型可以让参数的类型更加多样化，因此，如果一个参数想要接受任意类型的参数，我们既可以使用`any`类型，也可以使用空接口`interface{}`
-
-接口类型使得go语言能够更好的面向对象编程，这种编程思想在后端的开发中有很重要的指导意义
-
-<img src="question.png" width="25px"> 可以在一些社区文档或者教程中看到面向对象的思想，这种思想能让你更好得理解一些源代码
-
-```go
-type Human interface {
-	Say(msg string)
-	Eat(food string) (ok bool)
-}
-
-type Student struct {
-	Name string
-}
-
-func (s Student) Say(msg string) {
-	fmt.Printf("My name is %s,I want to say %s\n", s.Name, msg)
-}
-
-func (s Student) Eat(food string) (ok bool) {
-	if food == "apple" {
-		fmt.Println("delicious")
-		return true
-	}
-	fmt.Println("Ahhhhhhhh No!!!")
-	return false
-}
-
-func (s Student) Sleep(){
-    fmt.Println("I'm sleeping")
-}
-
-func Do(human Human) {
-	human.Say("hello")
-	human.Eat("U-235")
-}
-
-func main() {
-	a := Student{Name: "wjj"}
-	Do(a)
-}
-```
-> 如上例，我们把能`Say`和`Eat`的对象成为`Human`，对于`Student`结构体来说，它实现了这两个方法，此外它还有自己独特的方法`Sleep`，所以它可以作为一个`Human`，因此可以作为参数传递给`Do`函数
-
-接口可以继承，我们可以继承上面的`Human`接口来定义一个`Child`接口。于是，实现了`Say`,`Eat`,`Cry`方法的结构体都可以称为`Child`，显然`Student`由于没有实现`Cry`方法，所以不能称为`Child`
-```go
-type Child interface{
-    Human
-    Cry()
-}
-```
-接口类型的变量可以承接任意类型的变量，这在后面的开发中会非常使用。我们可以对接口类型的变量进行类型断言，进而使用它的一些属性和方法
-
-```go
-var stu interface{}
-data,ok := stu.(Student)
-if ok{
-    fmt.Println("It's a student")
-} else {
-    fmt.Println("It's not a student")
-}
-```
-
-> 这里的`stu`变量显然是一个空接口，不能作为`student`类型，所以`ok`的值是`false`，如果类型断言成功，`ok`的值为`true` ，那么就可以使用`student`类型的属性和方法
-
-<img src="question.png" width="25px"> 在go语言中有两个接口很重要`io.Reader`和`io.Writer`，建议查资料了解一下，对于后面 `gin` 框架的编写很有帮助 
-
-######   并发编程
-
-**<img src="question.png" width=25>进程，线程和协程** 
-
-进程的定义如下
-
-> 进程是一个具有一定独立功能的程序在一个数据集合上依次动态执行的**过程**。进程是一个正在执行的程序的实例，包括程序计数器、寄存器和程序变量的当前值。
-
-进程是操作系统资源分配的基本单位，拥有独立的地址空间，你可以在任务管理器中查看自己的电脑正在运行的进程。通常情况下一个进程崩溃后，并不会影响到其他进程
-
-线程是进程的一部分，一个进程至少拥有一个线程，线程是处理器任务调度和执行的基本单位。一个进程的线程之间共享它们的进程的地址空间，一个线程的崩溃有可能导致整个进程的崩溃
-
-go语言天然支持并发编程。值得注意的是，go语言的进程是一种轻量级的goroutine，并且在go语言中进行协程管理非常便捷，这使得`gin`框架在后端的并发情景处理中有着独特的优势
-
-**`go func`**
-
-go语言提供的go关键字可以很方便的开协程，配合匿名函数，完成一些并发编程就变得十分容易
-
-```go
-func main(){
-    go func(){
-        for i := 0;i<5;i++{
-        	fmt.Println("Hello World")
-        }
-    }()
-    time.Sleep(5*time.Second)
-}
-```
-
-<img src="warning.png" width=25> `time.Sleep(5*time.Second)`指让程序休眠5秒，因为`main`包中的`main`函数所在的协程为主协程，主协程结束运行之后，其他的协程也会立即结束，所以在这里我们通过让程序休眠的方式来让`go`关键字开的协程执行完毕，在后面我们有一些其他方法来达到这个目的
-
-这种开启协程的方式常用且方便，比如在后端程序运行的过程中想要定时发送消息，就可以通过开一个协程来实现
-
-**`sync`包**
-
-`sync`包是一个go的标准库，它包含的一些类型和函数可以让我们很方便的进行协程管理
-
-```go
-func main() {
-	wg := sync.WaitGroup{}
-	wg.Add(2)
-	go func() {
-		for i := 0; i < 100; i++ {
-			fmt.Println("Hello")
-
-		}
-		wg.Done()
-	}()
-	go func() {
-		for i := 0; i < 100; i++ {
-			fmt.Println("World")
-		}
-		wg.Done()
-	}()
-	wg.Wait()
-}
-```
-
-> 使用`sync.WaitGroup`类型及其方法可以让主协程等待子协程执行完毕之后在结束主协程，可以看到输出结果是`Hello`和`World`加菩提出现，但是它们并没有一个明确的顺序，这说明这两个循环是同时执行的
->
-> <img src="warning.png" width=25> 请务必保证`wg.Add` 增加的数量和`wg.Done`的数量相同，否则会导致线程阻塞
-
-##### gin框架基础
-
-**获取gin框架**
-
-```shell
-go get -u github.com/gin-gonic/gin
-```
-
-gin框架是在`net/http`包的基础上搭建起来的，简单易上手，支持中间件，下面是一个简单的示例代码
-
-<img src="question.png" width=25> gin框架基本可以满足开发需要，但是有的时候也不得不使用到`net/http`包，可自行查阅相关文档
-
-```go
-func main() {
-	r := gin.Default()
-	r.GET("/example", func(c *gin.Context) {
-		c.JSON(http.StatusOK, gin.H{
-			"msg": "hello gin!",
-		})
-	})
-	r.Run("127.0.0.1:8080")
-}
-```
-
-> 变量`r`是一个路由处理器，我们定义了一个`GET`方式的接口，通过匿名函数的方式为它分配了路由处理函数。gin框架中的路由处理函数是`func(*gin.Context)`类型，`gin,Context`是上下文，后面会讲到。这个应用运行在`127.0.0.1:8080`上，可以通过Apifox或者其他调试工具来进行测试
-
-###### 写一个接口
-
-为一个后端程序定义接口，我们需要为它写一个路由处理函数。一般一个路由处理函数有以下过程：获取参数及校验，编写业务逻辑，错误处理，返回值。
-
-我们从获取**参数及校验**开始。前端向后端发送请求，携带的参数可能在URL，或者请求体中，但是我们gin框架提供了一个统一的函数来接受参数，如下
-
-```go
-func Example(c *gin.Context){
-    var info interface{}
-    if err := c.ShouldBind(&info);err != nil{
-        // 错误处理
-    }
-}
-```
-
-使用空接口当然可以接受任意的参数，但是在实际的开发中，我们需要的参数类型是都是设定好的，我们通过结构体来实现这一点，比如，前端会向我们传递一个登录信息
-
-```go
-type LoginInfo struct{
-    UserName string
-    Password string
-}
-
-func Example(c *gin.Context){
-    var info LoginInfo
-    if err := c.ShouldBind(&info);err != nil{
-        // 错误处理
-    }
-}
-```
-
-这样，我们可以精准的拿到前端传参中字段名为`username`和`password`的数据，并进一步处理。
-
-<img src="warning.png" width=25> 在获取数据的同时我们可以进行数据有效性的校验，从安全性来说，后端务必要进行数据校验。对于无法在获取时就进行校验的数据，很有必要进行单独的校验。
-
-gin框架为我们提供了很多设定好的标签，通过为结构体的字段打标签的方式，我们就足够完成很多情况的校验了
-
-```go
-type LoginInfo struct{
-    UserName string `json:"username" binding:"required"`
-    Password string `json:"password" binding:"required,numeric"`
-}
-```
-
-> 在数据类型之后使用反引号\` 来为字段打标签，已`UserName`字段为例：`json`标签的意义是：在`ShouldBind`接受参数时，仅接受键名为`username`的`json`传参，`binding`标签内部的标签：`required`指这个字段在传参的时候是必填的，`numeric`指这个字符串字段应该是纯数字的
-
-`binding`标签内部的常见标签如下表
-
-| 标签名 | 意义 |
-| ------ | ---- |
-|  required | 必填     |
-|omitempty|选填|
-|len=10|字符串长度为10|
-|min=10|字符串的最小长度为10，或者整数的最小值为10|
-|max=100|字符串的最大长度为100，或者整数的最大值为100|
-|numeric|字符串应该为纯数字|
-|oneof=技术部 视频部 美工部|字符串的值应当是`技术部`,`视频部`,`美工部`之一|
-|url|字符串应该是一个合法的url|
-|ip|字符串应该是一个合法的ip地址|
-|email|字符串应该是一个合法的email地址|
-
- <img src="question.png" width=25> gin框架提供了非常丰富的标签用来校验，可自行参考gin框架官方文档
-
-在结构体的字段类型是切片的时候，使用`dive`标签来对切片的每个元素进行校验
-
-```go
-type Info struct{
-    Age int `json:"age" binding:"required,min=0,max=100"`
-    Hometon string `json:"hometon" binding:"required"`
-}
-
-type UserInfo struct{
-    DepartmentName string `json:"department_name" binding:"required"`
-    Info []Info `json:"info" binding:"required,dive"`
-}
-```
-
-> 使用`dive`标签可以对`UserInfo` 的`Info`切片的每个元素进行校验
-
-对于`Query`参数，只要把上面的`json`标签全部改成`form`标签就可以了
-
-<img src="warning.png" width=25> `json`参数存在于请求体中，`form`参数存在于`URL`中，故而在写`GET`请求的路由处理函数的时候，请不要尝试使用`json`标签来接受参数，尽管在某些测试工具中，可能不会出现问题
-
-在`URL`中，还存在着`Param`参数，使用专门的方法来获取
-
-```go
-func Example(c *gin.Context){
-    id := c.Param("id")
-}
-```
-
-> 通过`Param`方法来获取字段名为`id`的`Param`参数，此时变量`id`的值默认为`string`类型，请自行处理并进行校验
-
-接下来我们来说**返回值**，作为后端，在绝大部分情况下，我们的返回值都是`JSON` 。示例如下：
-
-```go
-c.JSON(http.StatusOK,gin.H{
-    "msg":"Hello Wolrd"
-})
-```
-
-> `http.StatusOK`就是状态码200，`gin.H`就是`map[string]any`类型的别称，其他的状态码自行查阅`net/http`包文档
->
-> <img src="awesomeface.png" width=25> 记得不要使用中文作为键的名称哦，不然前端的代码会非常离谱的 
-
-下面是**错误处理**，在处理错误的时候，我们需要向上下文报告错误，对返回值进行一些修改报告错误只需要用`Error`方法即可
-
-```go
-err := c.Error(errors.New("An Error"))
-```
-
-> `Error`方法会向上下文报告错误，并且返回一个包装过的`err`，你可以使用这个`err`来进行一些后续的处理
-
-###### 写一个中间件
-
-在写中间件之前，我们先来看看如何使用中间件
-
-```go
-func Middleware(c *gin.Context){
-    // code
-}
-
-r := gin.Default()
-r.User(Middleware)
-```
-
-可以看到，中间件的类型和路由处理函数一样，都是 `func (*gin.Context)`类型，通过 `Use`方法，可以让路由处理函数使用中间件。中间件会在路由处理函数的之前和之后运行，如果一个路由使用了多个中间件，那么这些中间件的执行顺序会按照参数传入的顺序。对于一个特定的中间件，你可能并不想让你的每个路由都使用它，你可以按照下面的方式来更加自由的使用中间件
-
-```go
-r.GET("/info",function1)
-r.DELETE("/info",function3,Midware3)
-r.Use(Midware1)
-r.POST("/info",function2,Midware2)
-```
-
-> 这里的`GET`请求不会使用任何中间件，`DELETE`会使用`Midware3`，`POST`会使用`Midware1`和`Midware3`
-
-中间件时路由处理过程的一部分，其函数中获取参数的方法和上面写到的相同，我们通常用中间件来进行鉴权，错误处理等。中间件和路由处理函数的地位时等同的，接下来我们会用`handlerFunc`来称它们。`gin.Context`有两个特殊的方法`Next`和`Abort`，`Next`方法会暂停当前`handlerFunc`的运行，等待其他`handlerFunc`运行完毕之后再继续运行，而`Abort`方法会立即结束当前的路由处理，即后面的`handlerFunc`都不会再执行了，但是之前被`c.Next`搁置的`handlerFunc`会继续执行完毕。当然了，有多个`handlerFunc`被`c.Next`搁置之后，会按照倒序执行
-
-现在我们来写一个错误处理中间件
-
-```go
-func Error(c *gin.Context){
-    c.Next()
-    if len(c.Errors) > 0{
-        err := c.Errors.Last().Err
-        c.JSON(http.StatusOK,gin.H{
-            "success":false,
-            "err":err,
-        })
-    }
-}
-
-r.User(Error)
-```
-
-> 在所有的路由之前使用这个中间件，然后使用`c.Next`方法，使得错误处理在路由处理的最后执行，这个错误处理会向前端返回一个面对错误时的`json`，这样我们在写路由处理函数的时候，就只需要向上下文报告错误就可以了
-
-<img src="question.png" width=25> 值得注意的是，`handlerFunc`之间是可以通过`gin.Context`通信的， gin框架为我们预留了这些函数，请参考gin框架官方文档
-
-###### 管理你的路由
-
-上面定义接口的方式会让代码变得冗杂，为了能使接口和路由更加的简洁易读，可以使用`Group`方法对路由进行分组。使用合适的分组，让路由更加直观易读，并且可以让中间件的使用更加准确
-
-```go
-r := gin.Default()
-
-apiRouter := r.Group("/api")
-{
-    apiRouter.GET("/info",func(){})
-    apiRouter.POST("/login",func(){})
-    stuRouter := apiRouter.Group("/stu")
-    stuRouter.Use(Midware)
-    {
-        stuRouter.GET("info",func(){})
-    }
-}
-```
-
-
-
-##### 数据库和gorm
-
-数据库是一个按数据结构来存储和管理数据的计算机软件系统。常用的数据库比如MySQL，SQL Server，Oracle等等。挑战使用的数据库是MySQL，开源，体积小，速度快，适用于中小型企业领域。
-
-关系型数据库是一种以关系（即表格）为基础的数据库，它采用了关系代数等数学概念和方法来处理数据。
-
-###### 下载MySQL和Navicat
-
-点击这里<a href="https://dev.mysql.com/downloads/mysql">下载</a>MySQL
-
-点击这里<a href="https://navicat.com.cn">进入官网</a>下载Navicat
-
-###### MySQL
-
-使用MySQL就可以完成数据库操作了，但是可视化的Navicat可以使我们的操作更加直观
-
-登录你的`mysql`
-
-```shell
-mysql -u <用户名> -p
-```
-
-`mysql`创建数据库
-
-```mysql
-CREATE DATABASE <数据库名>
-```
-
-MySQL的具体操作可自查<a href="https://www.runoob.com">菜鸟教程</a>
-
-
-
-`ORM`，Object Relational Mapping，即对象关系映射，在关系型数据库和编程的对象之间建立映射，`gorm`，即go语言中的`orm`，使用`gorm`使得我们能够通过go语言操纵数据库，从而完成一些业务逻辑
-
- **获取`gorm`**
-
-```shell
-go get -u gorm.io/gorm
-go get -u gorm.io/driver/sqlite
-```
-
-`gorm`的<a href="https://gorm.io/zh_CN/docs/index.html">官方文档</a>
-
-定义合适的模型，并且通过`Model`来和数据库进行交互，使得维护数据库更加统一
+##### 一些开发规范
