@@ -269,16 +269,10 @@ F盘的绝对文件（夹）                      F:\Riot Games\VALORANT
 
 
 
-**编译器，编辑器和IDE**
+**编辑器和IDE**
 $$
-编译器 \neq IDE！
+编辑器 \neq IDE！
 $$
-
-
-
-
-	编译器是将源代码转换为可执行程序的工具，比如gcc,llvm,go build等。编译器通过多个阶段（如词法分析、语法分析、语义分析、代码⽣成等）将源代码转换成可执⾏⽂件或库。特点是可以⼀次性转换整个源代码。可以进⾏语法和语义检查，提⾼代码质量。⽣成的代码执⾏效率⾼，但编译过程可能耗时较⻓。
-
 
 	编辑器是程序员⽤于编写和修改源代码的软件⼯具。它提供了⽂本编辑的基本功能，如插⼊、删除、复制和粘贴等，以及针对编程语⾔的特定功能，如语法⾼亮、代码折叠和⾃动完成等。本⾝并不参与代码的执⾏和转换，如vscode，记事本。
 
@@ -1611,7 +1605,7 @@ coroutine produce //生产者
             add the items to q
         yield to consume //中断生产者，开始消费者的行为
 
-coroutine consume //消费者
+coroutine consume //消费者	
     loop
         while q is not empty //队列不空时拿到物品开始消耗
             remove some items from q
@@ -1932,8 +1926,6 @@ git push <remote name> <分支>
 
 <img src="awesomeface.png" width=25> 文档看得太累了怎么办，还是打会儿<a href="https://learngitbranching.js.org/?locale=zh_CN">游戏</a>吧，一个挺有意思的git学习小游戏。
 
-
-
 ##### <img src="apifoxlogo.png" width=30>apifox
 
 `apifox`是一个国内开发的免费的接口调试工具，非常适合个人和团体使用。前后端都可以使用它来检查接口是否能正常运行，处理返回值。在项目中开发过程中，合适的接口调试工具会让开发轻松很多，类似的工具还有`postman`，`swagger`等等。你可以在<a href="https://apifox.com/">apifox的官网来获取</a>
@@ -1960,9 +1952,14 @@ git push <remote name> <分支>
 
 具体的使用方法，可以参考<a href="https://www.navicat.com.cn/manual/online_manual/cn/navicat_16/win_manual/">官方文档</a>获取帮助。
 
+#### 实践篇其2- 编译器
+
+编译器是将源代码转换为可执行程序的工具，比如gcc,llvm,go build等。编译器通过多个阶段（如词法分析、语法分析、语义分析、代码⽣成等）将源代码转换成可执⾏⽂件或库。特点是可以⼀次性转换整个源代码。可以进⾏语法和语义检查，提⾼代码质量。⽣成的代码执⾏效率⾼，但编译过程可能耗时较⻓。
+
+在对大型项目进行编译的时候，也会使用到另一些工具，比如`CMake`
 
 
-#### <span id="stack">实践篇其2-前后端学习浅谈和开发规范</span>
+#### <span id="stack">实践篇其3-前后端学习浅谈和开发规范</span>
 
 > [!NOTE]
 >
