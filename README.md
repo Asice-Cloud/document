@@ -399,6 +399,8 @@ vscode 的命令面板能让我们快速方便地执行很多功能与命令，�
 
 > 注：考虑到大部分人会学大学计算机，这门课有的使用的是C语言，所以我们也是用C语言举例。可以先行配置C语言环境，windows用户需要提前下载MSVC（[下载并配置到vscode里的流程点这里](https://code.visualstudio.com/docs/cpp/config-msvc)）或者MinGW（[下载并配置到vscode里的流程点这里](https://code.visualstudio.com/docs/cpp/config-mingw)）。
 
+
+
 ##### 走入代码的世界
 
 正如同现实世界中将物质分成了各种类型一样，计算机世界里也将数据存储为了各种类型。相对的，也存在这最小的存储单元：位(bit，或者缩写为b)，也就是一个0或者1。我们通常的信息计量单位是字节(byte，缩写为B)，**一个字节是8个位**。同样的，数据的不同类型也有着不同的大小(size)。下图列举了一些常见的类型和其大小。**以C语言中的为例：**
@@ -672,8 +674,6 @@ int fibonacci(int n){
     return fibonacci(n-1)+fibonacci(n-2);
 }
 ```
-
-
 
 
 
