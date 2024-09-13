@@ -843,9 +843,43 @@ int main(){
 
 经过上面的简单介绍，你应该已经了解了简单的代码知识。现在我们就来实践一下，如何写出一个简单的程序。
 
+```c
+// C
+#include "stdio.h"
 
+void insertionSort(int arr[], int n) {
+    int i, key, j;
+    for (i = 1; i < n; i++) {
+        key = arr[i];
+        j = i - 1;
+        while (j >= 0 && arr[j] > key) {
+            arr[j + 1] = arr[j];
+            j = j - 1;
+        }
+        arr[j + 1] = key;
+    }
+}
 
-然后你可以在vscode代码区右键，然后点击`RunCode`即可运行
+void output(int arr[],int len){
+    for (int i=0;i<len;i++){
+        printf("%d ",arr[i]);
+    }
+    printf("\n");
+}
+
+int main(){
+    int arr[] = {454,7,16,644,76,78,13};
+    int len = 7;
+    printf("排序前的数组:");
+    output(arr,len);
+    insertionSort(arr,len);
+    printf("排序后的数组:");
+    output(arr,len);
+    
+}
+```
+
+这是一个插入排序的例子，将一个`int`数组按从小大的的顺序排序。在安装了`Code Runner`插件的前提下你可以在vscode代码区右键，然后点击`RunCode`即可运行。
 
 <img src="runcode.png" width=500>
 
@@ -2208,7 +2242,16 @@ git commit -m "<提交信息>"
 比如我们后端使用的Go语言，就需要编译成机器码才能运行。Go语言的工具包里提供了编译的工具，可以使用命令`go bulid`来对代码进行编译，也可以在编译的时候添加参数：
 
 ```shell
+<<<<<<< HEAD
+<<<<<<< HEAD
+#shell
+go build <被编译的文件路径> -o <编译结果文件的名称>
+=======
 go build [build flags] [packages]
+>>>>>>> deb18902f2ca5bb02830d95add3ad1e0e9d7052f
+=======
+go build [build flags] [packages]
+>>>>>>> a4c41d87a66475ccb9dc733e23f4257a1b87dda1
 ```
 
 <img src="bulb.png" width=25px>大家可以自行查阅相关参数，如 -gcflags=-S 会输出汇编等。 
