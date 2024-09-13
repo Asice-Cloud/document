@@ -2243,11 +2243,15 @@ git commit -m "<提交信息>"
 
 ```shell
 <<<<<<< HEAD
+<<<<<<< HEAD
 #shell
 go build <被编译的文件路径> -o <编译结果文件的名称>
 =======
 go build [build flags] [packages]
 >>>>>>> deb18902f2ca5bb02830d95add3ad1e0e9d7052f
+=======
+go build [build flags] [packages]
+>>>>>>> a4c41d87a66475ccb9dc733e23f4257a1b87dda1
 ```
 
 <img src="bulb.png" width=25px>大家可以自行查阅相关参数，如 -gcflags=-S 会输出汇编等。 
