@@ -4,7 +4,7 @@
 
 ### 前言
 
-<h6><b><img src="awesomeface.png" alt="welcome" width="29px">[注:这不仅是一份预习文档，也可以当作以后学习期间的长期方向指导]</h6>
+<h6><b><img src="assets/awesomeface.png" alt="welcome" width="29px">[注:这不仅是一份预习文档，也可以当作以后学习期间的长期方向指导]</h6>
 
 ​	推荐用手机或者平板，可以躺在床上或者沙发上。在电脑上也可以使用 WIN + ← 将此文档放到屏幕一侧，右边可以用自己的IDE动手做实验。
 
@@ -12,13 +12,13 @@
 
 **符号约定**：
 
-<img src="question.png" alt="q" width="25px"> 这个用来表示暂时无需完全理解的细节问题，供深入研究和思考所用；
+<img src="assets/question.png" alt="q" width="25px"> 这个用来表示暂时无需完全理解的细节问题，供深入研究和思考所用；
 
-<img src="bulb.png" alt="b" width="25px"> 这个用来表示联想内容或是温馨提示;
+<img src="assets/bulb.png" alt="b" width="25px"> 这个用来表示联想内容或是温馨提示;
 
-<img src="awesomeface.png" alt="a" width="25px"> 这个用来表示下面的内容是一段笑话或是在项目开发过程出现的梗;
+<img src="assets/awesomeface.png" alt="a" width="25px"> 这个用来表示下面的内容是一段笑话或是在项目开发过程出现的梗;
 
-<img src="warning.png" alt="w" width="25px"> 这个用来表示下面的内容是容易犯错的地方，特此警告；
+<img src="assets/warning.png" alt="w" width="25px"> 这个用来表示下面的内容是容易犯错的地方，特此警告；
 
 我们会在每章前面使用⭐标出本章难度，5星即为最重要的内容，只用文本难以阐述完全，需要大家查阅更多资料。也会指出本章涉及的编程语言，避免产生歧义。
 
@@ -26,9 +26,9 @@
 
 **写给读者:**
 
-​	<img src="warning.png" alt="w" width="25px">这只是一份参考文档，并不能作为学习的唯一工具，我们推荐自己动手查阅更多资料，学习如何阅读官方文档，**这对以后的学习开发非常重要**。我们的培训不能覆盖到所有方面，而现实情况下我们遇到的问题和困难却是防不胜防的。本文档也将着力向大家传授部分阅读官方文档的方法。
+​	<img src="assets/warning.png" alt="w" width="25px">这只是一份参考文档，并不能作为学习的唯一工具，我们推荐自己动手查阅更多资料，学习如何阅读官方文档，**这对以后的学习开发非常重要**。我们的培训不能覆盖到所有方面，而现实情况下我们遇到的问题和困难却是防不胜防的。本文档也将着力向大家传授部分阅读官方文档的方法。
 
-​	<img src="awesomeface.png" alt="welcome" width="29px">另一方面，我们也不希望读者会对开发项目和写代码这些概念理解的过于沉重，代码只是我们在信息时代的一款语言，我们不需要去死记硬背各种标签或是函数，但是我们需要理解它们是一种什么样的存在，以及为什么而存在。
+​	<img src="assets/awesomeface.png" alt="welcome" width="29px">另一方面，我们也不希望读者会对开发项目和写代码这些概念理解的过于沉重，代码只是我们在信息时代的一款语言，我们不需要去死记硬背各种标签或是函数，但是我们需要理解它们是一种什么样的存在，以及为什么而存在。
 
 ​	最后一点，在计算机领域虽然看似很抽象，但是却比现实世界要单纯许多。希望我们社团的培训能够使大家产生对计算机的兴趣，进一步学会更多技能。也希望大家正确对待计算机，多多学习和实践，成为e时代的主人。
 
@@ -94,11 +94,11 @@ macOS，可使用`Command+Shift+4`，进行截屏
 
 如果上面两种方式你都不喜欢，那么你也可以使用QQ的截屏工具，如下图
 
-<img src="qqshot.png">
+<img src="assets/qqshot.png">
 
 请务必不要使用手机拍屏，因为图片质量非常差，完全没法看清楚内容
 
-<img src="shotjoke.jpg" width=500>
+<img src="assets/shotjoke.jpg" width=500>
 
 ###### 3.打开cmd和powershell
 
@@ -106,7 +106,7 @@ macOS，可使用`Command+Shift+4`，进行截屏
 
 常用指令
 
-<img src="bulb.png" alt="b" width="25px">说起路径，我们就不得不提到两个名词：绝对路径和相对路径。
+<img src="assets/bulb.png" alt="b" width="25px">说起路径，我们就不得不提到两个名词：绝对路径和相对路径。
 
 ```
 绝对路径是从硬盘的根目录或者Web站点的根目录开始，指明文件的真实位置，路径单一，不易更改。
@@ -138,7 +138,7 @@ exit // 退出终端
 
 3. 压缩工具：推荐7zip, xz等。
 
-4. 命令行工具：后续学习中将涉及到一些基本命令，windows用户可以学习以下powershell,比cmd好用。<img src="awesomeface.png" width=25px>Linux用户就默认会用了。
+4. 命令行工具：后续学习中将涉及到一些基本命令，windows用户可以学习以下powershell,比cmd好用。<img src="assets/awesomeface.png" width=25px>Linux用户就默认会用了。
 
    其他的可以按需配置。
 
@@ -164,7 +164,7 @@ exit // 退出终端
 
 按照如下的流程来打开文件的扩展名显示
 
-<img src="extension.png">
+<img src="assets/extension.png">
 
 ###### 6.F12开发者工具
 
@@ -174,11 +174,11 @@ F12开发者工具是浏览器内置的一个特殊工具，用于帮助网页�
 
 点击左上角的箭头图标（或按快捷键Ctrl+Shift+C）进入**元素选择模式**，从页面中选择需要查看的元素，可以在开发者工具元素（Elements）一栏中快速定位到该元素源代码的具体位置。
 
-<img src="f12ele.png">
+<img src="assets/f12ele.png">
 
 使用控制台来进行一些代码调试
 
-<img src="f12console.png">
+<img src="assets/f12console.png">
 
 ##### 配置和自学路线
 
@@ -196,7 +196,7 @@ F12开发者工具是浏览器内置的一个特殊工具，用于帮助网页�
 2. 完成基本语法后可以继续精进，这一阶段建议查看官方文档和社区论坛。例如学习C./C++可以查阅cppreference等。
 3. 后面就可以了解语言在实际业务的应用。这一块需要我们了解框架，学会自己阅读框架官方文档，可能也要去查看框架的源码。另一方面也需要了解业务方面的通用工具，比如基本的算法，设计模式，语言特性等。
 
-​	<img src="bulb.png" width=25px>总之一句话，要自己学会搜索查阅，以及如何查阅官方文档。
+​	<img src="assets/bulb.png" width=25px>总之一句话，要自己学会搜索查阅，以及如何查阅官方文档。
 
 
 
@@ -223,14 +223,14 @@ F12开发者工具是浏览器内置的一个特殊工具，用于帮助网页�
 
 丰富多彩的图像是美化网页必不可少的元素，用于网页上的图像一般为JPG格式和GIF格式(当然还有无限缩放而不失去清晰度的SVG格式)。网页中的图像主要用于点缀标题的小图片，介绍性的图片，代表企业形象或栏目内容的标志性图片，用于宣传广告等多种形式。
 
-<img src="tenzor.svg" alt="img" width="18px">这个挑战logo就是由以下代码导入的
+<img src="assets/tenzor.svg" alt="img" width="18px">这个挑战logo就是由以下代码导入的
 
 ```html
 <!-- .html文件 -->
-<img src="tenzor.svg" alt="img" width="25px">
+<img src="assets/tenzor.svg" alt="img" width="25px">
 ```
 
-<img src="question.png" alt="q" width="25px">上面的一串代码中，img标签被添加了三个属性，其中src属性规定了图像的路径、alt属性规定了图像无法显示时的替代文本、width属性规定了图像的宽度。除此之外，img标签还有height、draggable等属性，大家在后续学习中会逐渐接触到。
+<img src="assets/question.png" alt="q" width="25px">上面的一串代码中，img标签被添加了三个属性，其中src属性规定了图像的路径、alt属性规定了图像无法显示时的替代文本、width属性规定了图像的宽度。除此之外，img标签还有height、draggable等属性，大家在后续学习中会逐渐接触到。
 
 
 ##### 超链接
@@ -248,7 +248,7 @@ F12开发者工具是浏览器内置的一个特殊工具，用于帮助网页�
 
 动画是网页中最活跃的元素，创意出众、制作精致的动画是吸引浏览者眼球的最有效方法之一。但是如果网页动画太多，也会物极必反，使人眼花缭乱，进而产生视觉疲劳。
 
-<img src="question.png" alt="q" width="25px">下面的代码定义了一个动画，实现了一个元素颜色的变化。
+<img src="assets/question.png" alt="q" width="25px">下面的代码定义了一个动画，实现了一个元素颜色的变化。
 
 ```css
 /* .css文件 */
@@ -292,7 +292,7 @@ F12开发者工具是浏览器内置的一个特殊工具，用于帮助网页�
 
 ##### 开发平台选择：
 
-> ​	<img src="awesomeface.png" width="25px">推荐Arch Linux或者Ubuntu作为开发环境，当然我们培训是基于windows开展的。
+> ​	<img src="assets/awesomeface.png" width="25px">推荐Arch Linux或者Ubuntu作为开发环境，当然我们培训是基于windows开展的。
 
 
 
@@ -306,7 +306,7 @@ $$
 
 	IDE是⼀种集成了多种开发⼯具和功能的软件应⽤程序，旨在提⾼软件开发的效率和质量。它通常包括源代码编辑器、编译器、调试器、构建⼯具、版本控制系统等，为程序员提供了⼀个全⾯的开发环境。集成了多种开发⼯具，⽅便程序员在同⼀个界⾯下完成开发任务。提供了丰富的功能和插件，满⾜不同开发需求。⽀持代码⾃动完成、语法⾼亮、代码重构等，提⾼编程效率和质量。可以⾃动管理代码库、构建⼯具和⽂档等，减少⼿动操作的时间和错误。如Visual Studio，IDEA，Pycharm。
 
-<img src="question.png" width = "25px"> 我们在入门过程中不需要完全理解编译器的原理，而是选择使用合适的编辑器或者IDE来开发项目。我们推荐使用vscode来进行开发工作。
+<img src="assets/question.png" width = "25px"> 我们在入门过程中不需要完全理解编译器的原理，而是选择使用合适的编辑器或者IDE来开发项目。我们推荐使用vscode来进行开发工作。
 
 
 
@@ -316,9 +316,9 @@ $$
 
 这里推荐大家使用 `Visual Studio Code` 编辑器，先到其[官网下载](https://code.visualstudio.com/)安装。选择适合自己电脑的发行版进行安装。windows就一条龙到底就行了。记得选择添加到PATH中，这样方便以后在终端直接 `code .`打开这个项目文件夹。桌面快捷方式可以自行选择是否创建。
 
-<img src="vsc1.png" width = 500px>
+<img src="assets/vsc1.png" width = 500px>
 
-> <img src="awesomeface.png" width="25px">有关 vscode 可以看我们B站的一个视频了解一下。为什么 Visual Studio Code 被誉为 IDE 中最强的男人：https://www.bilibili.com/video/BV13v411w7Fb
+> <img src="assets/awesomeface.png" width="25px">有关 vscode 可以看我们B站的一个视频了解一下。为什么 Visual Studio Code 被誉为 IDE 中最强的男人：https://www.bilibili.com/video/BV13v411w7Fb
 
 现在我们已经完成了软件的安装。但是打开vscode的话里面还是空空的，因为它本身只是一个文本编辑器，我们需要安装一些插件来让它变得强大(:yum:vscode补全计划)
 
@@ -381,11 +381,11 @@ vscode 的命令面板能让我们快速方便地执行很多功能与命令，�
 
 我们经常需要将某些路径添加到系统变量中，这样方便我们可以快速调用它们。下面以windows平台为例，演示如何添加环境变量。
 
-<img src="sys1.png" width=800px>
+<img src="assets/sys1.png" width=800px>
 
 点击“环境变量”选项后，可以设置变量名和值。
 
-<img src="sys2.png" width=800px> 
+<img src="assets/sys2.png" width=800px> 
 
 完成以后点击确定，就可以保存到环境变量了:blush:
 
@@ -395,11 +395,11 @@ vscode 的命令面板能让我们快速方便地执行很多功能与命令，�
 
 我们上网冲浪的时候，经常会看到好多人在吵用什么工具写程序是最好的。下面是全网统计的编译器/IDE受欢迎图：
 
-<img src="rank.png">
+<img src="assets/rank.png">
 
 ​	但是 :cold_sweat: `visual studio`太重了！！而且vs主要经营.Net的开发和调试，也不是我们的主力语言。相比之下`vscode`便捷而且拥有海量插件，配置的好的话也不会比vs差到哪去。
 
-​	<img src="bulb.png" width=25px>不过市场上其他的编译器和IDE同样值得推荐，比如Jetbrains全家桶中的idea(收费，建议使用学信网去申请个教育包)，vim(门槛较高)，用起来也是很爽的。IDE的好处是开盖即用，不需要再过多配置，但是可能比较重而且不够自由。
+​	<img src="assets/bulb.png" width=25px>不过市场上其他的编译器和IDE同样值得推荐，比如Jetbrains全家桶中的idea(收费，建议使用学信网去申请个教育包)，vim(门槛较高)，用起来也是很爽的。IDE的好处是开盖即用，不需要再过多配置，但是可能比较重而且不够自由。
 
 
 
@@ -432,9 +432,9 @@ vscode 的命令面板能让我们快速方便地执行很多功能与命令，�
 | uint         | 32位系统4字节64位系统8字节 | 0~2^32-1 或 0 ~ 2^64-1           |
 | char         | 1字节                      | 存储ASCII字符                    |
 
-<img src="question.png" width=25px>另外还有类似int8，int64，string等类型，大家可以自行搜索做了解。
+<img src="assets/question.png" width=25px>另外还有类似int8，int64，string等类型，大家可以自行搜索做了解。
 
-<img src="awesomeface.png" width=25px>**这些数据在计算机底层都是存储在某个地址中**，可能是0x00这个位置上存了一个int 值1，地址就相当于是变量家的门牌号，变量值就像家里的东西，知道了门牌号自然就知道了如果找到这个房子，进而知道了家里的东西是什么。
+<img src="assets/awesomeface.png" width=25px>**这些数据在计算机底层都是存储在某个地址中**，可能是0x00这个位置上存了一个int 值1，地址就相当于是变量家的门牌号，变量值就像家里的东西，知道了门牌号自然就知道了如果找到这个房子，进而知道了家里的东西是什么。
 
 
 
@@ -455,9 +455,9 @@ int main(void){
    
 ```
 
-<img src="question.png" width=25px> 我们也可能会遇到定义的变量类型和我们需要的类型不一致的情况，这时我们需要转换这个变量。一般情况下有隐式转换和显示转换两种方式，读者可以自行查阅了解相关内容，如何转换以及什么情形下可以转换。
+<img src="assets/question.png" width=25px> 我们也可能会遇到定义的变量类型和我们需要的类型不一致的情况，这时我们需要转换这个变量。一般情况下有隐式转换和显示转换两种方式，读者可以自行查阅了解相关内容，如何转换以及什么情形下可以转换。
 
-<img src="warning.png" width=25px>**注意：有些符号我们称之为“关键字”，这是语言本身提供的，用来编写代码的元素。比如上面的int, bool等。我们给变量起名时不可以和关键字重名。大家可以自行查阅常用关键字。**
+<img src="assets/warning.png" width=25px>**注意：有些符号我们称之为“关键字”，这是语言本身提供的，用来编写代码的元素。比如上面的int, bool等。我们给变量起名时不可以和关键字重名。大家可以自行查阅常用关键字。**
 
 有没有想过把一堆同样类型的变量放到一起？就像我们学校每个专业都是同学的集合一样。我们可以使用一个叫做**数组**的数据结构来存储。顺便一提，数组本身也是一个变量，我们会在指针章节细说。
 
@@ -474,7 +474,7 @@ arr[2] = 10; //给对应位置赋值/修改值
 int a3=arr1[3]; //出界啦！
 ```
 
-<img src="question.png" width=25> 课外阅读：<a href="https://mp.weixin.qq.com/s?__biz=MzA5NDIzNzY1OQ==&mid=2735628657&idx=1&sn=379a9423f2a449ab5b94d795cedaff93&chksm=b7fab396327572047b4749532f4e901311efe16820cf52440aea3f717da440bc93ef75f7e27f&mpshare=1&scene=23&srcid=0909tArK7FVSGAARjnU7qOHP&sharer_shareinfo=e08c8cede59f8c572ad27f13b09e7726&sharer_shareinfo_first=e08c8cede59f8c572ad27f13b09e7726#rd">编程语言是怎么被实现出来的？</a> 这篇文章用生动的语言简述了编程的底层逻辑，有精力的话推荐阅读下。
+<img src="assets/question.png" width=25> 课外阅读：<a href="https://mp.weixin.qq.com/s?__biz=MzA5NDIzNzY1OQ==&mid=2735628657&idx=1&sn=379a9423f2a449ab5b94d795cedaff93&chksm=b7fab396327572047b4749532f4e901311efe16820cf52440aea3f717da440bc93ef75f7e27f&mpshare=1&scene=23&srcid=0909tArK7FVSGAARjnU7qOHP&sharer_shareinfo=e08c8cede59f8c572ad27f13b09e7726&sharer_shareinfo_first=e08c8cede59f8c572ad27f13b09e7726#rd">编程语言是怎么被实现出来的？</a> 这篇文章用生动的语言简述了编程的底层逻辑，有精力的话推荐阅读下。
 
 ##### 表达式
 
@@ -517,7 +517,7 @@ float expression_3 = 3*(expression_1+expression_2)
 | \|\| | 左边或者右边成立             |
 | !    | 逻辑非，将真变为假，假变为真 |
 
-> <img src="awesomeface.png" width=25px>[注：不同语言中可能有更多的逻辑运算符，可自行查找]
+> <img src="assets/awesomeface.png" width=25px>[注：不同语言中可能有更多的逻辑运算符，可自行查找]
 
 
 
@@ -562,11 +562,11 @@ for(int j=0;j<10;j++){
 }
 ```
 
-<img src="bulb.png" width=25px>可以自行查询 switch, while,goto等控制、循环语句关键字的作用
+<img src="assets/bulb.png" width=25px>可以自行查询 switch, while,goto等控制、循环语句关键字的作用
 
 
 
-##### <img src="question.png" width=25px>位运算和位运算符
+##### <img src="assets/question.png" width=25px>位运算和位运算符
 
 (这一部分建议自行了解，下面的表格还是以C语言为例)
 
@@ -579,7 +579,7 @@ for(int j=0;j<10;j++){
 | <<   | 左移     | 各二进位全部左移若干位，高位丢弃，低位补0   |
 | >>   | 右移     | 各二进位全部右移若干位，高位补0或符号位补齐 |
 
-<img src="awesomeface.png" width=25px>位运算我们一般用的不多，不过可能有时候会出现左移和右移的代码，通俗来讲，左移后移就是乘以2的某次幂：
+<img src="assets/awesomeface.png" width=25px>位运算我们一般用的不多，不过可能有时候会出现左移和右移的代码，通俗来讲，左移后移就是乘以2的某次幂：
 
 ``` c
 //C
@@ -594,7 +594,7 @@ a>>1; // = a/(2^1)
 
 <img src ="warning.png" width=25px> 在开发过程中往往会有多个运算符出现在一起，和数学上的运算一样，这时候需要规定运算顺序，以及如何改变运算顺序。
 
-这里是一份以C语言为例的运算符优先级排序，其他语言可以自行查阅了解。<img src="question.png" width=25px>有些运算符我们现在还没有提到，可以搜索看看都是什么。
+这里是一份以C语言为例的运算符优先级排序，其他语言可以自行查阅了解。<img src="assets/question.png" width=25px>有些运算符我们现在还没有提到，可以搜索看看都是什么。
 
 | 优先级 | 操作符             | 描述                   |
 | :----- | :----------------- | :--------------------- |
@@ -647,7 +647,7 @@ a>>1; // = a/(2^1)
 
 ##### 函数是将计算机和数学联系起来的桥梁
 
-<h6><img src="awesomeface.png" width=25px> 注虽然讲这个有点早了， 但是如果你学习过抽象代数和范畴论的话，就会知道计算机学的函数和数学上的函数本质上就是一模一样的东西。</h6>
+<h6><img src="assets/awesomeface.png" width=25px> 注虽然讲这个有点早了， 但是如果你学习过抽象代数和范畴论的话，就会知道计算机学的函数和数学上的函数本质上就是一模一样的东西。</h6>
 
 **什么是函数**：我们一般将某个可以**控制何时使用**，可以**传入参数**，处理后**存储返回信息**的代码块称作过程，在高级编程语言中，它也被称为函数。
 
@@ -687,7 +687,7 @@ int main(){
 }
 ```
 
-<img src="bulb.png" width=25px>你可以把定义过的函数视作一个待使用的变量，可以扔到另一个函数里调用(称为回调，会在指针章节谈到)，也可以自己调用自己(称为递归)。但是如何使用变量和函数需要注意它们的生命周期，我们会在后面介绍生命周期这个概念。
+<img src="assets/bulb.png" width=25px>你可以把定义过的函数视作一个待使用的变量，可以扔到另一个函数里调用(称为回调，会在指针章节谈到)，也可以自己调用自己(称为递归)。但是如何使用变量和函数需要注意它们的生命周期，我们会在后面介绍生命周期这个概念。
 
 ```c
 //递归的例子：计算第n项斐波那契数列的值
@@ -732,7 +732,7 @@ int main(){
 
 这边是变量的生命周期的概念之一，{}结束时，里面的局部变量会被自动销毁，除此之外我们还可以手动控制一些变量的生命周期。
 
-<img src="question.png" width=25px>我们需要介绍几个概念，栈、堆，静态区和常量区。这里它们不是数据结构的栈和堆，而是在内存中的位置。栈用来存储局部变量、函数以及函数的返回值，这一部分我们用户是没法去干涉的。堆则是我们手动分配的内存，可以去做改变。（这一部分我们会在讲到指针的时候讲解，先做了解）。静态区存储全局变量和静态变量，常量区则是存储常量。
+<img src="assets/question.png" width=25px>我们需要介绍几个概念，栈、堆，静态区和常量区。这里它们不是数据结构的栈和堆，而是在内存中的位置。栈用来存储局部变量、函数以及函数的返回值，这一部分我们用户是没法去干涉的。堆则是我们手动分配的内存，可以去做改变。（这一部分我们会在讲到指针的时候讲解，先做了解）。静态区存储全局变量和静态变量，常量区则是存储常量。
 
 顺便提一下，函数也是一个变量，函数名便是指向了它地址的指针。我们会在讲指针时细说。当然众所周知，指针各方面威力都很大，所以我们现代很多语言默认都不提供指针操作了。这里就还是用C语言举例子：
 
@@ -759,9 +759,9 @@ int main(int argc, char** argv) {
 int array[10]=(int *)malloc(10*sizeof(int))
 ```
 
-<img src="bulb.png" width=25px>大家可以自行了解更多相关概念，比如静态变量是什么，语言的内存结构是什么。
+<img src="assets/bulb.png" width=25px>大家可以自行了解更多相关概念，比如静态变量是什么，语言的内存结构是什么。
 
-<img src="question.png" width=25px>当然我们也有各种方式来管理变量生命周期，比如使用移动等方式。这些我们会在以后学习中遇到。
+<img src="assets/question.png" width=25px>当然我们也有各种方式来管理变量生命周期，比如使用移动等方式。这些我们会在以后学习中遇到。
 
 
 
@@ -785,7 +785,7 @@ int main(){
 }
 ```
 
-<img src="bulb.png" width=25px> 我们说调用函数时传入了实际参数，简称实参; 而函数接收的参数是形式参数，简称形参，顾名思义这就是实参的副本，所以对形参动手动脚是不会影响实参的。我们称这种传参方式为值传递。导致值传递没有交换成功的原因，还是之前说的那个生命周期的问题。**要明确的一点是，形参其实就是函数的局部变量**。
+<img src="assets/bulb.png" width=25px> 我们说调用函数时传入了实际参数，简称实参; 而函数接收的参数是形式参数，简称形参，顾名思义这就是实参的副本，所以对形参动手动脚是不会影响实参的。我们称这种传参方式为值传递。导致值传递没有交换成功的原因，还是之前说的那个生命周期的问题。**要明确的一点是，形参其实就是函数的局部变量**。
 
 ```c
 //这是古早的c的写法，可以看到形参真正的样子是这样的
@@ -798,7 +798,7 @@ void swap(){
 
 看了这个古早c语言，你应该立刻理解了为什么说形参就是实参的副本这个原理。所以如果想要改变实参，方法有两个，一个是用返回值把实参覆盖掉，另一个就是传入实参的地址。后者便是下文的解决方法。
 
-<img src="question.png" width=25px>一个解决方法是使用引用传递，对于变量进行修改，我们不传入变量的值，而是传入变量的地址，我们会在指针章节细说这是怎么实现的，现在可以先做了解：
+<img src="assets/question.png" width=25px>一个解决方法是使用引用传递，对于变量进行修改，我们不传入变量的值，而是传入变量的地址，我们会在指针章节细说这是怎么实现的，现在可以先做了解：
 
 ```c
 //C
@@ -887,11 +887,11 @@ int main(){
 }
 ```
 
-这是一个插入排序的例子，将一个`int`数组按从小大的的顺序排序。<img src="bulb.png" width=25px>在安装了`Code Runner`插件的前提下你可以在vscode代码区右键，然后点击`RunCode`即可运行。顺便一提，`Code Runner`可以支持多种语言的运行与调试，也可以手动配置编译选项（我们会在编译章节介绍编译参数选项），大家可以自行尝试更多功能。如下图所示，vscode中右键后出现在最上面的Run Code选项就是这个插件的效果之一。
+这是一个插入排序的例子，将一个`int`数组按从小大的的顺序排序。<img src="assets/bulb.png" width=25px>在安装了`Code Runner`插件的前提下你可以在vscode代码区右键，然后点击`RunCode`即可运行。顺便一提，`Code Runner`可以支持多种语言的运行与调试，也可以手动配置编译选项（我们会在编译章节介绍编译参数选项），大家可以自行尝试更多功能。如下图所示，vscode中右键后出现在最上面的Run Code选项就是这个插件的效果之一。
 
 > 插入排序：维护一个已经排序好的数组，依次将后面的元素按大小顺序插入到合适的位置。将第一个元素看作已经排序好的数组，然后将后面的元素依次插入，时间复杂度是$O(n^{2})$
 
-<img src="runcode.png" width=500>
+<img src="assets/runcode.png" width=500>
 
 
 
@@ -905,9 +905,9 @@ int main(){
 >
 > 涉及语言：C/C++，Go
 
-<img src="awesomeface.png" width=25px> 你可能早就听闻了指针的大名。今年全球windows蓝屏的原因就是一个经典的野指针访问。（图片来自b站epcdiy）
+<img src="assets/awesomeface.png" width=25px> 你可能早就听闻了指针的大名。今年全球windows蓝屏的原因就是一个经典的野指针访问。（图片来自b站epcdiy）
 
-<img src="pointer1.png" width=700px >
+<img src="assets/pointer1.png" width=700px >
 
  另一个臭名昭著的叫调用空指针，同样是程序爆炸的典中典了。
 
@@ -925,9 +925,9 @@ int main(){
 
 **这一段话初看可能很迷惑，但是重点就在于，指针指向的，是存储在内存中的地址，而不是简单的变量的值。**
 
-这里解释一下值和引用的区别：如果我想知道你在家里做什么，值相当于你告诉我在做什么，是一个给出了一个副本的过程; 引用就是相当于指针找到了你家的门牌号，通过指针就可以直接找到你在哪里、在家里做什么。<img src="awesomeface.png" width=25px>我们可以参考这个图片：
+这里解释一下值和引用的区别：如果我想知道你在家里做什么，值相当于你告诉我在做什么，是一个给出了一个副本的过程; 引用就是相当于指针找到了你家的门牌号，通过指针就可以直接找到你在哪里、在家里做什么。<img src="assets/awesomeface.png" width=25px>我们可以参考这个图片：
 
-<img src="pointer.avif" width=400px>
+<img src="assets/pointer.avif" width=400px>
 
 在C语言中，指针和引用的使用方式是这样的：
 
@@ -949,7 +949,7 @@ printf("b is %d",b); //2
 
 在了解了指针的概念后，我们可以深入探讨以下前面写过的变量生命周期的问题。先来了解一下编程语言的内存结构（不同语言可能有不同的标准内存结构），我们以**C语言内存结构**为例介绍变量是如何存储的（实际上这就是**linux x86_64 gnu**的内存结构）
 
-<img src="memory4.png" >
+<img src="assets/memory4.png" >
 
 
 
@@ -965,7 +965,7 @@ int *arr = (int*)malloc(10*sizeof(int)); //申请了10个int大小的空间
 free(arr); //记得释放这个空间，要不然会撑爆内存的（重启电脑除外）
 ```
 
-<img src="awesomeface.png" width=25px>是不是感觉这和数组很像？没错，**数组是一坨连续的内存组成的结构，它的数组名就是指向这一串变量的第一个的指针，也就是数组名就是指向索引为0的那个元素的指针**。
+<img src="assets/awesomeface.png" width=25px>是不是感觉这和数组很像？没错，**数组是一坨连续的内存组成的结构，它的数组名就是指向这一串变量的第一个的指针，也就是数组名就是指向索引为0的那个元素的指针**。
 
 ```c
 //C
@@ -1021,7 +1021,7 @@ struct Student[]students = {
 
 结构体中可以放入多种不同类型，一个结构体的大小也等于其中所有类型的总和。
 
-> <img src="bulb.png" width=25>我们知道类型大小可能不是4的倍数，而计算机访问时都是按4作为单元的。所以如果能将不是倍数的进行调整为4的倍数（称为对齐）将会提高性能。这一点在嵌入式开发中尤其重要。
+> <img src="assets/bulb.png" width=25>我们知道类型大小可能不是4的倍数，而计算机访问时都是按4作为单元的。所以如果能将不是倍数的进行调整为4的倍数（称为对齐）将会提高性能。这一点在嵌入式开发中尤其重要。
 >
 > 另一方面，我们知道函数是一种类型，所以结构体中也可以放入函数，这也是面向对象的一个重要的实现方式。我们会在下面章节接触面向对象的内容。
 
@@ -1045,7 +1045,7 @@ int main(){
 }
 ```
 
-<img src="question.png" width=25px> 我们有提到过函数存储在栈上，其函数名也是指向函数的指针，大家可以自行了解是什么作用，我们只写一个例子演示：函数指针两个主要用途：第一个是**回调函数**，这个概念我们也会在实际开发中经常用到，会在**异步编程**的章节详细讲述。
+<img src="assets/question.png" width=25px> 我们有提到过函数存储在栈上，其函数名也是指向函数的指针，大家可以自行了解是什么作用，我们只写一个例子演示：函数指针两个主要用途：第一个是**回调函数**，这个概念我们也会在实际开发中经常用到，会在**异步编程**的章节详细讲述。
 
 ```c
 //C
@@ -1106,7 +1106,7 @@ int main(){
 
 ##### 指针的威力
 
-<img src="awesomeface.png" width=25px>C/C++已经被白宫列为了危险的东西，那群老登现在都在鼓吹rust。Linux系统也委员会也因为是否使用rust开发内核处于几乎内战的状态了。说到C/C++内存问题，99%都是因为指针的破坏力太大了。我们举一个例子：
+<img src="assets/awesomeface.png" width=25px>C/C++已经被白宫列为了危险的东西，那群老登现在都在鼓吹rust。Linux系统也委员会也因为是否使用rust开发内核处于几乎内战的状态了。说到C/C++内存问题，99%都是因为指针的破坏力太大了。我们举一个例子：
 
 ```c
 //C
@@ -1117,7 +1117,7 @@ printf("p is %p, p+1 is %p",(void*)p,(void*)(p+1); // 加减法会将地址值�
 
 WC，指针居然也能做加减运算，如果你不小心运算到了某个没有存储数据的随机地址，然后你又去尝试取它的数据，便会触发一个叫脏内存的东西。顾名思义，这就是随机的数据，可能导致你的程序崩溃退出。
 
-<img src="awesomeface.png" width=25px>另一方面，如果你已经使用free手动释放了指针，指针将变为野指针，顾名思义这将指向不可访问/不可预测的区域，如果你不小心又访问或者释放了一次，寄寄。
+<img src="assets/awesomeface.png" width=25px>另一方面，如果你已经使用free手动释放了指针，指针将变为野指针，顾名思义这将指向不可访问/不可预测的区域，如果你不小心又访问或者释放了一次，寄寄。
 
 上面就是野指针的危害，相对的，空指针就是指向没有存储数据的地址，即0地址处，称为NULL或者nil, 这里是没有东西的。我们就不演示空指针和野指针了，大家可以自行了解。
 
@@ -1139,7 +1139,7 @@ WC，指针居然也能做加减运算，如果你不小心运算到了某个没
 
 面向过程其实是最为实际的一种思考方式，就算是面向对象的方法也是含有面向过程的思想。可以说面向过程是一种基础的方法。它考虑的是实际地实现。一般的面向过程是从上往下步步求精，所以面向过程最重要的是模块化的思想方法。面向过程编程，最典型的一个编程语言就是C语言。
 
-> <img src="awesomeface.png" width=25>把大象放进冰箱需要几步？一、把冰箱门打开。二、把大象放进去。三、把冰箱门关上。这就是一个典型的面向过程的思想。
+> <img src="assets/awesomeface.png" width=25>把大象放进冰箱需要几步？一、把冰箱门打开。二、把大象放进去。三、把冰箱门关上。这就是一个典型的面向过程的思想。
 
 
 
@@ -1157,7 +1157,7 @@ WC，指针居然也能做加减运算，如果你不小心运算到了某个没
 
 ​	面向对象的三大特点是封装继承多态，封装将对象的属性和方法划分为公有和私有，保证了外部和内部的稳定和效率。继承简单地说就是一种层次模型，这种层次模型能够被重用。层次结构的上层具有通用性，但是下层结构则具有特殊性。在继承的过程中类则可以从最顶层的部分继承一些方法和变量。多态是指不同事物具有不同表现形式的能力。多态机制使具有不同内部结构的对象可以共享相同的外部接口，通过这种方式减少代码的复杂度。
 
-<img src="object.png" width=400>
+<img src="assets/object.png" width=400>
 
 ##### 函数式编程
 
@@ -1252,7 +1252,7 @@ func checkrole(level int){
 
 ##### 网络如何工作
 
-<img src="question.png" width=25px> 这些东西阅读了解即可，具体的TCP/IP协议内容很多，今后将会逐步学习
+<img src="assets/question.png" width=25px> 这些东西阅读了解即可，具体的TCP/IP协议内容很多，今后将会逐步学习
 
 ```
 计算机网络使用电缆、光纤或无线信号来连接计算机、路由器和交换机等节点。利用这些连接，网络中的设备便可以进行通信并共享信息和资源。
@@ -1264,7 +1264,7 @@ func checkrole(level int){
 最底层的是网际网络协定，是用于报文交换网络的一种面向数据的协议，这一协议定义了数据包在网际传送时的格式。目前使用最多的是IPv4版本，这一版本中用32位定义IP地址，尽管地址总数达到43亿，但是仍然不能满足现今全球网络飞速发展的需求，因此IPv6版本应运而生。在IPv6版本中，IP地址共有128位，“几乎可以为地球上每一粒沙子分配一个IPv6地址”。IPv6目前并没有普及，许多网际网络服务提供商并不支持IPv6协议的连接。但是，可以预见，将来在IPv6的帮助下，任何家用电器都有可能连入网际网络。
 ```
 
-<img src="question.png" width=25px>如果学习大学计算机课程的话，会接触到网络体系结构，也就是下图所示的
+<img src="assets/question.png" width=25px>如果学习大学计算机课程的话，会接触到网络体系结构，也就是下图所示的
 
 <img src="https://img-blog.csdnimg.cn/img_convert/afe9b94ee66ddc880668dfef2c607d39.png" width=800px>
 
@@ -1285,7 +1285,7 @@ HTTP是一个客户端（用户）和服务端（网站）之间请求和应答�
 
 **HTTP方法**
 
-<img src="warning.png" width=25px>这是HTTP协议中非常重要的一环，HTTP/1.1一共定义了8中方法，我们这里指介绍常用的5种，其余的大家可以自行搜索了解。
+<img src="assets/warning.png" width=25px>这是HTTP协议中非常重要的一环，HTTP/1.1一共定义了8中方法，我们这里指介绍常用的5种，其余的大家可以自行搜索了解。
 
 ***GET* ** 
 
@@ -1309,13 +1309,13 @@ HTTP是一个客户端（用户）和服务端（网站）之间请求和应答�
 
 
 
-<img src="bulb.png" width=25px> 方法名称是**区分大小写**的。当某个请求所针对的资源不支持对应的请求方法的时候，服务器应当返回状态码405（Method Not Allowed），当服务器不认识或者不支持对应的请求方法的时候，应当返回状态码501（Not Implemented）。HTTP服务器至少应该实现GET和HEAD方法，其他方法都是可选的。
+<img src="assets/bulb.png" width=25px> 方法名称是**区分大小写**的。当某个请求所针对的资源不支持对应的请求方法的时候，服务器应当返回状态码405（Method Not Allowed），当服务器不认识或者不支持对应的请求方法的时候，应当返回状态码501（Not Implemented）。HTTP服务器至少应该实现GET和HEAD方法，其他方法都是可选的。
 
 另外的，我们的请求方法都有着更多不同的性质，诸如安全性、幂等性等，这些建议大家多多了解。
 
 
 
-<img src="bulb.png" width=25px>**HTTP状态码**
+<img src="assets/bulb.png" width=25px>**HTTP状态码**
 
 我们有时候会遇到页面显示类似404、503等，这些都是常见的HTTP状态码。状态码的第一个数字代表当前响应的类型：
 
@@ -1370,7 +1370,7 @@ HTTP是一个客户端（用户）和服务端（网站）之间请求和应答�
 
 
 
-<img src="warning.png" width=25px>**HTTP请求**
+<img src="assets/warning.png" width=25px>**HTTP请求**
 
 请求信息格式中需要包含：
 
@@ -1434,21 +1434,21 @@ Connection: keep-alive
 
 
 
-<img src="bulb.png" width=25px> DNS负责域名解析为IP，具体方式可以自行了解。
+<img src="assets/bulb.png" width=25px> DNS负责域名解析为IP，具体方式可以自行了解。
 
 
 
 **如何设计和进行交互**
 
-<img src="awesomeface.png" width=25px>一个重要的概念是 API： 应用程序接口（英语：application programming interface），缩写为API，是一种计算接口，它定义多个软件之间的交互，以及可以进行的调用（call）或请求（request）的种类，如何进行调用或发出请求，应使用的数据格式，应遵循的惯例等。它还可以提供扩展机制，以便用户可以通过各种方式对现有功能进行不同程度的扩展。一个API可以是完全定制的，针对某个组件的，也可以是基于行业标准设计的以确保互操作性。通过隐藏无关信息，API实现了模块化编程，从而允许用户实现独立地使用接口。
+<img src="assets/awesomeface.png" width=25px>一个重要的概念是 API： 应用程序接口（英语：application programming interface），缩写为API，是一种计算接口，它定义多个软件之间的交互，以及可以进行的调用（call）或请求（request）的种类，如何进行调用或发出请求，应使用的数据格式，应遵循的惯例等。它还可以提供扩展机制，以便用户可以通过各种方式对现有功能进行不同程度的扩展。一个API可以是完全定制的，针对某个组件的，也可以是基于行业标准设计的以确保互操作性。通过隐藏无关信息，API实现了模块化编程，从而允许用户实现独立地使用接口。
 
 应用程序接口有诸多不同设计。用于快速执行的接口通常包括**函数名、常量、变量与其他数据结构**。在向他人提供一个API时，你需要显式地提供以上信息。下面是cppreference上的一个API：
 
-<img src="api1.png" width=800px>
+<img src="assets/api1.png" width=800px>
 
 
 
-<img src="bulb.png" width=25px>**我们用到的API架构是 RESTful API, 后续会逐步教学，现在可以作了解**
+<img src="assets/bulb.png" width=25px>**我们用到的API架构是 RESTful API, 后续会逐步教学，现在可以作了解**
 
 RESTful API，Web服务必须遵守以下六个 REST 架构约束：
 
@@ -1492,7 +1492,7 @@ resource_id：资源的id，访问或操作该资源。
 
 
 
-<img src="awesomeface.png" width=25>举个例子，比如我们要抽取一道题目，可以这样设计URL：
+<img src="assets/awesomeface.png" width=25>举个例子，比如我们要抽取一道题目，可以这样设计URL：
 
 ```
 http://api.example.com/v1/draw
@@ -1554,7 +1554,7 @@ int main(){
 
 
 
-###### <img src="awesomeface.png" width=25px>砸瓦路多！
+###### <img src="assets/awesomeface.png" width=25px>砸瓦路多！
 
 我们可以控制一个流程的执行时间，C++可以使用sleep_for（或者sleep_until）关键字（不同语言可能关键字不同），将流程睡眠一会。
 
@@ -1638,11 +1638,11 @@ int main(){
 
 执行效果如下，我们可以在download的同时随意输入东西，但是输出却不会执行，因为main被阻塞了，只有download结束才会执行interact，输入完之后并不能立刻得到反馈：
 
-<img src="thread1.png">
+<img src="assets/thread1.png">
 
 
 
-###### <img src="awesomeface.png" width=25px>**多线程，启动！**
+###### <img src="assets/awesomeface.png" width=25px>**多线程，启动！**
 
 ```c++
 // C/C++
@@ -1679,13 +1679,13 @@ int main() {
 
 
 
-<img src="awesomeface.png" width=25px>现在就非常nice了，可以一边下载/观看王俊杰的黑历史一边发表评论了~~（bushi~~
+<img src="assets/awesomeface.png" width=25px>现在就非常nice了，可以一边下载/观看王俊杰的黑历史一边发表评论了~~（bushi~~
 
-<img src="thread3.png">
+<img src="assets/thread3.png">
 
 
 
-> <img src="question.png" width=25px>我们知道线程执行完就会销毁，有时候需要自己管理什么时候销毁，请大家自行查阅分离线程、线程池的概念。
+> <img src="assets/question.png" width=25px>我们知道线程执行完就会销毁，有时候需要自己管理什么时候销毁，请大家自行查阅分离线程、线程池的概念。
 
 
 
@@ -1699,7 +1699,7 @@ int main() {
 
 **协程**（coroutines），由字面意思就知道是和进程（Process/Routines）或者函数调用（Subroutines）对应的东西。协程其实是分割进程，但是分割的同时保留了之前处理过的信息，所以可以用来组件之间的协作工作。协程的初始处就是第一个的入口点。通过yield返回一部分结果值以及执行到这个时刻的协程的状态，作为下次进入这个协程的入口点。形象的演示，比如这张图（来自b站up百草园），容易看出函数调用和协程的关系。
 
-<img src="coroutine2.jpg">
+<img src="assets/coroutine2.jpg">
 
 ​	举个例子，就像你看一道数学题，有思路的时候去写，卡住了然后回去看题，有思路了继续写，这样循环下去。如果不出意外的话，你应该就是在卡住的地方去看了题，看的就是上次没看明白的地方，然后返回上次卡住的地方继续写。
 
@@ -1724,7 +1724,7 @@ coroutine consume //消费者
 call produce //开工了
 ```
 
-<img src="bulb.png" width=25px>队列用来存放产品的空间有限，同时制约生产者和消费者：为了提高效率，生产者协程要在一次执行中尽量向队列多增加产品，然后再放弃控制使得消费者协程开始运行；同样消费者协程也要在一次执行中尽量从队列多取出产品，从而倒出更多的存放产品空间，然后再放弃控制使得生产者协程开始运行。尽管这个例子常用来介绍[多线程](https://zh.wikipedia.org/wiki/多线程)，实际上简单明了的使用协程的`yield`即可实现这种协作关系。
+<img src="assets/bulb.png" width=25px>队列用来存放产品的空间有限，同时制约生产者和消费者：为了提高效率，生产者协程要在一次执行中尽量向队列多增加产品，然后再放弃控制使得消费者协程开始运行；同样消费者协程也要在一次执行中尽量从队列多取出产品，从而倒出更多的存放产品空间，然后再放弃控制使得生产者协程开始运行。尽管这个例子常用来介绍[多线程](https://zh.wikipedia.org/wiki/多线程)，实际上简单明了的使用协程的`yield`即可实现这种协作关系。
 
 
 
@@ -1739,7 +1739,7 @@ call produce //开工了
 
 ###### 协程的原理
 
-<img src="question.png" width=25px>当出现IO阻塞的时候，由协程的调度器进行调度，通过将数据流立刻yield掉（主动让出），并且记录当前栈上的数据，阻塞完后立刻再通过线程恢复栈，并把阻塞的结果放到这个线程上去跑，这样看上去好像跟写同步代码没有任何差别，这整个流程可以称为coroutine，而跑在由`coroutine`负责调度的线程称为`Fiber`。比如Golang里的 go关键字其实就是负责开启一个`Fiber`，让`func`逻辑跑在上面。
+<img src="assets/question.png" width=25px>当出现IO阻塞的时候，由协程的调度器进行调度，通过将数据流立刻yield掉（主动让出），并且记录当前栈上的数据，阻塞完后立刻再通过线程恢复栈，并把阻塞的结果放到这个线程上去跑，这样看上去好像跟写同步代码没有任何差别，这整个流程可以称为coroutine，而跑在由`coroutine`负责调度的线程称为`Fiber`。比如Golang里的 go关键字其实就是负责开启一个`Fiber`，让`func`逻辑跑在上面。
 
 由于协程的暂停完全由程序控制，发生在用户态上；而线程的阻塞状态是由操作系统内核来进行切换，发生在内核态上。
 因此，协程的开销远远小于线程的开销，也就没有了ContextSwitch上的开销。
@@ -1748,7 +1748,7 @@ call produce //开工了
 
 回到刚才的场景，能否使用协程来做呢
 
-###### <img src="awesomeface.png" width=25px>协程，启动！
+###### <img src="assets/awesomeface.png" width=25px>协程，启动！
 
 这里使用Go语言举例子，毕竟C++开协程是一项高级技术，有点难度，举例子的话没有那么清晰。
 
@@ -1788,7 +1788,7 @@ func main() {
 
 继续迫害王俊杰结果如下：
 
-<img src="coroutine1.png">
+<img src="assets/coroutine1.png">
 
 
 
@@ -1897,7 +1897,7 @@ func main() {
 
 以网络IO为例，其本质是Socket的读取，Socket在Linux系统被抽象为流，IO可以理解为对流的操作。Linux标准文件访问方式如下:
 
-<img src="sync1.png" width=800px>
+<img src="assets/sync1.png" width=800px>
 
 
 
@@ -1913,7 +1913,7 @@ func main() {
 
 网络应用需要处理的无非就是两大类问题，网络IO，数据计算。相对于后者，网络IO的延迟，给应用带来的性能瓶颈大于后者，接下来我们介绍下IO模型。
 
-> <img src="question.png" width=25px>这一段不用完全理解，先了解一下都是什么。
+> <img src="assets/question.png" width=25px>这一段不用完全理解，先了解一下都是什么。
 
 
 
@@ -1965,7 +1965,7 @@ IO多路复用解决了一个线程或者多个线程可以监控多个文件描
 
 并行（Parallel），**当系统有一个以上CPU时，当一个CPU执行一个进程时，另一个CPU可以执行另一个进程，两个进程互不抢占CPU资源，可以同时进行，这种方式我们称之为并行(Parallel)。**这里面有一个很重要的点，那就是系统要有多个CPU才会出现并行。在有多个CPU的情况下，才会出现真正意义上的『同时进行』。换言之，对于**GPU**这种原生就是多核结构的，**并行**才是最好的选择。
 
-<img src="concurrent1.png">
+<img src="assets/concurrent1.png">
 
 ###### **并发和并行的区别**
 
@@ -1975,11 +1975,11 @@ IO多路复用解决了一个线程或者多个线程可以监控多个文件描
 
 只有在多CPU的情况中，才会发生并行。否则，看似同时发生的事情，其实都是并发执行的。
 
-<img src="concurrent2.png" width=800px>
+<img src="assets/concurrent2.png" width=800px>
 
 ###### 对应关系
 
-<img src="bulb.png" width=25px>一般情况下：
+<img src="assets/bulb.png" width=25px>一般情况下：
 
 ​	协程->并发，协程适合用于阻塞、多任务场景，例如网络交互里面，而且不会消耗太多系统资源，也不会互相抢占进程。并发适合放到系统层面。
 
@@ -2005,19 +2005,19 @@ IO多路复用解决了一个线程或者多个线程可以监控多个文件描
 
 
 
-##### <img src="gitlogo.jpg" width=30>git
+##### <img src="assets/gitlogo.jpg" width=30>git
 
 在介绍`git`之前，我们不妨先从**代码托管平台**开始说起。世界上最大最热门的代码托管平台，当然要数`Github`，你可以从上面下载项目源代码、一些课程资料等等等等。国内也有类似的平台比如`Gitee(码云，全是广告)`，`Gitcode（'自主研发'的sb玩意）`等。
 
-<img src="bulb.png" width=25> 你可以为自己注册`Github`账号，并通过平台的学生认证，然后你就可以免费使用一些付费软件或者网站了，比如`jetbrains`系列，`overleaf`。  
+<img src="assets/bulb.png" width=25> 你可以为自己注册`Github`账号，并通过平台的学生认证，然后你就可以免费使用一些付费软件或者网站了，比如`jetbrains`系列，`overleaf`。  
 
 想要在这些平台上下载资源，我们就需要使用到`git`工具。事实上，`git`是一个版本控制工具，概括起来，就是实现开发者本地仓库与远程仓库之间的文件互传等操作。你可以在<a href="https://git-scm.com/downloads">这个网址</a>来下载`git`，然后按照下面推荐的流程进行安装（仅以windows为例）
 
-<img src="setup1.png" width=400>
+<img src="assets/setup1.png" width=400>
 
-<img src="setup2.png" width=400>
+<img src="assets/setup2.png" width=400>
 
-<img src="setup3.png" width=400>
+<img src="assets/setup3.png" width=400>
 
 关于`git`的使用教学，我们在这里只举几个简单的例子，深入的学习可以参考<a href="https://git-scm.com/docs">推荐文档</a>来进行学习，当然，网上相关的教程也是很多的。
 
@@ -2044,15 +2044,15 @@ git push <remote name> <分支>
 git clone <仓库url>.git
 ```
 
-<img src="awesomeface.png" width=25> 文档看得太累了怎么办，还是打会儿<a href="https://learngitbranching.js.org/?locale=zh_CN">游戏</a>吧，一个挺有意思的git学习小游戏。
+<img src="assets/awesomeface.png" width=25> 文档看得太累了怎么办，还是打会儿<a href="https://learngitbranching.js.org/?locale=zh_CN">游戏</a>吧，一个挺有意思的git学习小游戏。
 
-##### <img src="apifoxlogo.png" width=30>apifox
+##### <img src="assets/apifoxlogo.png" width=30>apifox
 
 `apifox`是一个国内开发的免费的接口调试工具，非常适合个人和团体使用。前后端都可以使用它来检查接口是否能正常运行，处理返回值。在项目中开发过程中，合适的接口调试工具会让开发轻松很多，类似的工具还有`postman`，`swagger`等等。你可以在<a href="https://apifox.com/">apifox的官网</a>来获取
 
 `apifox`提供了一个示例项目用于学习，同时你也可以参阅<a href="https://apifox.com/help/">官方文档</a>获取帮助，~~他们甚至提供了视频~~
 
-##### <img src="navicatlogo.png" width=30> Navicat
+##### <img src="assets/navicatlogo.png" width=30> Navicat
 
 `Navicat`是一个可以图形化操作`MySQL`的工具，在命令行操作数据库毕竟是一件比较费眼睛的事情，图形化的界面会方便很多。我们在后端的开发和部署时会频繁地用到它。此外`Navicat`支持操作多种数据库，比如`MongoDB`，`SQL Server`，`Redis`等等。这样强大的工具是需要付费的，所以我们也推荐一些其他的工具，如<a href="https://dbeaver.io/download/">`DbServer`</a>，它提供了免费的社区版。
 
@@ -2060,15 +2060,15 @@ git clone <仓库url>.git
 
 在操纵`MySQL`的时候，首先你需要和你的`MySQL`建立连接，如图所示：~~请忽略掉我已经建立的连接~~
 
-<img src="cat2.png" width=400>
+<img src="assets/cat2.png" width=400>
 
 然后你可以在一个连接中建立数据库，如图所示。对于一个独立的项目来说，建立独立的数据库显然是很有必要的
 
-<img src="cat1.png" width=400>
+<img src="assets/cat1.png" width=400>
 
 如果你要使用`MySQL`来进行一些操作，在上方菜单中点击查询，然后新建查询，就可以了，如图所示
 
-<img src="cat3.png" width=400>
+<img src="assets/cat3.png" width=400>
 
 具体的使用方法，可以参考<a href="https://www.navicat.com.cn/manual/online_manual/cn/navicat_16/win_manual/">官方文档</a>获取帮助。
 
@@ -2099,7 +2099,7 @@ git clone <仓库url>.git
 
 具体的三件套教程可参考<a href="https://www.runoob.com">菜鸟教程</a>和<a href="https://www.w3school.com.cn/">w3school</a>，里面有很详细的讲解和示例。
 
-<img src="hcj.png" width=400>
+<img src="assets/hcj.png" width=400>
 
 **`vue.js`**  `Vue.js`是一套用于构建用户界面的渐进式框架。它与其他大型框架不同，被设计为可以自底向上逐层应用。`Vue` 的核心库只关注视图层，易于上手，且便于与第三方库或既有项目整合。当与现代化的工具链以及各种支持类库结合使用时，`Vue` 也完全能够为复杂的单页应用提供驱动。
 
@@ -2111,7 +2111,7 @@ git clone <仓库url>.git
 
 
 
-###### <img src="bulb.png" width=25px>更多
+###### <img src="assets/bulb.png" width=25px>更多
 
 如果你对前端开发有浓厚的兴趣，我们也推荐你更加广泛的学习，这里我们列举一些例子：
 
@@ -2119,7 +2119,7 @@ git clone <仓库url>.git
 
 <a href="https://www.webpackjs.com/">`Webpack`中文文档</a>
 
-> <img src="awesomeface.png" width=25> -*你知道回答的人是谁吗，哈哈哈*
+> <img src="assets/awesomeface.png" width=25> -*你知道回答的人是谁吗，哈哈哈*
 >        -*我知道啊，一个不懂vue的胖子*
 
 
@@ -2130,19 +2130,19 @@ git clone <仓库url>.git
 
 后端将使用**`go`**语言进行开发，它是由谷歌推出的新兴的开发语言，在2024年8月的语言流行度排名中，位列第9。`go`语言是一种强类型语言，其运行速度接近C语言，同时又具有简单的语法，易于上手。其最大特点莫过于提供了一种简洁且高效的方式来处理并发事务，这使得它非常适合用来开发一些有高并发场景的服务，比如Web后端。
 
-<img src="tiobeindex.png">
+<img src="assets/tiobeindex.png">
 
-<img src="question.png" width=25> 推荐阅读：<a href="https://mp.weixin.qq.com/s?__biz=MzIxMzgyNTQyOA==&mid=2247487919&idx=1&sn=20e3b80796c6abd995af55ad1cd2007d&chksm=96715836363d799f3b3b5df2608256f033362e8d351d6ebac6279e522b6d87d144c94cd3a50e&mpshare=1&scene=23&srcid=0909d0ju8PpaT7dGiaJrsEQ6&sharer_shareinfo=1fa7d4e29ed415209d630b05d85f1edf&sharer_shareinfo_first=1fa7d4e29ed415209d630b05d85f1edf#rd">Go 语言中不可不知的语法糖</a> 这篇文章提到了很多`go`语言可以用来简化开发的用法， 在对`go`基础有一定的了解之后，可以阅读下这篇文章。
+<img src="assets/question.png" width=25> 推荐阅读：<a href="https://mp.weixin.qq.com/s?__biz=MzIxMzgyNTQyOA==&mid=2247487919&idx=1&sn=20e3b80796c6abd995af55ad1cd2007d&chksm=96715836363d799f3b3b5df2608256f033362e8d351d6ebac6279e522b6d87d144c94cd3a50e&mpshare=1&scene=23&srcid=0909d0ju8PpaT7dGiaJrsEQ6&sharer_shareinfo=1fa7d4e29ed415209d630b05d85f1edf&sharer_shareinfo_first=1fa7d4e29ed415209d630b05d85f1edf#rd">Go 语言中不可不知的语法糖</a> 这篇文章提到了很多`go`语言可以用来简化开发的用法， 在对`go`基础有一定的了解之后，可以阅读下这篇文章。
 
 更具体地，我们将使用基于`go`语言的`gin`框架来进行后端开发，~~应该有人的面试题就是这个吧~~，使用`gorm`来操作数据库。`gin`框架的优点包括高性能、支持中间件、路由管理方便、数据验证方便等等。而`gorm`的语法接近`MySQL`，易于掌握。在这些技术的加持下，我们就可以进行一些后端的开发了。
 
-<img src="bulb.png" width=25>在这些技术的学习中，`go`语言基础毫无疑问是最重要的，我们会在后续的课程中详细讲解。我们希望你能拥有扎实的语言基础，这样在使用框架的时候会更加的得心应手。我们更推荐你在使用框架的过程中，能逐渐地了解这个框架的架构，学习到更本质的东西，而不是仅停留在调包的水平。
+<img src="assets/bulb.png" width=25>在这些技术的学习中，`go`语言基础毫无疑问是最重要的，我们会在后续的课程中详细讲解。我们希望你能拥有扎实的语言基础，这样在使用框架的时候会更加的得心应手。我们更推荐你在使用框架的过程中，能逐渐地了解这个框架的架构，学习到更本质的东西，而不是仅停留在调包的水平。
 
 <a href="https://golang.google.cn/doc/">`go`语言官方文档 </a>                         <a href="https://gorm.io/zh_CN/docs/index.html">`gorm`官方文档</a>
 
 
 
-<img src="gogogo.jpeg">
+<img src="assets/gogogo.jpeg">
 
 如果你对后端开发的兴趣浓厚，那么也可以考虑进一步学习，我们在这里给出一些例子，仅供参考
 
@@ -2154,17 +2154,17 @@ git clone <仓库url>.git
 
 
 
-###### <img src="warning.png" width=25px> 后端学习中重要的额外内容
+###### <img src="assets/warning.png" width=25px> 后端学习中重要的额外内容
 
 > （以下内容适合后端兴趣浓厚，想要长期学习和开发的读者，不建议速通这些内容，但一定要坚持学习）
 
-1.<img src="warning.png" width=25px>**更多的数学知识**：不要以为上课学了个高数和线代就可以高枕无忧了，时代在变化，这些最浅层的数学内容不能让你有着解决所有问题的能力，所以建议了解以及学习**阶的估计**、**基础数论**、**抽象代数**等内容，多学数学百利而无一害，不要停止这方面的持续精进，特别是在计算机方面，你会发现你几百行代码解决不了的问题可能就只需要做一个简单的流形的变换就解决了。
+1.<img src="assets/warning.png" width=25px>**更多的数学知识**：不要以为上课学了个高数和线代就可以高枕无忧了，时代在变化，这些最浅层的数学内容不能让你有着解决所有问题的能力，所以建议了解以及学习**阶的估计**、**基础数论**、**抽象代数**等内容，多学数学百利而无一害，不要停止这方面的持续精进，特别是在计算机方面，你会发现你几百行代码解决不了的问题可能就只需要做一个简单的流形的变换就解决了。
 
 2.语言特性：迭代器，静态期和运行期特性，**上下文（context）**，可变参数，反射，泛型，管理垃圾回收等。
 
 3.算法基础：包括基本的排序，搜索，数据结构，优化等内容。了解常用容器的底层结构（如map底层是红黑树），判断、鉴权api时考虑前缀树等。
 
-4.<img src="warning.png" width=25px>调试工具：我们可能不会详细讲述如何进行调试，但是自己需要了解，这点很重要。比如go test如何使用，如何查看内存占用，段错误（segment error）是什么意思以及如何修复等。
+4.<img src="assets/warning.png" width=25px>调试工具：我们可能不会详细讲述如何进行调试，但是自己需要了解，这点很重要。比如go test如何使用，如何查看内存占用，段错误（segment error）是什么意思以及如何修复等。
 
 5.常用框架：学会如何阅读框架源码，更进一步最好做到自己看框架底层。
 
@@ -2212,7 +2212,7 @@ git clone <仓库url>.git
 
 + DELETE：从服务器删除资源
 
-<img src="question.png" width=25>关于`Restful API`的文章推荐：
+<img src="assets/question.png" width=25>关于`Restful API`的文章推荐：
 
 <a href="http://www.ruanyifeng.com/blog/2014/05/restful_api.html">RESTful API 设计指南 - 阮一峰的网络日志</a>
 
@@ -2258,7 +2258,7 @@ git commit -m "<提交信息>"
 go build [build flags] [packages]
 ```
 
-<img src="bulb.png" width=25px>大家可以自行查阅可以添加的编译相关参数，如 -gcflags=-S 会输出汇编等。 
+<img src="assets/bulb.png" width=25px>大家可以自行查阅可以添加的编译相关参数，如 -gcflags=-S 会输出汇编等。 
 
 当然了，在开发过程中，我们也可以使用`go run <文件名>`来编译运行了，它会生成一个临时的可执行文件。
 
@@ -2268,7 +2268,7 @@ go build [build flags] [packages]
 
 想要从源代码生成可执行文件并不是一件容易的事。对于在操作系统运行的程序，比如C语言的程序，要经历预处理、编译、汇编、链接四个过程。
 
-<img src="ccom.png">
+<img src="assets/ccom.png">
 
 **预处理**：在这个阶段，预处理器将源代码中的预处理指令（如 `#include`、`#define` 等）替换为实际的内容。预处理器会根据指令展开头文件，处理宏定义，并删除注释等。
 
@@ -2280,11 +2280,11 @@ go build [build flags] [packages]
 
 对于在虚拟机运行的程序，大致按照下面的流程。这里的前端和后端，当然不再是狭义的网络开发中的前端和后端了。编译过程中，还会对代码进行一些优化，比如乘法一般会被优化成位移，来提高程序的性能。
 
-<img src="compilepro.png">
+<img src="assets/compilepro.png">
 
-<img src="compile.png">
+<img src="assets/compile.png">
 
-你可能暂时不太理解每个细节，没有关系，先通过上面图片的大标题，感受一下编译的过程。<img src="question.png" width=25px>下面我们将会对Go以及javascript的编译流程进行简单讲述，当然不要求读者完全掌握。
+你可能暂时不太理解每个细节，没有关系，先通过上面图片的大标题，感受一下编译的过程。<img src="assets/question.png" width=25px>下面我们将会对Go以及javascript的编译流程进行简单讲述，当然不要求读者完全掌握。
 
 
 
@@ -2296,7 +2296,7 @@ go build [build flags] [packages]
 
 ###### 抽象语法树
 
-​	[抽象语法树](https://en.wikipedia.org/wiki/Abstract_syntax_tree)（Abstract Syntax Tree、AST），是源代码语法的结构的一种抽象表示，它用树状的方式表示编程语言的语法结构[1](https://draveness.me/golang/docs/part1-prerequisite/ch02-compile/golang-compile-intro/#fn:1)。抽象语法树中的每一个节点都表示源代码中的一个元素，每一棵子树都表示一个语法元素，以表达式 `2 * 3 + 7` 为例，编译器的语法分析阶段会生成如下图所示的抽象语法树（<img src="awesomeface.png" width=25px>看起来很像中缀树...）。下面是一个简单表达式的抽象语法树。
+​	[抽象语法树](https://en.wikipedia.org/wiki/Abstract_syntax_tree)（Abstract Syntax Tree、AST），是源代码语法的结构的一种抽象表示，它用树状的方式表示编程语言的语法结构[1](https://draveness.me/golang/docs/part1-prerequisite/ch02-compile/golang-compile-intro/#fn:1)。抽象语法树中的每一个节点都表示源代码中的一个元素，每一棵子树都表示一个语法元素，以表达式 `2 * 3 + 7` 为例，编译器的语法分析阶段会生成如下图所示的抽象语法树（<img src="assets/awesomeface.png" width=25px>看起来很像中缀树...）。下面是一个简单表达式的抽象语法树。
 
 ![abstract-syntax-tree](https://img.draveness.me/2019-12-20-15768548776645-abstract-syntax-tree.png)
 
@@ -2388,7 +2388,7 @@ Token 到上述抽象语法树（AST）的转换过程会用到语法解析器�
 
 ![golang-files-and-ast](https://img.draveness.me/2019-12-20-15768548776670-golang-files-and-ast.png)
 
-<img src="bulb.png" width=25px>值得注意的是，语法解析的过程中发生的任何语法错误都会被语法解析器发现并将消息打印到标准输出上，整个编译过程也会随着错误的出现而被中止。
+<img src="assets/bulb.png" width=25px>值得注意的是，语法解析的过程中发生的任何语法错误都会被语法解析器发现并将消息打印到标准输出上，整个编译过程也会随着错误的出现而被中止。
 
 
 
@@ -2409,7 +2409,7 @@ Token 到上述抽象语法树（AST）的转换过程会用到语法解析器�
 
 ![golang-keyword-make](https://img.draveness.me/2019-12-20-15768548776677-golang-keyword-make.png)
 
-<img src="bulb.png" width=25px>类型检查这一过程在整个编译流程中还是非常重要的，Go 语言的很多关键字都依赖类型检查期间的展开和改写。
+<img src="assets/bulb.png" width=25px>类型检查这一过程在整个编译流程中还是非常重要的，Go 语言的很多关键字都依赖类型检查期间的展开和改写。
 
 
 
@@ -2421,7 +2421,7 @@ Token 到上述抽象语法树（AST）的转换过程会用到语法解析器�
 
 ![concurrency-compiling](https://img.draveness.me/2019-12-20-15768548776685-concurrency-compiling.png)
 
-<img src="bulb.png" width=25px>由于 Go 语言编译器的中间代码使用了 SSA 的特性，所以在这一阶段我们能够分析出代码中的无用变量和片段并对代码进行优化
+<img src="assets/bulb.png" width=25px>由于 Go 语言编译器的中间代码使用了 SSA 的特性，所以在这一阶段我们能够分析出代码中的无用变量和片段并对代码进行优化
 
 
 
@@ -2509,7 +2509,7 @@ func Main(archInit func(*Arch)) {
 }
 ```
 
-<img src="bulb.png" width=25px>在主程序运行的最后，编译器会将顶层的函数编译成中间代码并根据目标的 CPU 架构生成机器码，不过在这一阶段也有可能会再次对外部依赖进行类型检查以验证其正确性。
+<img src="assets/bulb.png" width=25px>在主程序运行的最后，编译器会将顶层的函数编译成中间代码并根据目标的 CPU 架构生成机器码，不过在这一阶段也有可能会再次对外部依赖进行类型检查以验证其正确性。
 
 
 
@@ -2534,13 +2534,13 @@ js的编译主要工具有：
 
 在不考虑优化的前提下，编译流程可见下图：（其中AST等内容可见[上文](#pre)）
 
-<img src="jsengine3.png">
+<img src="assets/jsengine3.png">
 
 ###### 词法作用域
 
 ​	这其中我们着重关注词法作用域的规则，包括var/let的区别，提升，闭包等概念。
 
-<img src="js2.png">
+<img src="assets/js2.png">
 
 
 
@@ -2550,6 +2550,6 @@ js的编译主要工具有：
 
 > 为什么要攀登，因为山就在那里
 
-​	<img src="awesomeface.png" width=25px>非常感谢各位能够阅读到这里。时代在发展，计算机知识已经成为了现代社会生存必要技能。希望本文档和后续培训能够对各位起到帮助。本文档由:dash:程锦鑫，:cupid:孙源隆，:pizza:王俊杰共同编写，也感谢对文档提出指导和改进意见的所有人。
+​	<img src="assets/awesomeface.png" width=25px>非常感谢各位能够阅读到这里。时代在发展，计算机知识已经成为了现代社会生存必要技能。希望本文档和后续培训能够对各位起到帮助。本文档由:dash:程锦鑫，:cupid:孙源隆，:pizza:王俊杰共同编写，也感谢对文档提出指导和改进意见的所有人。
 
 ​	:heart:我们从来不要求任何人一定要成为什么计算机大师，也不要求任何人完美完成各种任务，只是想通过这门综合性科学，让有着共同兴趣爱好的大家聚在一起。，你们的计算机之路刚刚开始，正如同人生一样未来充满了可能。我们也希望学习和相处的过程中各位对计算机世界有更多的了解，对世界的神秘和未知产生更多的斗志和想法。如果有可能的话，我们同样希望未来的某一天，当各位回顾过往，能够想起计算机的玄妙，想起自己沉浸在0和1的世界，也能够想起在挑战网度过的时光。祝你们未来无限进步！
