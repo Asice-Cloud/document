@@ -23,7 +23,7 @@
 go build [build flags] [packages]
 ```
 
-<img src="assets/bulb.png" width=25px>大家可以自行查阅可以添加的编译相关参数，如 -gcflags=-S 会输出汇编等。 
+<img src="../../assets/bulb.png" width=25px>大家可以自行查阅可以添加的编译相关参数，如 -gcflags=-S 会输出汇编等。 
 
 当然了，在开发过程中，我们也可以使用 `go run <文件名>` 来编译运行了，它会生成一个临时的可执行文件。
 
@@ -33,7 +33,7 @@ go build [build flags] [packages]
 
 想要从源代码生成可执行文件并不是一件容易的事。对于在操作系统运行的程序，比如 C 语言的程序，要经历预处理、编译、汇编、链接四个过程。
 
-<img src="assets/ccom.png">
+<img src="../../assets/ccom.png">
 
 **预处理**：在这个阶段，预处理器将源代码中的预处理指令（如 `#include`、`#define` 等）替换为实际的内容。预处理器会根据指令展开头文件，处理宏定义，并删除注释等。
 
@@ -45,11 +45,11 @@ go build [build flags] [packages]
 
 对于在虚拟机运行的程序，大致按照下面的流程。这里的前端和后端，当然不再是狭义的网络开发中的前端和后端了。编译过程中，还会对代码进行一些优化，比如乘法一般会被优化成位移，来提高程序的性能。
 
-<img src="assets/compilepro.png">
+<img src="../../assets/compilepro.png">
 
-<img src="assets/compile.png">
+<img src="../../assets/compile.png">
 
-你可能暂时不太理解每个细节，没有关系，先通过上面图片的大标题，感受一下编译的过程。<img src="assets/question.png" width=25px>下面我们将会对 Go 以及 javascript 的编译流程进行简单讲述，当然不要求读者完全掌握。
+你可能暂时不太理解每个细节，没有关系，先通过上面图片的大标题，感受一下编译的过程。<img src="../../assets/question.png" width=25px>下面我们将会对 Go 以及 javascript 的编译流程进行简单讲述，当然不要求读者完全掌握。
 
 
 
@@ -61,7 +61,7 @@ go build [build flags] [packages]
 
 ###### 抽象语法树
 
-​	[抽象语法树](https://en.wikipedia.org/wiki/Abstract_syntax_tree)（Abstract Syntax Tree、AST），是源代码语法的结构的一种抽象表示，它用树状的方式表示编程语言的语法结构 [1](https://draveness.me/golang/docs/part1-prerequisite/ch02-compile/golang-compile-intro/#fn:1)。抽象语法树中的每一个节点都表示源代码中的一个元素，每一棵子树都表示一个语法元素，以表达式 `2 * 3 + 7` 为例，编译器的语法分析阶段会生成如下图所示的抽象语法树（<img src="assets/awesomeface.png" width=25px>看起来很像中缀树...）。下面是一个简单表达式的抽象语法树。
+​	[抽象语法树](https://en.wikipedia.org/wiki/Abstract_syntax_tree)（Abstract Syntax Tree、AST），是源代码语法的结构的一种抽象表示，它用树状的方式表示编程语言的语法结构 [1](https://draveness.me/golang/docs/part1-prerequisite/ch02-compile/golang-compile-intro/#fn:1)。抽象语法树中的每一个节点都表示源代码中的一个元素，每一棵子树都表示一个语法元素，以表达式 `2 * 3 + 7` 为例，编译器的语法分析阶段会生成如下图所示的抽象语法树（<img src="../../assets/awesomeface.png" width=25px>看起来很像中缀树...）。下面是一个简单表达式的抽象语法树。
 
 ![abstract-syntax-tree](https://img.draveness.me/2019-12-20-15768548776645-abstract-syntax-tree.png)
 
@@ -153,7 +153,7 @@ Token 到上述抽象语法树（AST）的转换过程会用到语法解析器�
 
 ![golang-files-and-ast](https://img.draveness.me/2019-12-20-15768548776670-golang-files-and-ast.png)
 
-<img src="assets/bulb.png" width=25px>值得注意的是，语法解析的过程中发生的任何语法错误都会被语法解析器发现并将消息打印到标准输出上，整个编译过程也会随着错误的出现而被中止。
+<img src="../../assets/bulb.png" width=25px>值得注意的是，语法解析的过程中发生的任何语法错误都会被语法解析器发现并将消息打印到标准输出上，整个编译过程也会随着错误的出现而被中止。
 
 
 
@@ -174,7 +174,7 @@ Token 到上述抽象语法树（AST）的转换过程会用到语法解析器�
 
 ![golang-keyword-make](https://img.draveness.me/2019-12-20-15768548776677-golang-keyword-make.png)
 
-<img src="assets/bulb.png" width=25px>类型检查这一过程在整个编译流程中还是非常重要的，Go 语言的很多关键字都依赖类型检查期间的展开和改写。
+<img src="../../assets/bulb.png" width=25px>类型检查这一过程在整个编译流程中还是非常重要的，Go 语言的很多关键字都依赖类型检查期间的展开和改写。
 
 
 
@@ -186,7 +186,7 @@ Token 到上述抽象语法树（AST）的转换过程会用到语法解析器�
 
 ![concurrency-compiling](https://img.draveness.me/2019-12-20-15768548776685-concurrency-compiling.png)
 
-<img src="assets/bulb.png" width=25px>由于 Go 语言编译器的中间代码使用了 SSA 的特性，所以在这一阶段我们能够分析出代码中的无用变量和片段并对代码进行优化
+<img src="../../assets/bulb.png" width=25px>由于 Go 语言编译器的中间代码使用了 SSA 的特性，所以在这一阶段我们能够分析出代码中的无用变量和片段并对代码进行优化
 
 
 
@@ -274,7 +274,7 @@ func Main(archInit func(*Arch)) {
 }
 ```
 
-<img src="assets/bulb.png" width=25px>在主程序运行的最后，编译器会将顶层的函数编译成中间代码并根据目标的 CPU 架构生成机器码，不过在这一阶段也有可能会再次对外部依赖进行类型检查以验证其正确性。
+<img src="../../assets/bulb.png" width=25px>在主程序运行的最后，编译器会将顶层的函数编译成中间代码并根据目标的 CPU 架构生成机器码，不过在这一阶段也有可能会再次对外部依赖进行类型检查以验证其正确性。
 
 
 
@@ -299,10 +299,10 @@ js 的编译主要工具有：
 
 在不考虑优化的前提下，编译流程可见下图：（其中 AST等内容可见[上文](#pre)）
 
-<img src="assets/jsengine3.png">
+<img src="../../assets/jsengine3.png">
 
 ###### 词法作用域
 
 ​	这其中我们着重关注词法作用域的规则，包括 var/let 的区别，提升，闭包等概念。
 
-<img src="assets/js2.png">
+<img src="../../assets/js2.png">

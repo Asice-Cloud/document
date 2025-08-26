@@ -12,7 +12,7 @@
 
 ##### 开发平台选择：
 
-> ​	<img src="assets/awesomeface.png" width="25px"> 推荐 Arch Linux 或者 Ubuntu 作为开发环境，当然我们培训是基于 windows 开展的。
+> ​	<img src="../../assets/awesomeface.png" width="25px"> 推荐 Arch Linux 或者 Ubuntu 作为开发环境，当然我们培训是基于 windows 开展的。
 
 
 
@@ -26,7 +26,7 @@ $$
 
     IDE 是一种集成了多种开发工具和功能的软件应用程序，旨在提高软件开发的效率和质量。它通常包括源代码编辑器、编译器、调试器、构建工具、版本控制系统等，为程序员提供了一个全面的开发环境。集成了多种开发工具，方便程序员在同一个界面下完成开发任务。提供了丰富的功能和插件，满足不同开发需求。支持代码自动完成、语法高亮、代码重构等，提高编程效率和质量。可以自动管理代码库、构建工具和文档等，减少手动操作的时间和错误。如 Visual Studio，IDEA，Pycharm。
 
-<img src="assets/question.png" width = "25px"> 我们在入门过程中不需要完全理解编译器的原理，而是选择使用合适的编辑器或者 IDE 来开发项目。我们推荐使用 vscode 来进行开发工作。
+<img src="../../assets/question.png" width = "25px"> 我们在入门过程中不需要完全理解编译器的原理，而是选择使用合适的编辑器或者 IDE 来开发项目。我们推荐使用 vscode 来进行开发工作。
 
 
 
@@ -36,9 +36,9 @@ $$
 
 这里推荐大家使用 `Visual Studio Code` 编辑器，先到其 [官网下载](https://code.visualstudio.com/) 安装。选择适合自己电脑的发行版进行安装。windows 就一条龙到底就行了。记得选择添加到 PATH 中，这样方便以后在终端直接 `code .` 打开这个项目文件夹。桌面快捷方式可以自行选择是否创建。
 
-<img src="assets/vsc1.png" width = 500px>
+<img src="../../assets/vsc1.png" width = 500px>
 
-> <img src="assets/awesomeface.png" width="25px"> 有关 vscode 可以看我们 B 站的一个视频了解一下。为什么 Visual Studio Code 被誉为 IDE 中最强的男人：https://www.bilibili.com/video/BV13v411w7Fb
+> <img src="../../assets/awesomeface.png" width="25px"> 有关 vscode 可以看我们 B 站的一个视频了解一下。为什么 Visual Studio Code 被誉为 IDE 中最强的男人：https://www.bilibili.com/video/BV13v411w7Fb
 
 现在我们已经完成了软件的安装。但是打开 vscode 的话里面还是空空的，因为它本身只是一个文本编辑器，我们需要安装一些插件来让它变得强大 (:yum: vscode 补全计划)
 
@@ -101,11 +101,11 @@ vscode 的命令面板能让我们快速方便地执行很多功能与命令，�
 
 我们经常需要将某些路径添加到系统变量中，这样方便我们可以快速调用它们。下面以 windows 平台为例，演示如何添加环境变量。
 
-<img src="assets/sys1.png" width=800px>
+<img src="../../assets/sys1.png" width=800px>
 
 点击“环境变量”选项后，可以设置变量名和值。
 
-<img src="assets/sys2.png" width=800px> 
+<img src="../../assets/sys2.png" width=800px> 
 
 完成以后点击确定，就可以保存到环境变量了 :blush:
 
@@ -115,8 +115,8 @@ vscode 的命令面板能让我们快速方便地执行很多功能与命令，�
 
 我们上网冲浪的时候，经常会看到好多人在吵用什么工具写程序是最好的。下面是全网统计的编译器 / IDE 受欢迎图：
 
-<img src="assets/rank.png">
+<img src="../../assets/rank.png">
 
 ​	但是 :cold_sweat: `visual studio` 太重了！！而且 vs 主要经营 .Net 的开发和调试，也不是我们的主力语言。相比之下 `vscode` 便捷而且拥有海量插件，配置的好的话也不会比 vs 差到哪去。
 
-​	<img src="assets/bulb.png" width=25px> 不过市场上其他的编译器和 IDE 同样值得推荐，比如 Jetbrains 全家桶中的 idea（收费，建议使用学信网去申请个教育包），vim（门槛较高），用起来也是很爽的。IDE 的好处是开盖即用，不需要再过多配置，但是可能比较重而且不够自由。
+​	<img src="../../assets/bulb.png" width=25px> 不过市场上其他的编译器和 IDE 同样值得推荐，比如 Jetbrains 全家桶中的 idea（收费，建议使用学信网去申请个教育包），vim（门槛较高），用起来也是很爽的。IDE 的好处是开盖即用，不需要再过多配置，但是可能比较重而且不够自由。

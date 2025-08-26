@@ -8,21 +8,22 @@ def process_markdown_files():
     """
     # 设置路径
     docs_pattern = "docs/0*/**/*.md"
-    readme_path = "README.md"
+    preface_path = "docs/preface.md"
     afterword_path = "docs/afterword.md"
-    output_path = "edocument.md"
+    output_path = "README.md"
     
     # 存储所有处理后的内容
     merged_content = []
     
-    # 读取README.md作为开头
-    if os.path.exists(readme_path):
-        with open(readme_path, 'r', encoding='utf-8') as f:
-            readme_content = f.read()
-            merged_content.append(readme_content)
-            print(f"已添加 README.md")
+    # 读取preface.md作为开头
+    if os.path.exists(preface_path):
+        with open(preface_path, 'r', encoding='utf-8') as f:
+            preface_content = f.read()
+            preface_content = preface_content.replace("../assets", "assets")
+            merged_content.append(preface_content)
+            print(f"已添加 preface.md")
     else:
-        print("警告: README.md 文件不存在")
+        print("警告: preface.md 文件不存在")
     
     # 获取所有匹配的markdown文件并排序
     md_files = glob.glob(docs_pattern, recursive=True)
@@ -39,8 +40,7 @@ def process_markdown_files():
             # 替换路径引用
             content = content.replace("../../assets", "assets")
             
-            # 添加文件分隔符
-            merged_content.append(f"\n\n---\n\n# {os.path.basename(md_file)}\n\n")
+            merged_content.append("\n\n---\n\n")
             merged_content.append(content)
             
             print(f"已处理: {md_file}")
@@ -52,7 +52,7 @@ def process_markdown_files():
                 with open(md_file, 'r', encoding='gbk') as f:
                     content = f.read()
                 content = content.replace("../../assets", "assets")
-                merged_content.append(f"\n\n---\n\n# {os.path.basename(md_file)}\n\n")
+                merged_content.append("\n\n---\n\n")
                 merged_content.append(content)
                 print(f"已处理 (GBK编码): {md_file}")
             except Exception as e2:
@@ -68,9 +68,9 @@ def process_markdown_files():
             
             afterword_content = afterword_content.replace("../assets", "assets")
             
-            merged_content.append("\n\n---\n\n# 后记\n\n")
+            merged_content.append("\n\n---\n\n")
             merged_content.append(afterword_content)
-            print(f"已添加 afterword.md")
+            print(f"已处理: docs/afterword.md")
         except Exception as e:
             print(f"处理afterword.md错误: {e}")
     else:

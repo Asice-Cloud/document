@@ -58,7 +58,7 @@
 
 ##### 网络如何工作
 
-<img src="assets/question.png" width=25px> 这些东西阅读了解即可，具体的 TCP/IP 协议内容很多，今后将会逐步学习
+<img src="../../assets/question.png" width=25px> 这些东西阅读了解即可，具体的 TCP/IP 协议内容很多，今后将会逐步学习
 
 ```
 计算机网络使用电缆、光纤或无线信号来连接计算机、路由器和交换机等节点。利用这些连接，网络中的设备便可以进行通信并共享信息和资源。
@@ -70,7 +70,7 @@
 最底层的是网际网络协定，是用于报文交换网络的一种面向数据的协议，这一协议定义了数据包在网际传送时的格式。目前使用最多的是IPv4版本，这一版本中用32位定义IP地址，尽管地址总数达到43亿，但是仍然不能满足现今全球网络飞速发展的需求，因此IPv6版本应运而生。在IPv6版本中，IP地址共有128位，“几乎可以为地球上每一粒沙子分配一个IPv6地址”。IPv6目前并没有普及，许多网际网络服务提供商并不支持IPv6协议的连接。但是，可以预见，将来在IPv6的帮助下，任何家用电器都有可能连入网际网络。
 ```
 
-<img src="assets/question.png" width=25px> 如果学习大学计算机课程的话，会接触到网络体系结构，也就是下图所示的
+<img src="../../assets/question.png" width=25px> 如果学习大学计算机课程的话，会接触到网络体系结构，也就是下图所示的
 
 <img src="https://img-blog.csdnimg.cn/img_convert/afe9b94ee66ddc880668dfef2c607d39.png" width=800px>
 
@@ -91,7 +91,7 @@ HTTP是一个客户端（用户）和服务端（网站）之间请求和应答�
 
 **HTTP 方法**
 
-<img src="assets/warning.png" width=25px> 这是 HTTP 协议中非常重要的一环，HTTP/1.1 一共定义了 8 种方法，我们这里只介绍常用的 5 种，其余的大家可以自行搜索了解。
+<img src="../../assets/warning.png" width=25px> 这是 HTTP 协议中非常重要的一环，HTTP/1.1 一共定义了 8 种方法，我们这里只介绍常用的 5 种，其余的大家可以自行搜索了解。
 
 ***GET*** 
 
@@ -115,13 +115,13 @@ HTTP是一个客户端（用户）和服务端（网站）之间请求和应答�
 
 
 
-<img src="assets/bulb.png" width=25px> 方法名称是 **区分大小写** 的。当某个请求所针对的资源不支持对应的请求方法的时候，服务器应当返回状态码 405（Method Not Allowed），当服务器不认识或者不支持对应的请求方法的时候，应当返回状态码 501（Not Implemented）。HTTP 服务器至少应该实现 GET 和 HEAD 方法，其他方法都是可选的。
+<img src="../../assets/bulb.png" width=25px> 方法名称是 **区分大小写** 的。当某个请求所针对的资源不支持对应的请求方法的时候，服务器应当返回状态码 405（Method Not Allowed），当服务器不认识或者不支持对应的请求方法的时候，应当返回状态码 501（Not Implemented）。HTTP 服务器至少应该实现 GET 和 HEAD 方法，其他方法都是可选的。
 
 另外的，我们的请求方法都有着更多不同的性质，诸如安全性、幂等性等，这些建议大家多多了解。
 
 
 
-<img src="assets/bulb.png" width=25px> **HTTP 状态码**
+<img src="../../assets/bulb.png" width=25px> **HTTP 状态码**
 
 我们有时候会遇到页面显示类似 404、503 等，这些都是常见的 HTTP 状态码。状态码的第一个数字代表当前响应的类型：
 
@@ -176,7 +176,7 @@ HTTP是一个客户端（用户）和服务端（网站）之间请求和应答�
 
 
 
-<img src="assets/warning.png" width=25px> **HTTP 请求**
+<img src="../../assets/warning.png" width=25px> **HTTP 请求**
 
 请求信息格式中需要包含：
 
@@ -240,21 +240,21 @@ Connection: keep-alive
 
 
 
-<img src="assets/bulb.png" width=25px> DNS 负责域名解析为 IP，具体方式可以自行了解。
+<img src="../../assets/bulb.png" width=25px> DNS 负责域名解析为 IP，具体方式可以自行了解。
 
 
 
 **如何设计和进行交互**
 
-<img src="assets/awesomeface.png" width=25px> 一个重要的概念是 API： 应用程序接口（英语：application programming interface），缩写为 API，是一种计算接口，它定义多个软件之间的交互，以及可以进行的调用（call）或请求（request）的种类，如何进行调用或发出请求，应使用的数据格式，应遵循的惯例等。它还可以提供扩展机制，以便用户可以通过各种方式对现有功能进行不同程度的扩展。一个 API 可以是完全定制的，针对某个组件的，也可以是基于行业标准设计的以确保互操作性。通过隐藏无关信息，API 实现了模块化编程，从而允许用户实现独立地使用接口。
+<img src="../../assets/awesomeface.png" width=25px> 一个重要的概念是 API： 应用程序接口（英语：application programming interface），缩写为 API，是一种计算接口，它定义多个软件之间的交互，以及可以进行的调用（call）或请求（request）的种类，如何进行调用或发出请求，应使用的数据格式，应遵循的惯例等。它还可以提供扩展机制，以便用户可以通过各种方式对现有功能进行不同程度的扩展。一个 API 可以是完全定制的，针对某个组件的，也可以是基于行业标准设计的以确保互操作性。通过隐藏无关信息，API 实现了模块化编程，从而允许用户实现独立地使用接口。
 
 应用程序接口有诸多不同设计。用于快速执行的接口通常包括 **函数名、常量、变量与其他数据结构**。在向他人提供一个 API 时，你需要显式地提供以上信息。下面是 cppreference 上的一个 API：
 
-<img src="assets/api1.png" width=800px>
+<img src="../../assets/api1.png" width=800px>
 
 
 
-<img src="assets/bulb.png" width=25px> **我们用到的 API 架构是 RESTful API, 后续会逐步教学，现在可以作了解**
+<img src="../../assets/bulb.png" width=25px> **我们用到的 API 架构是 RESTful API, 后续会逐步教学，现在可以作了解**
 
 RESTful API，Web 服务必须遵守以下六个 REST 架构约束：
 
@@ -298,7 +298,7 @@ resource_id：资源的id，访问或操作该资源。
 
 
 
-<img src="assets/awesomeface.png" width=25> 举个例子，比如我们要抽取一道题目，可以这样设计 URL：
+<img src="../../assets/awesomeface.png" width=25> 举个例子，比如我们要抽取一道题目，可以这样设计 URL：
 
 ```
 http://api.example.com/v1/draw

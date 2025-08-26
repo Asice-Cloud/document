@@ -20,14 +20,14 @@
 
 丰富多彩的图像是美化网页必不可少的元素，用于网页上的图像一般为 JPG 格式和 GIF 格式（当然还有无限缩放而不失去清晰度的 SVG 格式）。网页中的图像主要用于点缀标题的小图片，介绍性的图片，代表企业形象或栏目内容的标志性图片，用于宣传广告等多种形式。
 
-<img src="assets/tenzor.svg" alt="img" width="18px"> 这个挑战 logo 就是由以下代码导入的
+<img src="../../assets/tenzor.svg" alt="img" width="18px"> 这个挑战 logo 就是由以下代码导入的
 
 ```html
 <!-- .html文件 -->
-<img src="assets/tenzor.svg" alt="img" width="25px">
+<img src="images/tenzor.svg" alt="img" width="25px">
 ```
 
-<img src="assets/question.png" alt="q" width="25px"> 上面的一串代码中，img 标签被添加了三个属性，其中 src 属性规定了图像的路径、alt 属性规定了图像无法显示时的替代文本、width 属性规定了图像的宽度。除此之外，img 标签还有 height、draggable 等属性，大家在后续学习中会逐渐接触到。
+<img src="../../assets/question.png" alt="q" width="25px"> 上面的一串代码中，img 标签被添加了三个属性，其中 src 属性规定了图像的路径、alt 属性规定了图像无法显示时的替代文本、width 属性规定了图像的宽度。除此之外，img 标签还有 height、draggable 等属性，大家在后续学习中会逐渐接触到。
 
 ##### 超链接
 
@@ -44,7 +44,7 @@
 
 动画是网页中最活跃的元素，创意出众、制作精致的动画是吸引浏览者眼球的最有效方法之一。但是如果网页动画太多，也会物极必反，使人眼花缭乱，进而产生视觉疲劳。
 
-<img src="assets/question.png" alt="q" width="25px"> 下面的代码定义了一个动画，实现了一个元素颜色的变化。
+<img src="../../assets/question.png" alt="q" width="25px"> 下面的代码定义了一个动画，实现了一个元素颜色的变化。
 
 ```css
 /* .css文件 */

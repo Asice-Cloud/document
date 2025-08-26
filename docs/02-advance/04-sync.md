@@ -52,7 +52,7 @@ int main(){
 
 
 
-###### <img src="assets/awesomeface.png" width=25px>砸瓦路多！
+###### <img src="../../assets/awesomeface.png" width=25px>砸瓦路多！
 
 我们可以控制一个流程的执行时间，C++ 可以使用 sleep_for（或者 sleep_until）关键字（不同语言可能关键字不同），将流程睡眠一会。
 
@@ -136,11 +136,11 @@ int main(){
 
 执行效果如下，我们可以在 download 的同时随意输入东西，但是输出却不会执行，因为 main 被阻塞了，只有 download 结束才会执行 interact，输入完之后并不能立刻得到反馈：
 
-<img src="assets/thread1.png">
+<img src="../../assets/thread1.png">
 
 
 
-###### <img src="assets/awesomeface.png" width=25px>**多线程，启动！**
+###### <img src="../../assets/awesomeface.png" width=25px>**多线程，启动！**
 
 ```c++
 // C/C++
@@ -177,13 +177,13 @@ int main() {
 
 
 
-<img src="assets/awesomeface.png" width=25px>现在就非常 nice 了，可以一边下载/观看王俊杰的黑历史一边发表评论了~~（bushi~~
+<img src="../../assets/awesomeface.png" width=25px>现在就非常 nice 了，可以一边下载/观看王俊杰的黑历史一边发表评论了~~（bushi~~
 
-<img src="assets/thread3.png">
+<img src="../../assets/thread3.png">
 
 
 
-> <img src="assets/question.png" width=25px>我们知道线程执行完就会销毁，有时候需要自己管理什么时候销毁，请大家自行查阅分离线程、线程池的概念。
+> <img src="../../assets/question.png" width=25px>我们知道线程执行完就会销毁，有时候需要自己管理什么时候销毁，请大家自行查阅分离线程、线程池的概念。
 
 
 
@@ -197,7 +197,7 @@ int main() {
 
 **协程**（coroutines），由字面意思就知道是和进程（Process/Routines）或者函数调用（Subroutines）对应的东西。协程其实是分割进程，但是分割的同时保留了之前处理过的信息，所以可以用来组件之间的协作工作。协程的初始处就是第一个的入口点。通过 yield 返回一部分结果值以及执行到这个时刻的协程的状态，作为下次进入这个协程的入口点。形象的演示，比如这张图（来自 b 站 up 百草园），容易看出函数调用和协程的关系。
 
-<img src="assets/coroutine2.jpg">
+<img src="../../assets/coroutine2.jpg">
 
 ​	举个例子，就像你看一道数学题，有思路的时候去写，卡住了然后回去看题，有思路了继续写，这样循环下去。如果不出意外的话，你应该就是在卡住的地方去看了题，看的就是上次没看明白的地方，然后返回上次卡住的地方继续写。
 
@@ -222,7 +222,7 @@ coroutine consume //消费者
 call produce //开工了
 ```
 
-<img src="assets/bulb.png" width=25px>队列用来存放产品的空间有限，同时制约生产者和消费者：为了提高效率，生产者协程要在一次执行中尽量向队列多增加产品，然后再放弃控制使得消费者协程开始运行；同样消费者协程也要在一次执行中尽量从队列多取出产品，从而倒出更多的存放产品空间，然后再放弃控制使得生产者协程开始运行。尽管这个例子常用来介绍 [多线程](https://zh.wikipedia.org/wiki/多线程)，实际上简单明了的使用协程的 `yield` 即可实现这种协作关系。
+<img src="../../assets/bulb.png" width=25px>队列用来存放产品的空间有限，同时制约生产者和消费者：为了提高效率，生产者协程要在一次执行中尽量向队列多增加产品，然后再放弃控制使得消费者协程开始运行；同样消费者协程也要在一次执行中尽量从队列多取出产品，从而倒出更多的存放产品空间，然后再放弃控制使得生产者协程开始运行。尽管这个例子常用来介绍 [多线程](https://zh.wikipedia.org/wiki/多线程)，实际上简单明了的使用协程的 `yield` 即可实现这种协作关系。
 
 
 
@@ -237,7 +237,7 @@ call produce //开工了
 
 ###### 协程的原理
 
-<img src="assets/question.png" width=25px>当出现 IO 阻塞的时候，由协程的调度器进行调度，通过将数据流立刻 yield 掉（主动让出），并且记录当前栈上的数据，阻塞完后立刻再通过线程恢复栈，并把阻塞的结果放到这个线程上去跑，这样看上去好像跟写同步代码没有任何差别，这整个流程可以称为 coroutine，而跑在由 `coroutine` 负责调度的线程称为 `Fiber`。比如 Golang 里的 go 关键字其实就是负责开启一个 `Fiber`，让 `func` 逻辑跑在上面。
+<img src="../../assets/question.png" width=25px>当出现 IO 阻塞的时候，由协程的调度器进行调度，通过将数据流立刻 yield 掉（主动让出），并且记录当前栈上的数据，阻塞完后立刻再通过线程恢复栈，并把阻塞的结果放到这个线程上去跑，这样看上去好像跟写同步代码没有任何差别，这整个流程可以称为 coroutine，而跑在由 `coroutine` 负责调度的线程称为 `Fiber`。比如 Golang 里的 go 关键字其实就是负责开启一个 `Fiber`，让 `func` 逻辑跑在上面。
 
 由于协程的暂停完全由程序控制，发生在用户态上；而线程的阻塞状态是由操作系统内核来进行切换，发生在内核态上。
 因此，协程的开销远远小于线程的开销，也就没有了 ContextSwitch 上的开销。
@@ -246,7 +246,7 @@ call produce //开工了
 
 回到刚才的场景，能否使用协程来做呢
 
-###### <img src="assets/awesomeface.png" width=25px>协程，启动！
+###### <img src="../../assets/awesomeface.png" width=25px>协程，启动！
 
 这里使用 Go 语言举例子，毕竟 C++ 开协程是一项高级技术，有点难度，举例子的话没有那么清晰。
 
@@ -286,7 +286,7 @@ func main() {
 
 继续迫害王俊杰结果如下：
 
-<img src="assets/coroutine1.png">
+<img src="../../assets/coroutine1.png">
 
 
 
@@ -398,7 +398,7 @@ func main() {
 
 以网络 IO 为例，其本质是 Socket 的读取，Socket 在 Linux 系统被抽象为流，IO 可以理解为对流的操作。Linux 标准文件访问方式如下:
 
-<img src="assets/sync1.png" width=800px>
+<img src="../../assets/sync1.png" width=800px>
 
 
 
@@ -414,7 +414,7 @@ func main() {
 
 网络应用需要处理的无非就是两大类问题，网络 IO，数据计算。相对于后者，网络 IO 的延迟，给应用带来的性能瓶颈大于后者，接下来我们介绍下 IO 模型。
 
-> <img src="assets/question.png" width=25px>这一段不用完全理解，先了解一下都是什么。
+> <img src="../../assets/question.png" width=25px>这一段不用完全理解，先了解一下都是什么。
 
 
 
@@ -466,7 +466,7 @@ IO 多路复用解决了一个线程或者多个线程可以监控多个文件�
 
 并行（Parallelism），**当系统有一个以上 CPU 时，当一个 CPU 执行一个进程时，另一个 CPU 可以执行另一个进程，两个进程互不抢占 CPU 资源，可以同时进行，这种方式我们称之为并行（Parallelism）。**这里面有一个很重要的点，那就是系统要有多个 CPU 才会出现并行。在有多个 CPU 的情况下，才会出现真正意义上的『同时进行』。换言之，对于**GPU**这种原生就是多核结构的，**并行**才是最好的选择。
 
-<img src="assets/concurrent1.png">
+<img src="../../assets/concurrent1.png">
 
 ###### **并发和并行的区别**
 
@@ -476,11 +476,11 @@ IO 多路复用解决了一个线程或者多个线程可以监控多个文件�
 
 只有在多 CPU 的情况中，才会发生并行。否则，看似同时发生的事情，其实都是并发执行的。
 
-<img src="assets/concurrent2.png" width=800px>
+<img src="../../assets/concurrent2.png" width=800px>
 
 ###### 对应关系
 
-<img src="assets/bulb.png" width=25px>一般情况下：
+<img src="../../assets/bulb.png" width=25px>一般情况下：
 
 ​	协程 -> 并发，协程适合用于阻塞、多任务场景，例如网络交互里面，而且不会消耗太多系统资源，也不会互相抢占进程。并发适合放到系统层面。
 

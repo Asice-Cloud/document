@@ -27,9 +27,9 @@
 | uint         | 32 位系统 4 字节 64 位系统 8 字节 | 0 ~ 2^32-1 或 0 ~ 2^64-1           |
 | char         | 1 字节                      | 存储 ASCII 字符                    |
 
-<img src="assets/question.png" width=25px> 另外还有类似 int8，int64，string 等类型，大家可以自行搜索做了解。
+<img src="../../assets/question.png" width=25px> 另外还有类似 int8，int64，string 等类型，大家可以自行搜索做了解。
 
-<img src="assets/awesomeface.png" width=25px> **这些数据在计算机底层都是存储在某个地址中**，可能是 0x00 这个位置上存了一个 int 值 1，地址就相当于是变量家的门牌号，变量值就像家里的东西，知道了门牌号自然就知道了如果找到这个房子，进而知道了家里的东西是什么。
+<img src="../../assets/awesomeface.png" width=25px> **这些数据在计算机底层都是存储在某个地址中**，可能是 0x00 这个位置上存了一个 int 值 1，地址就相当于是变量家的门牌号，变量值就像家里的东西，知道了门牌号自然就知道了如果找到这个房子，进而知道了家里的东西是什么。
 
 
 
@@ -50,9 +50,9 @@ int main(void){
    
 ```
 
-<img src="assets/question.png" width=25px> 我们也可能会遇到定义的变量类型和我们需要的类型不一致的情况，这时我们需要转换这个变量。一般情况下有隐式转换和显示转换两种方式，读者可以自行查阅了解相关内容，如何转换以及什么情形下可以转换。
+<img src="../../assets/question.png" width=25px> 我们也可能会遇到定义的变量类型和我们需要的类型不一致的情况，这时我们需要转换这个变量。一般情况下有隐式转换和显示转换两种方式，读者可以自行查阅了解相关内容，如何转换以及什么情形下可以转换。
 
-<img src="assets/warning.png" width=25px> **注意：有些符号我们称之为“关键字”，这是语言本身提供的，用来编写代码的元素。比如上面的 int, bool 等。我们给变量起名时不可以和关键字重名。大家可以自行查阅常用关键字。**
+<img src="../../assets/warning.png" width=25px> **注意：有些符号我们称之为“关键字”，这是语言本身提供的，用来编写代码的元素。比如上面的 int, bool 等。我们给变量起名时不可以和关键字重名。大家可以自行查阅常用关键字。**
 
 有没有想过把一堆同样类型的变量放到一起？就像我们学校每个专业都是同学的集合一样。我们可以使用一个叫做 **数组** 的数据结构来存储。顺便一提，数组本身也是一个变量，我们会在指针章节细说。
 
@@ -69,7 +69,7 @@ arr[2] = 10; //给对应位置赋值/修改值
 int a3=arr1[3]; //出界啦！
 ```
 
-<img src="assets/question.png" width=25> 课外阅读：<a href="https://mp.weixin.qq.com/s?__biz=MzA5NDIzNzY1OQ==&mid=2735628657&idx=1&sn=379a9423f2a449ab5b94d795cedaff93&chksm=b7fab396327572047b4749532f4e901311efe16820cf52440aea3f717da440bc93ef75f7e27f&mpshare=1&scene=23&srcid=0909tArK7FVSGAARjnU7qOHP&sharer_shareinfo=e08c8cede59f8c572ad27f13b09e7726&sharer_shareinfo_first=e08c8cede59f8c572ad27f13b09e7726#rd">编程语言是怎么被实现出来的？</a> 这篇文章用生动的语言简述了编程的底层逻辑，有精力的话推荐阅读下。
+<img src="../../assets/question.png" width=25> 课外阅读：<a href="https://mp.weixin.qq.com/s?__biz=MzA5NDIzNzY1OQ==&mid=2735628657&idx=1&sn=379a9423f2a449ab5b94d795cedaff93&chksm=b7fab396327572047b4749532f4e901311efe16820cf52440aea3f717da440bc93ef75f7e27f&mpshare=1&scene=23&srcid=0909tArK7FVSGAARjnU7qOHP&sharer_shareinfo=e08c8cede59f8c572ad27f13b09e7726&sharer_shareinfo_first=e08c8cede59f8c572ad27f13b09e7726#rd">编程语言是怎么被实现出来的？</a> 这篇文章用生动的语言简述了编程的底层逻辑，有精力的话推荐阅读下。
 
 ##### 表达式
 
@@ -112,7 +112,7 @@ float expression_3 = 3*(expression_1+expression_2)
 | \|\| | 左边或者右边成立             |
 | !    | 逻辑非，将真变为假，假变为真 |
 
-> <img src="assets/awesomeface.png" width=25px> [注：不同语言中可能有更多的逻辑运算符，可自行查找]
+> <img src="../../assets/awesomeface.png" width=25px> [注：不同语言中可能有更多的逻辑运算符，可自行查找]
 
 
 
@@ -158,11 +158,11 @@ for (int j = 0; j < 10; j++) {
 }
 ```
 
-<img src="assets/bulb.png" width=25px> 可以自行查询 switch, while, goto 等控制、循环语句关键字的作用
+<img src="../../assets/bulb.png" width=25px> 可以自行查询 switch, while, goto 等控制、循环语句关键字的作用
 
 
 
-##### <img src="assets/question.png" width=25px> 位运算和位运算符
+##### <img src="../../assets/question.png" width=25px> 位运算和位运算符
 
 (这一部分建议自行了解，下面的表格还是以 C 语言为例)
 
@@ -175,7 +175,7 @@ for (int j = 0; j < 10; j++) {
 | <<   | 左移     | 各二进位全部左移若干位，高位丢弃，低位补 0   |
 | >>   | 右移     | 各二进位全部右移若干位，高位补 0 或符号位补齐 |
 
-<img src="assets/awesomeface.png" width=25px> 位运算我们一般用的不多，不过可能有时候会出现左移和右移的代码，通俗来讲，左移后移就是乘以 2 的某次幂：
+<img src="../../assets/awesomeface.png" width=25px> 位运算我们一般用的不多，不过可能有时候会出现左移和右移的代码，通俗来讲，左移后移就是乘以 2 的某次幂：
 
 ``` c
 // C
@@ -190,7 +190,7 @@ a >> 1; // = a / (2^1)
 
 <img src ="warning.png" width=25px> 在开发过程中往往会有多个运算符出现在一起，和数学上的运算一样，这时候需要规定运算顺序，以及如何改变运算顺序。
 
-这里是一份以 C 语言为例的运算符优先级排序，其他语言可以自行查阅了解。<img src="assets/question.png" width=25px> 有些运算符我们现在还没有提到，可以搜索看看都是什么。
+这里是一份以 C 语言为例的运算符优先级排序，其他语言可以自行查阅了解。<img src="../../assets/question.png" width=25px> 有些运算符我们现在还没有提到，可以搜索看看都是什么。
 
 | 优先级 | 操作符                        | 描述                    |
 | :----- | :---------------------------- | :----------------------|

@@ -24,7 +24,7 @@
 
 具体的三件套教程可参考 <a href="https://www.runoob.com">菜鸟教程</a> 和 <a href="https://www.w3school.com.cn/">w3school</a>，里面有很详细的讲解和示例。
 
-<img src="assets/hcj.png" width=400>
+<img src="../../assets/hcj.png" width=400>
 
 **`vue.js`**  `Vue.js` 是一套用于构建用户界面的渐进式框架。它与其他大型框架不同，被设计为可以自底向上逐层应用。`Vue` 的核心库只关注视图层，易于上手，且便于与第三方库或既有项目整合。当与现代化的工具链以及各种支持类库结合使用时，`Vue` 也完全能够为复杂的单页应用提供驱动。
 
@@ -36,7 +36,7 @@
 
 
 
-###### <img src="assets/bulb.png" width=25px>更多
+###### <img src="../../assets/bulb.png" width=25px>更多
 
 如果你对前端开发有浓厚的兴趣，我们也推荐你更加广泛地学习，这里我们列举一些例子：
 
@@ -44,7 +44,7 @@
 
 <a href="https://www.webpackjs.com/">`Webpack` 中文文档</a>
 
-> <img src="assets/awesomeface.png" width=25> -*你知道回答的人是谁吗，哈哈哈*
+> <img src="../../assets/awesomeface.png" width=25> -*你知道回答的人是谁吗，哈哈哈*
 >        -*我知道啊，一个不懂 vue 的胖子*
 
 
@@ -55,19 +55,19 @@
 
 后端将使用 **`go`** 语言进行开发，它是由谷歌推出的新兴的开发语言，在 2024 年 8 月的语言流行度排名中，位列第 9。`go` 语言是一种强类型语言，其运行速度接近 C 语言，同时又具有简单的语法，易于上手。其最大特点莫过于提供了一种简洁且高效的方式来处理并发事务，这使得它非常适合用来开发一些有高并发场景的服务，比如 Web 后端。
 
-<img src="assets/tiobeindex.png">
+<img src="../../assets/tiobeindex.png">
 
-<img src="assets/question.png" width=25> 推荐阅读：<a href="https://mp.weixin.qq.com/s?__biz=MzIxMzgyNTQyOA==&mid=2247487919&idx=1&sn=20e3b80796c6abd995af55ad1cd2007d&chksm=96715836363d799f3b3b5df2608256f033362e8d351d6ebac6279e522b6d87d144c94cd3a50e&mpshare=1&scene=23&srcid=0909d0ju8PpaT7dGiaJrsEQ6&sharer_shareinfo=1fa7d4e29ed415209d630b05d85f1edf&sharer_shareinfo_first=1fa7d4e29ed415209d630b05d85f1edf#rd">Go 语言中不可不知的语法糖</a> 这篇文章提到了很多 `go` 语言可以用来简化开发的用法，在对 `go` 基础有一定的了解之后，可以阅读下这篇文章。
+<img src="../../assets/question.png" width=25> 推荐阅读：<a href="https://mp.weixin.qq.com/s?__biz=MzIxMzgyNTQyOA==&mid=2247487919&idx=1&sn=20e3b80796c6abd995af55ad1cd2007d&chksm=96715836363d799f3b3b5df2608256f033362e8d351d6ebac6279e522b6d87d144c94cd3a50e&mpshare=1&scene=23&srcid=0909d0ju8PpaT7dGiaJrsEQ6&sharer_shareinfo=1fa7d4e29ed415209d630b05d85f1edf&sharer_shareinfo_first=1fa7d4e29ed415209d630b05d85f1edf#rd">Go 语言中不可不知的语法糖</a> 这篇文章提到了很多 `go` 语言可以用来简化开发的用法，在对 `go` 基础有一定的了解之后，可以阅读下这篇文章。
 
 更具体地，我们将使用基于 `go` 语言的 `gin` 框架来进行后端开发，~~应该有人的面试题就是这个吧~~，使用 `gorm` 来操作数据库。`gin` 框架的优点包括高性能、支持中间件、路由管理方便、数据验证方便等等。而 `gorm` 的语法接近 `MySQL`，易于掌握。在这些技术的加持下，我们就可以进行一些后端的开发了。
 
-<img src="assets/bulb.png" width=25>在这些技术的学习中，`go` 语言基础毫无疑问是最重要的，我们会在后续的课程中详细讲解。我们希望你能拥有扎实的语言基础，这样在使用框架的时候会更加得心应手。我们更推荐你在使用框架的过程中，能逐渐地了解这个框架的架构，学习到更本质的东西，而不是仅停留在调包的水平。
+<img src="../../assets/bulb.png" width=25>在这些技术的学习中，`go` 语言基础毫无疑问是最重要的，我们会在后续的课程中详细讲解。我们希望你能拥有扎实的语言基础，这样在使用框架的时候会更加得心应手。我们更推荐你在使用框架的过程中，能逐渐地了解这个框架的架构，学习到更本质的东西，而不是仅停留在调包的水平。
 
 <a href="https://golang.google.cn/doc/">`go` 语言官方文档 </a> <a href="https://gorm.io/zh_CN/docs/index.html">`gorm` 官方文档</a>
 
 
 
-<img src="assets/gogogo.jpeg">
+<img src="../../assets/gogogo.jpeg">
 
 如果你对后端开发的兴趣浓厚，那么也可以考虑进一步学习，我们在这里给出一些例子，仅供参考
 
@@ -79,17 +79,17 @@
 
 
 
-###### <img src="assets/warning.png" width=25px> 后端学习中重要的额外内容
+###### <img src="../../assets/warning.png" width=25px> 后端学习中重要的额外内容
 
 > （以下内容适合后端兴趣浓厚，想要长期学习和开发的读者，不建议速通这些内容，但一定要坚持学习）
 
-1.<img src="assets/warning.png" width=25px>**更多的数学知识**：不要以为上课学了个高数和线代就可以高枕无忧了，时代在变化，这些最浅层的数学内容不能让你有着解决所有问题的能力，所以建议了解以及学习 **阶的估计**、**基础数论**、**抽象代数** 等内容，多学数学百利而无一害，不要停止这方面的持续精进，特别是在计算机方面，你会发现你几百行代码解决不了的问题可能就只需要做一个简单的流形的变换就解决了。
+1.<img src="../../assets/warning.png" width=25px>**更多的数学知识**：不要以为上课学了个高数和线代就可以高枕无忧了，时代在变化，这些最浅层的数学内容不能让你有着解决所有问题的能力，所以建议了解以及学习 **阶的估计**、**基础数论**、**抽象代数** 等内容，多学数学百利而无一害，不要停止这方面的持续精进，特别是在计算机方面，你会发现你几百行代码解决不了的问题可能就只需要做一个简单的流形的变换就解决了。
 
 2.语言特性：迭代器，静态期和运行期特性，**上下文（context）**，可变参数，反射，泛型，管理垃圾回收等。
 
 3.算法基础：包括基本的排序、搜索、数据结构、优化等内容。了解常用容器的底层结构（如 map 底层是红黑树），判断、鉴权 api 时考虑前缀树等。
 
-4.<img src="assets/warning.png" width=25px>调试工具：我们可能不会详细讲述如何进行调试，但是自己需要了解，这点很重要。比如 go test 如何使用，如何查看内存占用，段错误（Segmentation Fault）是什么意思以及如何修复等。
+4.<img src="../../assets/warning.png" width=25px>调试工具：我们可能不会详细讲述如何进行调试，但是自己需要了解，这点很重要。比如 go test 如何使用，如何查看内存占用，段错误（Segmentation Fault）是什么意思以及如何修复等。
 
 5.常用框架：学会如何阅读框架源码，更进一步最好做到自己看框架底层。
 
@@ -137,7 +137,7 @@
 
 + DELETE：从服务器删除资源
 
-<img src="assets/question.png" width=25> 关于 `Restful API` 的文章推荐：
+<img src="../../assets/question.png" width=25> 关于 `Restful API` 的文章推荐：
 
 <a href="http://www.ruanyifeng.com/blog/2014/05/restful_api.html">RESTful API 设计指南 - 阮一峰的网络日志</a>
 

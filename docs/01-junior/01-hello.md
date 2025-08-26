@@ -32,11 +32,11 @@ macOS，可使用 `Command + Shift + 4`，进行截屏
 
 如果上面两种方式你都不喜欢，那么你也可以使用 QQ 的截屏工具，如下图
 
-<img src="assets/qqshot.png">
+<img src="../../assets/qqshot.png">
 
 请务必不要使用手机拍屏，因为图片质量非常差，完全没法看清楚内容
 
-<img src="assets/shotjoke.jpg" width=500>
+<img src="../../assets/shotjoke.jpg" width=500>
 
 ###### 3. 打开 cmd 和 powershell
 
@@ -44,7 +44,7 @@ macOS，可使用 `Command + Shift + 4`，进行截屏
 
 常用指令
 
-<img src="assets/bulb.png" alt="b" width="25px"> 说起路径，我们就不得不提到两个名词：绝对路径和相对路径。
+<img src="../../assets/bulb.png" alt="b" width="25px"> 说起路径，我们就不得不提到两个名词：绝对路径和相对路径。
 
 ```
 绝对路径是从硬盘的根目录或者Web站点的根目录开始，指明文件的真实位置，路径单一，不易更改。
@@ -76,7 +76,7 @@ exit // 退出终端
 
 3. 压缩工具：推荐 7zip, xz 等。
 
-4. 命令行工具：后续学习中将涉及到一些基本命令，Windows 用户可以学习以下 powershell, 比 cmd 好用。<img src="assets/awesomeface.png" width=25px> Linux 用户就默认会用了。
+4. 命令行工具：后续学习中将涉及到一些基本命令，Windows 用户可以学习以下 powershell, 比 cmd 好用。<img src="../../assets/awesomeface.png" width=25px> Linux 用户就默认会用了。
 
    其他的可以按需配置。
 
@@ -98,7 +98,7 @@ exit // 退出终端
 
 按照如下的流程来打开文件的扩展名显示
 
-<img src="assets/extension.png">
+<img src="../../assets/extension.png">
 
 ###### 6. F12 开发者工具
 
@@ -106,11 +106,11 @@ F12 开发者工具是浏览器内置的一个特殊工具，用于帮助网页�
 
 点击左上角的箭头图标（或按快捷键 Ctrl + Shift + C）进入 **元素选择模式**，从页面中选择需要查看的元素，可以在开发者工具元素（Elements）一栏中快速定位到该元素源代码的具体位置。
 
-<img src="assets/f12ele.png">
+<img src="../../assets/f12ele.png">
 
 使用控制台来进行一些代码调试
 
-<img src="assets/f12console.png">
+<img src="../../assets/f12console.png">
 
 ##### 配置和自学路线
 
@@ -128,4 +128,4 @@ F12 开发者工具是浏览器内置的一个特殊工具，用于帮助网页�
 2. 完成基本语法后可以继续精进，这一阶段建议查看官方文档和社区论坛。例如学习 C./C++ 可以查阅 cppreference 等。
 3. 后面就可以了解语言在实际业务的应用。这一块需要我们了解框架，学会自己阅读框架官方文档，可能也要去查看框架的源码。另一方面也需要了解业务方面的通用工具，比如基本的算法，设计模式，语言特性等。
 
-​	<img src="assets/bulb.png" width=25px> 总之一句话，要自己学会搜索查阅，以及如何查阅官方文档。
+​	<img src="../../assets/bulb.png" width=25px> 总之一句话，要自己学会搜索查阅，以及如何查阅官方文档。
