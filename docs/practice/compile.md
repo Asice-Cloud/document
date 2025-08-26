@@ -1,4 +1,4 @@
-#### <span id="compile">实践篇其3-从零开始的代码编译原理</span>
+#### <span id="compile">实践篇其 3 - 从零开始的代码编译原理</span>
 
 > [!NOTE]
 >
@@ -16,7 +16,7 @@
 
 高级语言源代码并不能直接运行，而是要转化成某种机器看得懂的代码。对于在操作系统上运行的代码，应该转化为汇编代码，而对于在虚拟机上运行的代码，则应该转化为一些中间代码，比如字节码。编译就是进行这个过程。
 
-比如我们后端使用的Go语言，就需要编译成机器码才能运行。Go语言的工具包里提供了编译的工具，可以使用命令`go bulid`来对代码进行编译，也可以在编译的时候添加参数，即[build flags]位置上可以填写的参数：
+比如我们后端使用的 Go 语言，就需要编译成机器码才能运行。Go 语言的工具包里提供了编译的工具，可以使用命令 `go bulid` 来对代码进行编译，也可以在编译的时候添加参数，即 [build flags] 位置上可以填写的参数：
 
 ```shell
 #shell
@@ -25,13 +25,13 @@ go build [build flags] [packages]
 
 <img src="assets/bulb.png" width=25px>大家可以自行查阅可以添加的编译相关参数，如 -gcflags=-S 会输出汇编等。 
 
-当然了，在开发过程中，我们也可以使用`go run <文件名>`来编译运行了，它会生成一个临时的可执行文件。
+当然了，在开发过程中，我们也可以使用 `go run <文件名>` 来编译运行了，它会生成一个临时的可执行文件。
 
 
 
 ##### 编译的过程
 
-想要从源代码生成可执行文件并不是一件容易的事。对于在操作系统运行的程序，比如C语言的程序，要经历预处理、编译、汇编、链接四个过程。
+想要从源代码生成可执行文件并不是一件容易的事。对于在操作系统运行的程序，比如 C 语言的程序，要经历预处理、编译、汇编、链接四个过程。
 
 <img src="assets/ccom.png">
 
@@ -49,19 +49,19 @@ go build [build flags] [packages]
 
 <img src="assets/compile.png">
 
-你可能暂时不太理解每个细节，没有关系，先通过上面图片的大标题，感受一下编译的过程。<img src="assets/question.png" width=25px>下面我们将会对Go以及javascript的编译流程进行简单讲述，当然不要求读者完全掌握。
+你可能暂时不太理解每个细节，没有关系，先通过上面图片的大标题，感受一下编译的过程。<img src="assets/question.png" width=25px>下面我们将会对 Go 以及 javascript 的编译流程进行简单讲述，当然不要求读者完全掌握。
 
 
 
-##### Go语言的编译
+##### Go 语言的编译
 
-​	这是Go官方介绍自己的编译器的网址，https://go.dev/src/cmd/compile/README，感兴趣可以看一看。我们下面具体讲一下Go编译器是如何工作的。先看几个<span id="pre">前置知识</span>。
+​	这是 Go 官方介绍自己的编译器的网址，https://go.dev/src/cmd/compile/README，感兴趣可以看一看。我们下面具体讲一下 Go 编译器是如何工作的。先看几个 <span id="pre">前置知识</span>。
 
 
 
 ###### 抽象语法树
 
-​	[抽象语法树](https://en.wikipedia.org/wiki/Abstract_syntax_tree)（Abstract Syntax Tree、AST），是源代码语法的结构的一种抽象表示，它用树状的方式表示编程语言的语法结构[1](https://draveness.me/golang/docs/part1-prerequisite/ch02-compile/golang-compile-intro/#fn:1)。抽象语法树中的每一个节点都表示源代码中的一个元素，每一棵子树都表示一个语法元素，以表达式 `2 * 3 + 7` 为例，编译器的语法分析阶段会生成如下图所示的抽象语法树（<img src="assets/awesomeface.png" width=25px>看起来很像中缀树...）。下面是一个简单表达式的抽象语法树。
+​	[抽象语法树](https://en.wikipedia.org/wiki/Abstract_syntax_tree)（Abstract Syntax Tree、AST），是源代码语法的结构的一种抽象表示，它用树状的方式表示编程语言的语法结构 [1](https://draveness.me/golang/docs/part1-prerequisite/ch02-compile/golang-compile-intro/#fn:1)。抽象语法树中的每一个节点都表示源代码中的一个元素，每一棵子树都表示一个语法元素，以表达式 `2 * 3 + 7` 为例，编译器的语法分析阶段会生成如下图所示的抽象语法树（<img src="assets/awesomeface.png" width=25px>看起来很像中缀树...）。下面是一个简单表达式的抽象语法树。
 
 ![abstract-syntax-tree](https://img.draveness.me/2019-12-20-15768548776645-abstract-syntax-tree.png)
 
@@ -71,7 +71,7 @@ go build [build flags] [packages]
 
 ###### 静态单赋值
 
-[静态单赋值](https://en.wikipedia.org/wiki/Static_single_assignment_form)（Static Single Assignment、SSA）是中间代码的特性，如果中间代码具有静态单赋值的特性，那么每个变量就只会被赋值一次。在实践中，我们通常会用下标实现静态单赋值，这里以下面的Go代码举个例子：
+[静态单赋值](https://en.wikipedia.org/wiki/Static_single_assignment_form)（Static Single Assignment、SSA）是中间代码的特性，如果中间代码具有静态单赋值的特性，那么每个变量就只会被赋值一次。在实践中，我们通常会用下标实现静态单赋值，这里以下面的 Go 代码举个例子：
 
 ```go
 x := 1
@@ -113,7 +113,7 @@ x86 是目前比较常见的指令集，除了 x86 之外，还有 arm 等指令
 
 
 
-###### Go编译原理
+###### Go 编译原理
 
 Go 语言编译器的源代码在 [`src/cmd/compile`](https://github.com/golang/go/tree/master/src/cmd/compile) 目录中，目录下的文件共同组成了 Go 语言的编译器，学过编译原理的人可能听说过编译器的前端和后端，编译器的前端一般承担着词法分析、语法分析、类型检查和中间代码生成几部分工作，而编译器后端主要负责目标代码的生成和优化，也就是将中间代码翻译成目标机器能够运行的二进制机器码。 编译原理的核心过程如下所示。
 
@@ -149,7 +149,7 @@ SourceFile = PackageClause ";" { ImportDecl ";" } { TopLevelDecl ";" } .
 
 Token 到上述抽象语法树（AST）的转换过程会用到语法解析器，每一个 AST 都对应着一个单独的 Go 语言文件，这个抽象语法树中包括当前文件属于的包名、定义的常量、结构体和函数等。
 
-> Go 语言的语法解析器使用的是 LALR(1)的文法，对解析器文法感兴趣的读者可以在推荐阅读中找到编译器文法的相关资料。
+> Go 语言的语法解析器使用的是 LALR(1) 的文法，对解析器文法感兴趣的读者可以在推荐阅读中找到编译器文法的相关资料。
 
 ![golang-files-and-ast](https://img.draveness.me/2019-12-20-15768548776670-golang-files-and-ast.png)
 
@@ -200,7 +200,7 @@ Go 语言源代码的 [`src/cmd/compile/internal`](https://github.com/golang/go/
 $ GOARCH=wasm GOOS=js go build -o lib.wasm main.go
 ```
 
-我们可以使用上述的命令将 Go 的源代码编译成能够在浏览器上运行 WebAssembly 文件，当然除了这种新兴的二进制指令格式之外，Go 语言经过编译还可以运行在几乎全部的主流机器上，不过它的兼容性在除 Linux 和 Darwin 之外的机器上可能还有一些问题，例如：Go Plugin 至今仍然不支持 Windows。下图为Go 语言支持的架构。
+我们可以使用上述的命令将 Go 的源代码编译成能够在浏览器上运行 WebAssembly 文件，当然除了这种新兴的二进制指令格式之外，Go 语言经过编译还可以运行在几乎全部的主流机器上，不过它的兼容性在除 Linux 和 Darwin 之外的机器上可能还有一些问题，例如：Go Plugin 至今仍然不支持 Windows。下图为 Go 语言支持的架构。
 
 ![supported-hardware](https://img.draveness.me/2019-12-20-15768548776695-supported-hardware.png)
 
@@ -278,14 +278,14 @@ func Main(archInit func(*Arch)) {
 
 
 
-##### javascript语言的编译
+##### javascript 语言的编译
 
-虽然我们常说js是动态类型语言，但是其实js也是一门编译语言。与传统编译不同的地方在于，js并非提前编译，编译结果也不能在分布式系统上移植。这一部分内容相较于Go编译较少，而且大部分内容是相似的，这里就使用流程图简单概括了。
+虽然我们常说 js 是动态类型语言，但是其实 js 也是一门编译语言。与传统编译不同的地方在于，js 并非提前编译，编译结果也不能在分布式系统上移植。这一部分内容相较于 Go 编译较少，而且大部分内容是相似的，这里就使用流程图简单概括了。
 
-js的编译主要工具有：
+js 的编译主要工具有：
 
 - **引擎**
-  从头到尾负责整个JavaScript程序的编译和执行过程。
+  从头到尾负责整个 JavaScript 程序的编译和执行过程。
 
 - **编译器**
   引擎的好朋友之一，负责**语法分析**及**代码生成**等一系列脏活累活
@@ -295,14 +295,14 @@ js的编译主要工具有：
 
   
 
-###### V8引擎编译流程
+###### V8 引擎编译流程
 
-在不考虑优化的前提下，编译流程可见下图：（其中AST等内容可见[上文](#pre)）
+在不考虑优化的前提下，编译流程可见下图：（其中 AST等内容可见[上文](#pre)）
 
 <img src="assets/jsengine3.png">
 
 ###### 词法作用域
 
-​	这其中我们着重关注词法作用域的规则，包括var/let的区别，提升，闭包等概念。
+​	这其中我们着重关注词法作用域的规则，包括 var/let 的区别，提升，闭包等概念。
 
 <img src="assets/js2.png">
