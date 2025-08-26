@@ -1,5 +1,3 @@
-<h1 align="center">做e时代的主人</h1>
-
 ### 前言
 
 <h6><b><img src="assets/awesomeface.png" alt="welcome" width="29px">[注:这不仅是一份预习文档，也可以当作以后学习期间的长期方向指导]</h6>
@@ -29,30 +27,3 @@
 ​	<img src="assets/awesomeface.png" alt="welcome" width="29px">另一方面，我们也不希望读者会对开发项目和写代码这些概念理解的过于沉重，代码只是我们在信息时代的一款语言，我们不需要去死记硬背各种标签或是函数，但是我们需要理解它们是一种什么样的存在，以及为什么而存在。
 
 ​	最后一点，在计算机领域虽然看似很抽象，但是却比现实世界要单纯许多。希望我们社团的培训能够使大家产生对计算机的兴趣，进一步学会更多技能。也希望大家正确对待计算机，多多学习和实践，成为e时代的主人。
-
-### 章节列表
-
-
-<h6><b>入门篇</b></h6>
-
-1. [你好, 0和1的世界](docs/junior/hello.md)
-2. [网页简介:元素](docs/junior/page.md)
-3. [开发环境和基础平台配置](docs/junior/config.md)
-4. [进入代码(上):基本类型和逻辑](docs/junior/type.md)
-5. [让函数再次伟大!](docs/junior/MFGA.md)
-6. [程序，启动！](docs/junior/run.md)
-
-<h6><b>进阶篇</b></h6>
-
-1. [进入代码(下):指针和自定义类型，更多特性](docs/advance/pointer.md)
-2. [编程思想浅谈](docs/advance/paradigm.md)
-3. [网络沉思录](docs/advance/brainfuck.md)
-4. [同步与异步](docs/advance/sync.md)
-
-<h6><b>实践篇</b></h6>
-
-1. [前后端以及通用工具简介](docs/practice/common.md)
-2. [前后端学习浅谈和开发规范](docs/practice/stack.md)
-3. [从零开始的代码编译原理](docs/practice/compile.md)
-
-<h6><b>后记</b></h6>
