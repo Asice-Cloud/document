@@ -35,24 +35,22 @@
 
 <h6><b>入门篇</b></h6>
 
-1. [你好, 0和1的世界](docs/junior/hello.md)
-2. [网页简介:元素](docs/junior/page.md)
-3. [开发环境和基础平台配置](docs/junior/config.md)
-4. [进入代码(上):基本类型和逻辑](docs/junior/type.md)
-5. [让函数再次伟大!](docs/junior/MFGA.md)
-6. [程序，启动！](docs/junior/run.md)
+1. [你好, 0和1的世界](#hello)
+2. [网页简介:元素](#page)
+3. [开发环境和基础平台配置](#config)
+4. [进入代码(上):基本类型和逻辑](#type)
+5. [让函数再次伟大!](#MFGA)
+6. [程序，启动！](#run)
 
 <h6><b>进阶篇</b></h6>
 
-1. [进入代码(下):指针和自定义类型，更多特性](docs/advance/pointer.md)
-2. [编程思想浅谈](docs/advance/paradigm.md)
-3. [网络沉思录](docs/advance/brainfuck.md)
-4. [同步与异步](docs/advance/sync.md)
+1. [进入代码(下):指针和自定义类型，更多特性](#pointer)
+2. [编程思想浅谈](#paradigm)
+3. [网络沉思录](#brainfuck)
+4. [同步与异步](#sync)
 
 <h6><b>实践篇</b></h6>
 
-1. [前后端以及通用工具简介](docs/practice/common.md)
-2. [前后端学习浅谈和开发规范](docs/practice/stack.md)
-3. [从零开始的代码编译原理](docs/practice/compile.md)
-
-<h6><b>后记</b></h6>
+1. [前后端以及通用工具简介](#common)
+2. [前后端学习浅谈和开发规范](#stack)
+3. [从零开始的代码编译原理](#compile)
