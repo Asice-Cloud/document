@@ -7,7 +7,7 @@ def process_markdown_files():
     遍历docs/0x-xx/目录下的所有.md文件，处理路径并合并文档
     """
     # 设置路径
-    docs_pattern = "docs/0*/**/*.md"
+    docs_pattern = "docs/0*/*.md"
     preface_path = "docs/preface.md"
     afterword_path = "docs/afterword.md"
     output_path = "README.md"
