@@ -1,4 +1,4 @@
-#### <span id="config">入门篇其 3 - 开发环境和基础平台配置</span>
+#### <span id="config">入门篇其 4 - 开发环境和基础平台配置</span>
 
 > [!NOTE]
 >
@@ -12,7 +12,7 @@
 
 ##### 开发平台选择：
 
-> ​	<img src="../../assets/awesomeface.png" width="25px"> 推荐 Arch Linux 或者 Ubuntu 作为开发环境，当然我们培训是基于 windows 开展的。
+> ​	<img src="../../assets/awesomeface.png" width="25px"> 推荐 Arch Linux 或者 Ubuntu 作为开发环境，当然我们培训是基于 Windows 开展的。
 
 
 

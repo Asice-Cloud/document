@@ -1,4 +1,4 @@
-#### <span id="run">入门篇其 6 - 程序，启动！</span>
+#### <span id="run">入门篇其 7 - 程序，启动！</span>
 
 > [!NOTE]
 >

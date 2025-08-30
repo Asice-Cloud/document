@@ -1,4 +1,4 @@
-#### <span id="MFGA">入门篇其 5 - 让函数再次伟大！</span>
+#### <span id="MFGA">入门篇其 6 - 让函数再次伟大！</span>
 
 > [!NOTE]
 >

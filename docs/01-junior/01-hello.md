@@ -76,7 +76,7 @@ exit // 退出终端
 
 3. 压缩工具：推荐 7zip, xz 等。
 
-4. 命令行工具：后续学习中将涉及到一些基本命令，Windows 用户可以学习以下 powershell, 比 cmd 好用。<img src="../../assets/awesomeface.png" width=25px> Linux 用户就默认会用了。
+4. 命令行工具：后续学习中将涉及到一些基本命令，Windows 用户可以学习一下 powershell, 比 cmd 好用。<img src="../../assets/awesomeface.png" width=25px> Linux 用户就默认会用了。
 
    其他的可以按需配置。
 
