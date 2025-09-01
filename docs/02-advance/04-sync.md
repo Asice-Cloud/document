@@ -1,4 +1,4 @@
-#### <span id="sync">进阶篇其 4-同步与异步</span>
+#### <span id="sync">进阶篇其 4 - 同步与异步</span>
 
 > [!NOTE]
 >
