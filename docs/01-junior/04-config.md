@@ -50,7 +50,7 @@ $$
 
 vscode 自身的产品思路就是一个轻量级的开发工具加上繁荣开放的插件市场组成。因此很多强大的功能需要通过安装插件来实现，目前 vscode 的插件市场中已经有着几万个插件。通过 `侧边栏上的按钮` 或快捷键 `Ctrl + Shift + X` 打开 vscode 的插件市场。
 
-<img src="https://qiniu.3yya.com/ca3a892f5d5cca90adaaf101a0504e0a/ca3a892f5d5cca90adaaf101a0504e0a.png" width=500px>
+<img src="../../assets/vscode-extension.png" width=500px>
 
 **命令面板**
 
@@ -58,13 +58,13 @@ vscode 的命令面板能让我们快速方便地执行很多功能与命令，�
 
 通过 `View -> Command Palette` 或者快捷键 `Ctrl + Shift + P` 可以打开命令面板。
 
-<img src="https://qiniu.3yya.com/085039b5ebd66fa5b0e927d5ff803707/085039b5ebd66fa5b0e927d5ff803707.png" width = 500px>
+<img src="../../assets/vscode-command.png" width = 500px>
 
 **配置面板**
 
 通过 `File -> Preferences -> Settings` 或 `Ctrl + ,` 打开配置面板。
 
-<img src="https://qiniu.3yya.com/230cb699debabe62f5a05afc42077fbc/230cb699debabe62f5a05afc42077fbc.png" width=500px>
+<img src="../../assets/vscode-settings.png" width=500px>
 
 **简单的配置启动 HTML**
 

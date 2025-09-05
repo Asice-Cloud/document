@@ -38,7 +38,7 @@ macOS，可使用 `Command + Shift + 4`，进行截屏
 
 <img src="../../assets/shotjoke.jpg" width=500>
 
-###### 3. 打开 cmd 和 powershell
+###### 3. 打开 cmd 或 powershell
 
 快捷键打开：`Win + R` 然后输入 `cmd` 或者 `powershell` 就可以打开。
 
@@ -72,9 +72,9 @@ exit // 退出终端
 
 1. 最常用的肯定就是浏览器，推荐 Microsoft Edge 或者 Google Chrome 浏览器，当然 FireFox 也很好。至于国内那些逆天厂商的，只能说懂得都懂。现在的浏览器一般除了访问网页的基本功能以外也可以增加丰富的插件，大家可以按需求添加。
 
-2. 文件阅览的工具：大学中最常用到的就是 word 文档和 PPT, 也有 pdf 文档。可以使用系统自带的（如 Microsoft），当然 pdf 直接就可以在浏览器中打开。我们社团也会经常用到 markdown 文档，这是 Github 主流的文档。可以使用 Typora 等工具预览和修改 markdown 文档，也可以使用 vscode（配置 vscode 见入门篇其 3）。
+2. 文件阅览的工具：大学中最常用到的就是 word 文档和 PPT, 也有 pdf 文档。可以使用系统自带的（如 Microsoft office），当然 pdf 直接就可以在浏览器中打开。我们社团也会经常用到 markdown 文档，这是 Github 主流的文档。可以使用 Typora 等工具预览和修改 markdown 文档，也可以使用 vscode（配置 vscode 见入门篇其 3）。
 
-3. 压缩工具：推荐 7zip, xz 等。
+3. 压缩工具：推荐 7zip, xz 等。在需要传输多个文件时，通常会打包成一个文件（可压缩可不压缩）再把这个文件发送给对方。在 Windows 11 / Mac OS 下压缩文件，可以直接选中想要压缩（打包）的文件，右键选择压缩即可。Linux 用户可参见[实践篇其 1](#common)。
 
 4. 命令行工具：后续学习中将涉及到一些基本命令，Windows 用户可以学习一下 powershell, 比 cmd 好用。<img src="../../assets/awesomeface.png" width=25px> Linux 用户就默认会用了。
 

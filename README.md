@@ -100,7 +100,7 @@ macOS，可使用 `Command + Shift + 4`，进行截屏
 
 <img src="assets/shotjoke.jpg" width=500>
 
-###### 3. 打开 cmd 和 powershell
+###### 3. 打开 cmd 或 powershell
 
 快捷键打开：`Win + R` 然后输入 `cmd` 或者 `powershell` 就可以打开。
 
@@ -134,9 +134,9 @@ exit // 退出终端
 
 1. 最常用的肯定就是浏览器，推荐 Microsoft Edge 或者 Google Chrome 浏览器，当然 FireFox 也很好。至于国内那些逆天厂商的，只能说懂得都懂。现在的浏览器一般除了访问网页的基本功能以外也可以增加丰富的插件，大家可以按需求添加。
 
-2. 文件阅览的工具：大学中最常用到的就是 word 文档和 PPT, 也有 pdf 文档。可以使用系统自带的（如 Microsoft），当然 pdf 直接就可以在浏览器中打开。我们社团也会经常用到 markdown 文档，这是 Github 主流的文档。可以使用 Typora 等工具预览和修改 markdown 文档，也可以使用 vscode（配置 vscode 见入门篇其 3）。
+2. 文件阅览的工具：大学中最常用到的就是 word 文档和 PPT, 也有 pdf 文档。可以使用系统自带的（如 Microsoft office），当然 pdf 直接就可以在浏览器中打开。我们社团也会经常用到 markdown 文档，这是 Github 主流的文档。可以使用 Typora 等工具预览和修改 markdown 文档，也可以使用 vscode（配置 vscode 见入门篇其 3）。
 
-3. 压缩工具：推荐 7zip, xz 等。
+3. 压缩工具：推荐 7zip, xz 等。在需要传输多个文件时，通常会打包成一个文件（可压缩可不压缩）再把这个文件发送给对方。在 Windows 11 / Mac OS 下压缩文件，可以直接选中想要压缩（打包）的文件，右键选择压缩即可。Linux 用户可参见[实践篇其 1](#common)。
 
 4. 命令行工具：后续学习中将涉及到一些基本命令，Windows 用户可以学习一下 powershell, 比 cmd 好用。<img src="assets/awesomeface.png" width=25px> Linux 用户就默认会用了。
 
@@ -389,7 +389,7 @@ $$
 
 vscode 自身的产品思路就是一个轻量级的开发工具加上繁荣开放的插件市场组成。因此很多强大的功能需要通过安装插件来实现，目前 vscode 的插件市场中已经有着几万个插件。通过 `侧边栏上的按钮` 或快捷键 `Ctrl + Shift + X` 打开 vscode 的插件市场。
 
-<img src="https://qiniu.3yya.com/ca3a892f5d5cca90adaaf101a0504e0a/ca3a892f5d5cca90adaaf101a0504e0a.png" width=500px>
+<img src="assets/vscode-extension.png" width=500px>
 
 **命令面板**
 
@@ -397,13 +397,13 @@ vscode 的命令面板能让我们快速方便地执行很多功能与命令，�
 
 通过 `View -> Command Palette` 或者快捷键 `Ctrl + Shift + P` 可以打开命令面板。
 
-<img src="https://qiniu.3yya.com/085039b5ebd66fa5b0e927d5ff803707/085039b5ebd66fa5b0e927d5ff803707.png" width = 500px>
+<img src="assets/vscode-command.png" width = 500px>
 
 **配置面板**
 
 通过 `File -> Preferences -> Settings` 或 `Ctrl + ,` 打开配置面板。
 
-<img src="https://qiniu.3yya.com/230cb699debabe62f5a05afc42077fbc/230cb699debabe62f5a05afc42077fbc.png" width=500px>
+<img src="assets/vscode-settings.png" width=500px>
 
 **简单的配置启动 HTML**
 
@@ -2057,7 +2057,7 @@ IO 多路复用解决了一个线程或者多个线程可以监控多个文件�
 
 > [!NOTE]
 >
-> 本章作者：wjj
+> 本章作者：wjj + cgy
 >
 > 难度：⭐⭐
 >
@@ -2131,6 +2131,89 @@ git clone <仓库url>.git
 <img src="assets/cat3.png" width=400>
 
 具体的使用方法，可以参考 <a href="https://www.navicat.com.cn/manual/online_manual/cn/navicat_16/win_manual/">官方文档</a> 获取帮助。
+
+<img src="assets/linux.jpg" width=30> **GNU/Linux (仅了解)**
+
+GNU/Linux 是对一系列基于 Linux 内核和 GNU 组件的发行版的统称，一般称作 Linux 即可。现今大多数服务器都运行着免费、稳定的 Linux 操作系统，而且对于开发者而言，Linux 下的工具链往往更为完整，开发环境的配置与 Windows 相比也简单太多。Linux 操作多数基于命令，即你在终端中输入命令，操作系统便能精准地明白你的意思，然后执行你交代的任务。这里只简要介绍一些入门的操作，更深入的了解可参考[中科大 Linux 101](https://101.lug.ustc.edu.cn/)。有些命令不知道是用来干嘛的的不要紧，后续接触的多了就能理解了。
+
+【简单上手：Windows 推荐 WSL】
+
+搜索栏中搜索“启用或关闭 Windows 功能”，打开“适用于 Linux 的 Windows 子系统"和"Hyper-V"，重启后在 powershell 中运行命令
+
+```powershell
+wsl --install    # 安装 wsl 的命令，默认会安装 Ubuntu，对新手友好
+```
+
+如果连接不上服务器可在 Microsoft Store 中搜索 Ubuntu 安装。
+
+安装好后可在 Powershell 中运行命令 `wsl` 或开始菜单中打开应用 `Ubuntu`，即进入 Linux 命令行（wsl 默认不包含图形界面）。
+
+【常用操作】
+- 路径与导航
+```bash
+pwd                 # print working directory，会打印出你当前所处位置
+ls                  # 列出当前位置的文件
+cd ..               # change directory 改变当前所处位置
+mkdir proj          # 新建目录（文件夹）
+```
+- 文件与查看
+```bash
+touch README.md             # 新建一个名为 README.md 的文件，若存在则只 touch 它一下（修改时间更新内容不变）
+cp -r src dst               # cp 表示 copy, -r 表示递归（也会复制子目录），复制 src 目录到 dst 目录
+mv object destination       # move 移动文件/目录
+rm -r danger                # remove，-r 同上表示递归，小心使用，回车前看清路径，删除后很难恢复
+cat file | less             # cat 会输出文件所有内容，less 接收这些内容并允许用户翻页查看
+```
+- 压缩与解压
+```bash
+# c-compress x-extract
+tar -czvf archive.tar.gz dir/        # 将目录压缩为 tar.gz（常用）
+tar -xzvf archive.tar.gz             # 解压 tar.gz 到当前目录
+tar -xzvf archive.tar.gz -C target/  # 解压到指定目录
+
+tar -cjvf archive.tar.bz2 dir/       # 使用 bzip2 压缩
+tar -xjvf archive.tar.bz2            # 解压 tar.bz2
+
+tar -cJvf archive.tar.xz dir/        # 使用 xz 压缩
+tar -xJvf archive.tar.xz             # 解压 tar.xz
+
+zip -r archive.zip dir/              # 压缩为 zip（跨平台常见）
+unzip archive.zip -d target/         # 解压到指定目录
+
+gzip -k file                         # 单个文件 → file.gz（-k 保留原文件）
+gunzip file.gz                       # 解压 .gz
+```
+- 搜索与定位
+```bash
+grep -Rni "TODO" .          # 代码里找关键字
+find . -name "*.go"         # 按名字找文件
+```
+- 权限与 sudo
+```bash
+ls -l               # 列出的同时显示权限（rwx read write execute)
+chmod +x run.sh     # change mode，x 表示 execute，给 run.sh 添加可执行权限
+sudo <命令>         # 临时以管理员身份执行某命令
+```
+- 包管理（Ubuntu/Debian）
+```bash
+sudo apt search docker       # 查找某一软件包
+sudo apt install docker.io   # 安装指定软件包
+sudo apt remove docker.io    # 删除指定软件包
+sudo apt upgrade             # 更新所有软件包
+```
+- 进程与网络
+```bash
+ps aux | grep myapp       # 找进程，grep 接收 ps 的输出结果并筛选出含 "myapp" 的信息
+kill 12345                # 结束（杀死）进程
+curl https://example.com  # 获取一个网站的信息，类似于你用浏览器访问该网站的过程
+```
+
+- 编辑器怎么选
+  - nano：命令 `nano <filename>` 即可开始编辑，底部有命令提示
+  - vim：学习曲线陡峭，基本使用：命令 `vi <filename>` 或 `vim <filename>` 打开文件，打开时会处于 NORMAL 模式，`i` 进入 INSERT 模式来编辑；`Esc` 退出 INSERT 模式，回到 NORMAL 模式， `:wq` 保存退出
+  - VS Code：有人称其为宇宙第一编辑器，功能强大且易用，有友好的图形化界面
+
+
 
 
 ---
