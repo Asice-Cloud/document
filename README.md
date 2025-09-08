@@ -1,6 +1,33 @@
-<h1 align="center">做e时代的主人</h1>
+<h1 align="center">挑战网大计基</h1>
+
+## 目录
+
+- [前言](#前言)
+- [章节列表](#章节列表)
+  - 入门篇
+    - [你好, 0和1的世界](#hello)
+    - [大模型工具的使用](#ai)
+    - [网页简介: 元素](#page)
+    - [开发环境和基础平台配置](#config)
+    - [进入代码(上): 基本类型和逻辑](#type)
+    - [让函数再次伟大!](#MFGA)
+    - [程序，启动！](#run)
+  - 进阶篇
+    - [进入代码(下): 指针和自定义类型，更多特性](#pointer)
+    - [编程思想浅谈](#paradigm)
+    - [网络沉思录](#brainfuck)
+    - [同步与异步](#sync)
+  - 实践篇
+    - [前后端以及通用工具简介](#common)
+    - [前后端学习浅谈和开发规范](#stack)
+    - [从零开始的代码编译原理](#compile)
+    - [如何 Debug](#debug)
+    - [系统的一些小配置](#else)
 
 ### 前言
+
+<h6><b> 第二版文档，正式定名挑战网大计基， 第一版为2024年做e时代的主人></h6>
+<h6></h6>
 
 <h6><b><img src="assets/awesomeface.png" alt="welcome" width="29px">[注:这不仅是一份预习文档，也可以当作以后学习期间的长期方向指导]</h6>
 
@@ -27,6 +54,8 @@
 ​	<img src="assets/warning.png" alt="w" width="25px">这只是一份参考文档，并不能作为学习的唯一工具，我们推荐自己动手查阅更多资料，学习如何阅读官方文档，**这对以后的学习开发非常重要**。我们的培训不能覆盖到所有方面，而现实情况下我们遇到的问题和困难却是防不胜防的。本文档也将着力向大家传授部分阅读官方文档的方法。
 
 ​	<img src="assets/awesomeface.png" alt="welcome" width="29px">另一方面，我们也不希望读者会对开发项目和写代码这些概念理解的过于沉重，代码只是我们在信息时代的一款语言，我们不需要去死记硬背各种标签或是函数，但是我们需要理解它们是一种什么样的存在，以及为什么而存在。
+
+​	第二版特别增加了一些AI工具和debug工具的使用，这是为了更好的帮助现在大模型时代“沉浸式编程”的学习和工作。最后由于最近使用linux发行版系统人数越来越多，适当增加了些linux的知识, 包含一些小配置，具体可以直接参见最后一章， 当然其他内容里面也有一些零星的小知识点
 
 ​	最后一点，在计算机领域虽然看似很抽象，但是却比现实世界要单纯许多。希望我们社团的培训能够使大家产生对计算机的兴趣，进一步学会更多技能。也希望大家正确对待计算机，多多学习和实践，成为e时代的主人。
 
@@ -56,6 +85,7 @@
 2. [前后端学习浅谈和开发规范](#stack)
 3. [从零开始的代码编译原理](#compile)
 4. [如何 Debug](#debug)
+5. [系统的一些小配置](#else)
 
 
 ---
@@ -68,7 +98,7 @@
 >
 > 难度：⭐
 >
-> 涉及语言：cmd
+> 涉及语言：cmd bash
 
 
 
@@ -85,6 +115,29 @@
 #设置多少秒后关机
 shutdown -s -t 秒数
 ```
+
+bash同理
+``` bash
+-> shutdown --help         
+shutdown [OPTIONS...] [TIME] [WALL...]
+
+Shut down the system.
+
+Options:
+     --help      Show this help
+  -H --halt      Halt the machine
+  -P --poweroff  Power-off the machine
+  -r --reboot    Reboot the machine
+  -h             Equivalent to --poweroff, overridden by --halt
+  -k             Don't halt/power-off/reboot, just send warnings
+     --no-wall   Don't send wall message before halt/power-off/reboot
+  -c             Cancel a pending shutdown
+     --show      Show pending shutdown
+
+This is a compatibility interface, please use the more powerful 'systemctl halt',
+'systemctl poweroff', 'systemctl reboot' commands instead.
+```
+
 
 ###### 2. 电脑截屏
 
@@ -219,7 +272,7 @@ F12 开发者工具是浏览器内置的一个特殊工具，用于帮助网页�
 
 ##### 第二章：核心工具入门
 
-- 文本生成：我个人的推荐是 DeepSeek, Gemini, ChatGPT
+- 文本生成：我个人的推荐是 Claude, Gemini, ChatGPT
   - 提问技巧：
     - 核心原则：清晰、具体、有约束。不要问得太宽泛。
     - 结构化：可提供背景、目标、限制、输出格式。
@@ -366,7 +419,6 @@ $$
     IDE 是一种集成了多种开发工具和功能的软件应用程序，旨在提高软件开发的效率和质量。它通常包括源代码编辑器、编译器、调试器、构建工具、版本控制系统等，为程序员提供了一个全面的开发环境。集成了多种开发工具，方便程序员在同一个界面下完成开发任务。提供了丰富的功能和插件，满足不同开发需求。支持代码自动完成、语法高亮、代码重构等，提高编程效率和质量。可以自动管理代码库、构建工具和文档等，减少手动操作的时间和错误。如 Visual Studio，IDEA，Pycharm。
 
 <img src="assets/question.png" width = "25px"> 我们在入门过程中不需要完全理解编译器的原理，而是选择使用合适的编辑器或者 IDE 来开发项目。我们推荐使用 vscode 来进行开发工作。
-
 
 
 ##### 编辑器 vscode 配置
@@ -2892,6 +2944,84 @@ Previous write at 0x000001234567 by goroutine 6:
 
 
 ---
+
+
+### <span id="else">系统的一些小配置</span>
+
+> [!NOTE]
+>
+> 本章作者：syl
+>
+> 难度：自适应
+>
+> 涉及语言：？
+
+​	<img src="assets/awesomeface.png" width=25px>这一部分特别给linux发行版用户使用，本人是Arch linux，就用这个举例了
+
+<ul>
+    <li>1.boot process
+    <li>2.system/user config
+    <li>3.package/tools 
+</ul>
+
+<h4>1. boot process</h4>
+为什么要知道启动流程：对于个人pc而言，一般启动就算会出问题也就是在systemd或者桌面session启动那一部分出事，但是要是你在用服务器的话，一个黑漆漆的界面可就说不好了，所以，了解一下启动流程还是很必要的，最起码你能快速定位问题然后去搜索解法
+
+<br>先来一张图
+<img src="assets/0213-linux-boot-process-explained.png">
+
+- 这里就是linux系统启动步骤，首先是bios和grub引导启动（当然你也可能是其他引导方式），这两个步骤通常硬件设备没什么问题就不会出事，也不需要细究这些。另外多说一句，据说如果是windows+linux双系统的话，windows更新可能会破坏grub引导，因为MicroSoft喜欢往引导里面乱塞东西，比如什么恢复什么的。
+
+```zsh
+ls
+BOOT/  Microsoft/
+```
+
+<br> 之后的部分是kernal init的启动,这里systemd是最主流的方式，但是还有其他的，比如void linux就使用的是runit。 如果你经常使用一些系统级配置的话，对systemd应该不陌生。到这个地方出现问题的话，可以考虑使用linux recovery模式去恢复一下，因为到现在还没法走到tty等部分，所以出事了也是一片黑屏，只有去恢复模式了。一般来说问题主要就是一些软件配置出错，或者依赖爆炸了这种。
+
+
+<br>
+
+启动了init这一步后，会执行一些自启动脚本，比如bashrc,profile等，这里就是用户自定义的部分了，比如我的profile：
+
+```zsh
+-> cat .profile
+export GO111MODULE=on
+export GOPROXY=https://goproxy.cn
+
+
+export GTK_IM_MODULE=fcitx5
+export QT_IM_MODULE=fcitx5
+export XMODIFIERS="@im=fcitx5"
+export SDL_IM_MODULE=fcitx5
+export GLFW_IM_MODULE=fcitx5
+
+# fcitx5 &
+
+# Added by Toolbox App
+export PATH="$PATH:/home/asice-cloud/.local/share/JetBrains/Toolbox/scripts"
+
+. "$HOME/.cargo/env"
+```
+
+- 我的内容挺简单的，主要是系统也没有配很复杂，这也是Arch的好处之一，如果有ubuntu用户可以看看自己的bashrc等，可以看到某无良公司自己乱塞了多少破烂东西进去。Ubuntu随便配置一下基本开发环境就动辄150G,我这Arch环境配了还下了好多游戏也就100G才。
+
+这些自启动脚本通常也就包含一些代理，环境变量，以及一些应用
+
+<br> 最后是user login后，这里将会启动session, 所谓session,之前的后端里面有所涉及，总体概念大差不差。是的和你想象的一样，前端后端只是个相对概念而已，你看到的用户桌面也可以视为前端，后面支撑着的是后端。同理你现在写编程语言，能看到的都是前端，而进入编译阶段后台的运行才是真正的后端。<br>回到正题，现在流行的桌面后台服务器有wayland和X11, wayland是更安全和先进的。至于桌面而言，有多种选择，常见的gnome和kde,如果你和我一样喜欢折腾，可以考虑hyprland或者cwm/river等，这些都是很开放的（我不是说gnome不好，平常打游戏我也是用gnome）。总而言之桌面自己选择就好。
+
+<br>有些人应该在桌面启动的过程中也遇到过问题，比如会出现“a unexpect error occured”这种，然后没法进入桌面。一般来说这都是更新的时候把依赖干掉了，解决方案也很简单, ub或者debian就直接进tty或者恢复模式然后 sudo apt --fix-broken， 或者reinstall强制更新一下你的桌面就行。 Arch直接pacman -Syu 你的桌面，强制更新一下就好。
+
+<h4>2.system/user config</h4>
+<h4>3.package/tools</h4>
+
+
+
+
+
+
+
+
 
 ### 后记
 
