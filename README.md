@@ -4,30 +4,10 @@
 
 - [前言](#前言)
 - [章节列表](#章节列表)
-  - 入门篇
-    - [你好, 0和1的世界](#hello)
-    - [大模型工具的使用](#ai)
-    - [网页简介: 元素](#page)
-    - [开发环境和基础平台配置](#config)
-    - [进入代码(上): 基本类型和逻辑](#type)
-    - [让函数再次伟大!](#MFGA)
-    - [程序，启动！](#run)
-  - 进阶篇
-    - [进入代码(下): 指针和自定义类型，更多特性](#pointer)
-    - [编程思想浅谈](#paradigm)
-    - [网络沉思录](#brainfuck)
-    - [同步与异步](#sync)
-  - 实践篇
-    - [前后端以及通用工具简介](#common)
-    - [前后端学习浅谈和开发规范](#stack)
-    - [从零开始的代码编译原理](#compile)
-    - [如何 Debug](#debug)
-    - [系统的一些小配置](#else)
 
 ### 前言
 
-<h6><b> 第二版文档，正式定名挑战网大计基， 第一版为2024年做e时代的主人></h6>
-<h6></h6>
+​	版本：这是第二版文档，正式定名挑战网大计基， 第一版为2024年做e时代的主人>
 
 <h6><b><img src="assets/awesomeface.png" alt="welcome" width="29px">[注:这不仅是一份预习文档，也可以当作以后学习期间的长期方向指导]</h6>
 
@@ -55,7 +35,7 @@
 
 ​	<img src="assets/awesomeface.png" alt="welcome" width="29px">另一方面，我们也不希望读者会对开发项目和写代码这些概念理解的过于沉重，代码只是我们在信息时代的一款语言，我们不需要去死记硬背各种标签或是函数，但是我们需要理解它们是一种什么样的存在，以及为什么而存在。
 
-​	第二版特别增加了一些AI工具和debug工具的使用，这是为了更好的帮助现在大模型时代“沉浸式编程”的学习和工作。最后由于最近使用linux发行版系统人数越来越多，适当增加了些linux的知识, 包含一些小配置，具体可以直接参见最后一章， 当然其他内容里面也有一些零星的小知识点
+​	第二版特别增加了一些AI工具和debug工具的使用，这是为了更好的帮助现在大模型时代“沉浸式编程”的学习和工作。最后由于最近使用linux发行版系统人数越来越多， 而且，以后从事计算机相关工作的话难免会遇到linux系统或者服务器，于是适当增加了些linux的知识, 包含一些小配置和操作技术，具体可以直接参见最后一章， 当然其他内容里面也有一些零星的小知识点
 
 ​	最后一点，在计算机领域虽然看似很抽象，但是却比现实世界要单纯许多。希望我们社团的培训能够使大家产生对计算机的兴趣，进一步学会更多技能。也希望大家正确对待计算机，多多学习和实践，成为e时代的主人。
 
@@ -85,7 +65,7 @@
 2. [前后端学习浅谈和开发规范](#stack)
 3. [从零开始的代码编译原理](#compile)
 4. [如何 Debug](#debug)
-5. [系统的一些小配置](#else)
+5. [Linux的愉悦](#else)
 
 
 ---
@@ -290,6 +270,7 @@ F12 开发者工具是浏览器内置的一个特殊工具，用于帮助网页�
     - 片段生成：选中函数签名，按下触发快捷键查看建议多样化方案。
     - Copilot Chat：<img src="assets/warning.png" width=25px>这个是重头戏，用好它会让你的写代码体验起飞。点击 VS Code 上方搜索栏右侧的小机器人，即可调出 Copilot Chat。有三种模式：chat, edit, agent。chat 模式下只会回答你的问题（回答中会包含建议代码），edit 模式会对你提供的上下文（即你希望它读取和修改的文件）进行修改，agent 模式会主动分析上下文以执行测试、重构等复杂任务（轮椅程度依次递增）。可根据需求来灵活使用。
     
+
 <img src="assets/copilot.png" width="500px">
 
 ##### 第三章：常见问题与风险防范
@@ -405,6 +386,10 @@ F12 开发者工具是浏览器内置的一个特殊工具，用于帮助网页�
 ##### 开发平台选择：
 
 > ​	<img src="assets/awesomeface.png" width="25px"> 推荐 Arch Linux 或者 Ubuntu 作为开发环境，当然我们培训是基于 Windows 开展的。
+
+另外提醒一下，我们后端首选的是golang语言，但是windows defender会去在你编译go代码的时候扫你的文件，导致编译时间长的离谱（傻逼微软）。因此，真心推荐（不是强制）使用linux发行版，或者次一点用wsl（windows subsystem linux），当然你要是能忍受一个代码编译几分钟以上的，我也没什么说的
+
+------
 
 
 
@@ -1309,7 +1294,7 @@ func checkrole(level int){
 >
 > 涉及语言：API 规范
 
-
+<img src="assets/question.png" alt="q" width="25px">前排提醒，这种纯知识点类的，对于实际开发基本没有作用，地位就类似于理工科课本里面给你讲历史一样，属于自己看看就好的那种。所以要是觉得云里雾里的，也没什么大事。
 
 ##### 什么是计算机网络
 
@@ -1701,15 +1686,13 @@ std::this_thread::sleep_until(t); //睡眠到从现在起过400ms的时间点
 
 线程有自己的堆栈和局部变量（进阶篇 1 阐述了这些概念），但线程之间没有单独的地址空间，一个线程死掉就等于整个进程死掉，所以多进程的程序要比多线程的程序健壮，但在进程切换时，耗费资源较大，效率要差一些。但对于一些要求同时进行并且又要共享某些变量的并发操作（我们一会会详细阐述这个概念），只能用线程，不能用进程。
 
-
-
 - 简而言之，一个程序至少有一个进程，一个进程至少有一个线程。
 - 线程的划分尺度小于进程，使得多线程程序的并发性高。
 - 另外，进程在执行过程中拥有独立的内存单元，而多个线程共享内存，从而极大地提高了程序的运行效率。
 - 线程在执行过程中与进程还是有区别的。每个独立的线程有一个程序运行的入口、顺序执行序列和程序的出口。但是线程不能够独立执行，必须依存在应用程序中，由应用程序提供多个线程执行控制。
 - 从逻辑角度来看，多线程的意义在于一个应用程序中，有多个执行部分可以同时执行。但操作系统并没有将多个线程看做多个独立的应用，来实现进程的调度和管理以及资源分配。这就是进程和线程的重要区别。
 
-
+<img src="assets/question.png" alt="q" width="25px">总之就是，我们平常搞项目的，除非是搞大型项目，比如你自己写个桌面环境，才会用到多个完全分离但是互相依赖的部分，而且每一部分都也是十分庞大，这时候需要使用进程。其他的情况下，如果只是需要在主流程进行过程中突然处理一个大型计算，或者大量交互，就是使用的多线程以及下面的协程。
 
 **多线程能做什么：无阻塞多任务！！！**
 
@@ -1793,7 +1776,7 @@ int main() {
 
 
 
-> <img src="assets/question.png" width=25px>我们知道线程执行完就会销毁，有时候需要自己管理什么时候销毁，请大家自行查阅分离线程、线程池的概念。
+> <img src="assets/question.png" width=25px>我们知道线程执行完就会销毁，有时候需要自己管理什么时候销毁，请大家自行查阅分离线程、线程池的概念。当然你要是用的是有GC的语言，也希望了解一下。
 
 
 
@@ -1805,7 +1788,9 @@ int main() {
 
 
 
-**协程**（coroutines），由字面意思就知道是和进程（Process/Routines）或者函数调用（Subroutines）对应的东西。协程其实是分割进程，但是分割的同时保留了之前处理过的信息，所以可以用来组件之间的协作工作。协程的初始处就是第一个的入口点。通过 yield 返回一部分结果值以及执行到这个时刻的协程的状态，作为下次进入这个协程的入口点。形象的演示，比如这张图（来自 b 站 up 百草园），容易看出函数调用和协程的关系。
+**协程**（coroutines），由字面意思就知道是和进程（Process/Routines）或者函数调用（Subroutines）对应的东西。协程其实是分割进程，但是分割的同时保留了之前处理过的信息，所以可以用来组件之间的协作工作。协程的初始处就是第一个的入口点。通过 yield 返回一部分结果值以及执行到这个时刻的协程的状态，作为下次进入这个协程的入口点。形象的演示，比如这张图（来自 b 站 up 百草园），容易看出函数调用和协程的关系。 
+
+<img src="assets/awesomeface.png" alt="a" width="25px">其实协程就是把本来异步的事，或者说不同的事情，给同步了，就类似于你把好几种彩线拧到了一起，但是呢，彼此已经混合了，不是最开始那种独立顺序了。然后你还能自己控制这混起来的部分罢了。
 
 <img src="assets/coroutine2.jpg">
 
@@ -1957,16 +1942,23 @@ func main() {
 3. 多线程 + promise + future 实现线程间传递结果
 4. 函数式编程范式上的异步概念：**回调函数**（我们之前将函数指针时候提到过这个概念），演示如下：
 
-其实就是将需求拆成了不同的函数来实现，在函数式编程范式上这称之为**反应式编程**。
+其实就是将需求拆成了不同的函数来实现，在函数式编程范式上这称之为**反应式编程**。注意一般情况下回调不止一个，可以视运行到回调的时候就是切换到了那个函数去执行，然后在切回原函数。以此类推。
 
 ```c++
 // 回调函数异步 C++实现
 #include<iostream>
 #include<functional>
 
+// if callback not only, you can use std::vector<return_type(param_type)> callback_list
+// or, use ... syntax in template 
+
 void download(std::string file, std::function<void(std::string)> callback){
+    //forward code ...
     std::cout << "Downloading file: " << file << std::endl;
+    /*here, you can regard as stopping [download] function, then jumping to callback 	function.*/
     callback("Downloaded file: " + file);
+    //well, return to [download] function, then continue run
+    //else code ...
 }
 
 int main(){
@@ -2184,11 +2176,13 @@ git clone <仓库url>.git
 
 具体的使用方法，可以参考 <a href="https://www.navicat.com.cn/manual/online_manual/cn/navicat_16/win_manual/">官方文档</a> 获取帮助。
 
-<img src="assets/linux.jpg" width=30> **GNU/Linux (仅了解)**
 
-GNU/Linux 是对一系列基于 Linux 内核和 GNU 组件的发行版的统称，一般称作 Linux 即可。现今大多数服务器都运行着免费、稳定的 Linux 操作系统，而且对于开发者而言，Linux 下的工具链往往更为完整，开发环境的配置与 Windows 相比也简单太多。Linux 操作多数基于命令，即你在终端中输入命令，操作系统便能精准地明白你的意思，然后执行你交代的任务。这里只简要介绍一些入门的操作，更深入的了解可参考[中科大 Linux 101](https://101.lug.ustc.edu.cn/)。有些命令不知道是用来干嘛的的不要紧，后续接触的多了就能理解了。
 
-【简单上手：Windows 推荐 WSL】
+##### <img src="assets/linux.jpg" width=30> GNU/Linux
+
+GNU/Linux 是对一系列基于 Linux 内核和 GNU 组件的发行版的统称，一般称作 Linux 即可。现今大多数服务器都运行着免费、稳定的 Linux 操作系统，而且对于开发者而言，Linux 下的工具链往往更为完整，开发环境的配置与 Windows 相比也简单太多。Linux 操作多数基于命令，即你在终端中输入命令，操作系统便能精准地明白你的意思，然后执行你交代的任务。这里只简要介绍一些入门的操作，更深入的了解可参考[中科大 Linux 101](https://101.lug.ustc.edu.cn/)。有些命令不知道是用来干嘛的的不要紧，后续接触的多了就能理解了。 这个部分简单介绍常用指令，更多的使用和配置在本文档末尾的linux部分。
+
+【win用户简单上手：Windows 可以考虑 WSL】
 
 搜索栏中搜索“启用或关闭 Windows 功能”，打开“适用于 Linux 的 Windows 子系统"和"Hyper-V"，重启后在 powershell 中运行命令
 
@@ -2331,7 +2325,9 @@ curl https://example.com  # 获取一个网站的信息，类似于你用浏览�
 
 <img src="assets/question.png" width=25> 推荐阅读：<a href="https://mp.weixin.qq.com/s?__biz=MzIxMzgyNTQyOA==&mid=2247487919&idx=1&sn=20e3b80796c6abd995af55ad1cd2007d&chksm=96715836363d799f3b3b5df2608256f033362e8d351d6ebac6279e522b6d87d144c94cd3a50e&mpshare=1&scene=23&srcid=0909d0ju8PpaT7dGiaJrsEQ6&sharer_shareinfo=1fa7d4e29ed415209d630b05d85f1edf&sharer_shareinfo_first=1fa7d4e29ed415209d630b05d85f1edf#rd">Go 语言中不可不知的语法糖</a> 这篇文章提到了很多 `go` 语言可以用来简化开发的用法，在对 `go` 基础有一定的了解之后，可以阅读下这篇文章。
 
-更具体地，我们将使用基于 `go` 语言的 `gin` 框架来进行后端开发，~~应该有人的面试题就是这个吧~~，使用 `gorm` 来操作数据库。`gin` 框架的优点包括高性能、支持中间件、路由管理方便、数据验证方便等等。而 `gorm` 的语法接近 `MySQL`，易于掌握。在这些技术的加持下，我们就可以进行一些后端的开发了。
+更具体地，我们将使用基于 `go` 语言的 `gin` 框架来进行后端开发，~~应该有人的面试题就是这个吧~~(去年的梗，不用管它)，使用 `gorm` 来操作数据库。`gin` 框架的优点包括高性能、支持中间件、路由管理方便、数据验证方便等等。而 `gorm` 的语法接近 `MySQL`，易于掌握。在这些技术的加持下，我们就可以进行一些后端的开发了。
+
+**另外的，我们社团也有一个gin框架基础上的，更适合挑战宝宝体质的框架，<a href="https://github.com/Asice-Cloud/tz-gin-template.git">tz-gin</a>, 感兴趣可以先去试试**
 
 <img src="assets/bulb.png" width=25>在这些技术的学习中，`go` 语言基础毫无疑问是最重要的，我们会在后续的课程中详细讲解。我们希望你能拥有扎实的语言基础，这样在使用框架的时候会更加得心应手。我们更推荐你在使用框架的过程中，能逐渐地了解这个框架的架构，学习到更本质的东西，而不是仅停留在调包的水平。
 
@@ -2831,7 +2827,7 @@ func main() {
 	
 	log.Fatalf("警告：自毁程序已启动...") // 发生致命错误
 }
-  ```
+```
 - **JSON 打印**：对于复杂结构体，使用 `json.Marshal` 转换为 JSON 格式打印，便于阅读。
 ```go
 import "encoding/json"
@@ -2874,7 +2870,7 @@ fmt.Println(string(jsonData))  // 输出: {"Name":"syl"}
 - **断点（Breakpoints）**：鼠标移动到代码左侧行号上，此时行号会变成一个红点，点击后即设置断点，这行代码背景色会变红，程序运行到这里会暂停。（不打断点的调试就和运行没啥区别了）
 - **条件断点**：右键代码行号处的红点，可设置断点条件，比如有一段代码是多次循环，而你需要在 `i = 1145` 时暂停程序，条件中就可以写 `i = 1145`。
 - **步进执行**：
-<img src="assets/warning.png" width="25px"> 当前变量值是高亮的那一行代码尚未执行时刻的。
+	<img src="assets/warning.png" width="25px"> 当前变量值是高亮的那一行代码尚未执行时刻的。
 	- 步过（Step Over）：执行当前行，不进入函数。
 	- 步入（Step Into）：进入函数内部。
 	- 步出（Step Out）：跳出当前函数。
@@ -2890,13 +2886,14 @@ fmt.Println(string(jsonData))  // 输出: {"Name":"syl"}
 虽然 Go 有垃圾回收（GC），但仍可能发生泄露，如未关闭的 goroutine 或缓存增长，因此掌握如何调试内存泄露也是有好处的。
 
 **使用 Go 的内置 pprof 工具**
+
 1. **启用 pprof**：在代码中导入 `net/http/pprof` 并启动 HTTP 服务。
    ```go
    import (
        _ "net/http/pprof"
        "net/http"
    )
-
+   
    go func() {
        http.ListenAndServe("localhost:6060", nil)
    }()
@@ -2946,7 +2943,7 @@ Previous write at 0x000001234567 by goroutine 6:
 ---
 
 
-### <span id="else">系统的一些小配置</span>
+### <span id="else">Linux的愉悦</span>
 
 > [!NOTE]
 >
@@ -2963,11 +2960,11 @@ Previous write at 0x000001234567 by goroutine 6:
     <li>2.system/user config
     <li>3.package/tools 
 </ul>
+#### 1. Boot process
 
-<h4>1. boot process</h4>
 为什么要知道启动流程：对于个人pc而言，一般启动就算会出问题也就是在systemd或者桌面session启动那一部分出事，但是要是你在用服务器的话，一个黑漆漆的界面可就说不好了，所以，了解一下启动流程还是很必要的，最起码你能快速定位问题然后去搜索解法
 
-<br>先来一张图
+先来一张图
 <img src="assets/0213-linux-boot-process-explained.png">
 
 - 这里就是linux系统启动步骤，首先是bios和grub引导启动（当然你也可能是其他引导方式），这两个步骤通常硬件设备没什么问题就不会出事，也不需要细究这些。另外多说一句，据说如果是windows+linux双系统的话，windows更新可能会破坏grub引导，因为MicroSoft喜欢往引导里面乱塞东西，比如什么恢复什么的。
@@ -2977,10 +2974,10 @@ ls
 BOOT/  Microsoft/
 ```
 
-<br> 之后的部分是kernal init的启动,这里systemd是最主流的方式，但是还有其他的，比如void linux就使用的是runit。 如果你经常使用一些系统级配置的话，对systemd应该不陌生。到这个地方出现问题的话，可以考虑使用linux recovery模式去恢复一下，因为到现在还没法走到tty等部分，所以出事了也是一片黑屏，只有去恢复模式了。一般来说问题主要就是一些软件配置出错，或者依赖爆炸了这种。
+ 之后的部分是kernal init的启动,这里systemd是最主流的方式，但是还有其他的，比如void linux就使用的是runit。 如果你经常使用一些系统级配置的话，对systemd应该不陌生。到这个地方出现问题的话，可以考虑使用linux recovery模式去恢复一下，因为到现在还没法走到tty等部分，所以出事了也是一片黑屏，只有去恢复模式了。一般来说问题主要就是一些软件配置出错，或者依赖爆炸了这种。
 
 
-<br>
+
 
 启动了init这一步后，会执行一些自启动脚本，比如bashrc,profile等，这里就是用户自定义的部分了，比如我的profile：
 
@@ -3008,14 +3005,21 @@ export PATH="$PATH:/home/asice-cloud/.local/share/JetBrains/Toolbox/scripts"
 
 这些自启动脚本通常也就包含一些代理，环境变量，以及一些应用
 
-<br> 最后是user login后，这里将会启动session, 所谓session,之前的后端里面有所涉及，总体概念大差不差。是的和你想象的一样，前端后端只是个相对概念而已，你看到的用户桌面也可以视为前端，后面支撑着的是后端。同理你现在写编程语言，能看到的都是前端，而进入编译阶段后台的运行才是真正的后端。<br>回到正题，现在流行的桌面后台服务器有wayland和X11, wayland是更安全和先进的。至于桌面而言，有多种选择，常见的gnome和kde,如果你和我一样喜欢折腾，可以考虑hyprland或者cwm/river等，这些都是很开放的（我不是说gnome不好，平常打游戏我也是用gnome）。总而言之桌面自己选择就好。
-
-<br>有些人应该在桌面启动的过程中也遇到过问题，比如会出现“a unexpect error occured”这种，然后没法进入桌面。一般来说这都是更新的时候把依赖干掉了，解决方案也很简单, ub或者debian就直接进tty或者恢复模式然后 sudo apt --fix-broken， 或者reinstall强制更新一下你的桌面就行。 Arch直接pacman -Syu 你的桌面，强制更新一下就好。
-
-<h4>2.system/user config</h4>
-<h4>3.package/tools</h4>
+ 最后是user login后，这里将会启动session, 所谓session,之前的后端里面有所涉及，总体概念大差不差。是的和你想象的一样，前端后端只是个相对概念而已，你看到的用户桌面也可以视为前端，后面支撑着的是后端。同理你现在写编程语言，能看到的都是前端，而进入编译阶段后台的运行才是真正的后端。<br>回到正题，现在流行的桌面后台服务器有wayland和X11, wayland是更安全和先进的。至于桌面而言，有多种选择，常见的gnome和kde,如果你和我一样喜欢折腾，可以考虑hyprland或者cwm/river等，这些都是很开放的（我不是说gnome不好，平常打游戏我也是用gnome）。总而言之桌面自己选择就好。
 
 
+
+有些人应该在桌面启动的过程中也遇到过问题，比如会出现“a unexpect error occured”这种，然后没法进入桌面。一般来说这都是更新的时候把依赖干掉了，解决方案也很简单, ub或者debian就直接进tty或者恢复模式然后 sudo apt --fix-broken， 或者reinstall强制更新一下你的桌面就行。 Arch直接pacman -Syu 你的桌面，强制更新一下就好。
+
+#### 2. System/user configure
+
+
+
+
+
+#### 3. Package/tools
+
+#### 
 
 
 
