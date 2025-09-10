@@ -3013,19 +3013,67 @@ export PATH="$PATH:/home/asice-cloud/.local/share/JetBrains/Toolbox/scripts"
 
 #### 2. System/user configure
 
+**美化你的桌面**
 
+<img src="./assets/awesomeface.png" width=25>默认界面那么丑，不会有人看的下去把
 
+这个东西其实要看你的桌面环境，本人用过`kde,Gnome`，各个都不同。由于本人对Gnome比较熟悉，就重点放在Gnome上了
 
+[Gnome look](https://www.gnome-look.org/browse/)
+
+在这个网站上直接找现成的主题，配色什么的，操作就非常简单
+
+[Gnome插件](https://extensions.gnome.org/)
+
+Gnome插件能够改善他的功能，假如你是刚从windows切换过去的用户，那么你可能更喜欢在屏幕下方的状态栏，任务栏，那么你可以安装一个`Dash pin to dock`插件
+
+<img src="./assets/pintodock.png">
+
+<img src="./assets/awesomeface.png" width=25> 有人说这是微软孝子行为，我的评价是有点抽象了
+
+窗口的动画，可以用css实现，要看你是什么窗口管理器，然后去相应的文档下面找
+
+**设计你自己的桌面应用**
+
+很多情况下，插件并不能完美的匹配你的需求，那么你可以设计自己的桌面应用，Gnome的系统窗口大都是基于`GTk4` 的，你可以利用这个框架自己写一个应用，这和写网页前端其实是差不太多的，比如下图是一个启动器
+
+> 启动器其实github上有很多，比如rofi，不过rofi在gnome的表现似乎很糟糕，所以这个启动器是仿着rofi做的
+
+<img src="./assets/launcher.png">
 
 #### 3. Package/tools
 
-#### 
+我们需要一些工具来让我们更好的了解我们的`linux`，下面我简单介绍一些
 
+**进程分析：htop**
 
+安装很简单：sudo apt install htop，或者 sudo pacman -S htop
 
+<img src="./assets/htop.png">
 
+使用也很简单，下面都有提示，跟着用就好了
 
+**硬件检测：psensor**
 
+安装和htop一样
+
+<img src="./assets/psensor.png">
+
+其实一般系统也会带`sensors`用于检测，不过是命令行界面，如果你能习惯，那么用那个也可以
+
+**系统信息展示：fastfetch,neofetch**
+
+其实这个更多的是展示作用，可以展示你的电脑的各个配置
+
+<img src="./assets/fastfetch.png">
+
+> 我的这个fastfetch还没有美化过，想要更好看的fastfetch可以去找syl
+
+**处理压缩文件：unrar，zip**
+
+当然了，在linux上碰到的可能更多是`.tar.gz`这种，你可以用`tar -czvf`和`tar -xzvf`去处理，只是有的时候，你也许也会遇到`.rar`，那么`unrar`是不错的工具
+
+linux工具那么多，也不可能在这里罗列全，需要啥的时候，直接上网查资料或者问ai，总有适合你的
 
 ### 后记
 
