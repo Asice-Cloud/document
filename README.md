@@ -1,4 +1,7 @@
 <h1 align="center">挑战网大计基</h1>
+<h2 align="center">101培训计划技术文档</h2>
+
+
 
 ## 目录
 
@@ -2947,7 +2950,7 @@ Previous write at 0x000001234567 by goroutine 6:
 
 > [!NOTE]
 >
-> 本章作者：syl
+> 本章作者：syl + 杰青书记
 >
 > 难度：自适应
 >
@@ -3005,17 +3008,49 @@ export PATH="$PATH:/home/asice-cloud/.local/share/JetBrains/Toolbox/scripts"
 
 这些自启动脚本通常也就包含一些代理，环境变量，以及一些应用
 
- 最后是user login后，这里将会启动session, 所谓session,之前的后端里面有所涉及，总体概念大差不差。是的和你想象的一样，前端后端只是个相对概念而已，你看到的用户桌面也可以视为前端，后面支撑着的是后端。同理你现在写编程语言，能看到的都是前端，而进入编译阶段后台的运行才是真正的后端。<br>回到正题，现在流行的桌面后台服务器有wayland和X11, wayland是更安全和先进的。至于桌面而言，有多种选择，常见的gnome和kde,如果你和我一样喜欢折腾，可以考虑hyprland或者cwm/river等，这些都是很开放的（我不是说gnome不好，平常打游戏我也是用gnome）。总而言之桌面自己选择就好。
+ 最后是user login后，这里将会启动session, 所谓session,之前的后端里面有所涉及，总体概念大差不差。是的和你想象的一样，前端后端只是个相对概念而已，你看到的用户桌面也可以视为前端，后面支撑着的是后端。同理你现在写编程语言，能看到的都是前端，而进入编译阶段后台的运行才是真正的后端。
+
+回到正题，现在流行的桌面后台服务器有wayland和X11, wayland是更安全和先进的。至于桌面而言，有多种选择，常见的gnome和kde,如果你和我一样喜欢折腾，可以考虑hyprland或者cwm/river等，这些都是很开放的（我不是说gnome不好，平常打游戏我也是用gnome）。总而言之桌面自己选择就好。
 
 
 
-有些人应该在桌面启动的过程中也遇到过问题，比如会出现“a unexpect error occured”这种，然后没法进入桌面。一般来说这都是更新的时候把依赖干掉了，解决方案也很简单, ub或者debian就直接进tty或者恢复模式然后 sudo apt --fix-broken， 或者reinstall强制更新一下你的桌面就行。 Arch直接pacman -Syu 你的桌面，强制更新一下就好。
+有些人应该在桌面启动的过程中也遇到过问题，比如会出现“a unexpect error occured”这种，然后没法进入桌面。一般来说这都是更新的时候把依赖干掉了，解决方案也很简单, ub或者debian就直接进tty或者恢复模式然后` sudo apt --fix-broken`， 或者reinstall强制更新一下你的桌面就行。 Arch直接`pacman -Syu 你的桌面`，强制更新一下就好。
 
 #### 2. System/user configure
 
-**美化你的桌面**
+**终端选择**
 
-<img src="./assets/awesomeface.png" width=25>默认界面那么丑，不会有人看的下去把
+不管是个人用户还是服务器，终端都是必不可少的东西。这里也不多比较各种终端优劣，直接推荐如下：
+
+​	**1.zsh/fish** 这种属于简单配置，开箱即用，各种功能，诸如补全和预览，语法高亮，历史记录等等都是全的
+
+<img src="assets/terminal1.png">
+
+​	**2. kitty/alacritty** : 需要一定的配置，不过配好了相当帅，比如我用的kitty（上图）,就有类似于neovide的光标跳转动画。网上有不少配置比我好多了
+
+
+
+**编辑器**
+
+编辑器有两类，终端编辑器（emacs,vim等），非终端编辑器（三大编辑器，subline, chromium, chromium（可以自己猜一下这两个是什么））
+
+如果你是gnome,kde用户，那你选择任何编辑器都可以
+
+但是如果你用的其他桌面，如hyprland这种，那么，诸如vscode就会出现分辨率，线程狂飙等bug,因此，对于其他桌面用户而言，终端反而是最常用的。而如果你是服务器用户，那么终端就是唯一选择了。
+
+回到正题，
+
+有如下比较优秀的终端编辑器： Emacs ， vim ， neovim， nano ... 更多见https://linuxblog.io/50-linux-text-editors/
+
+这里我不评价各自的好坏，就用途而言，vim适合系统配置，也就随便改改几个点，neovim则是专门用来写代码的vim的改版，可以装插件，改配置，体验很好，理论上你能把neovim配置的像idea或者vscode那样全面（我的neovim配置https://github.com/Asice-Cloud/myvim）
+
+
+
+**美化你的桌面（gnome&kde）**
+
+<img src="./assets/awesomeface.png" width=25>默认界面那么丑，不会有人看的下去把(*杰青你不要引战好不好*)
+
+（有对hyprland感兴趣的可以找我，这里就不展开了）
 
 这个东西其实要看你的桌面环境，本人用过`kde,Gnome`，各个都不同。由于本人对Gnome比较熟悉，就重点放在Gnome上了
 
@@ -3029,13 +3064,13 @@ Gnome插件能够改善他的功能，假如你是刚从windows切换过去的�
 
 <img src="./assets/pintodock.png">
 
-<img src="./assets/awesomeface.png" width=25> 有人说这是微软孝子行为，我的评价是有点抽象了
+<img src="./assets/awesomeface.png" width=25> 有人说这是微软孝子行为，我的评价是有点抽象了（*欲盖弥彰*）
 
 窗口的动画，可以用css实现，要看你是什么窗口管理器，然后去相应的文档下面找
 
 **设计你自己的桌面应用**
 
-很多情况下，插件并不能完美的匹配你的需求，那么你可以设计自己的桌面应用，Gnome的系统窗口大都是基于`GTk4` 的，你可以利用这个框架自己写一个应用，这和写网页前端其实是差不太多的，比如下图是一个启动器
+很多情况下，插件并不能完美的匹配你的需求，那么你可以设计自己的桌面应用，Gnome的系统窗口大都是基于`GTk4` 的（*评价是不如Qt*），你可以利用这个框架自己写一个应用，这和写网页前端其实是差不太多的，比如下图是一个启动器
 
 > 启动器其实github上有很多，比如rofi，不过rofi在gnome的表现似乎很糟糕，所以这个启动器是仿着rofi做的
 
@@ -3063,17 +3098,31 @@ Gnome插件能够改善他的功能，假如你是刚从windows切换过去的�
 
 **系统信息展示：fastfetch,neofetch**
 
-其实这个更多的是展示作用，可以展示你的电脑的各个配置
+其实这个更多的是展示作用，可以展示你的电脑的各个配置 （）
 
 <img src="./assets/fastfetch.png">
 
 > 我的这个fastfetch还没有美化过，想要更好看的fastfetch可以去找syl
+
+
+
+(这是我的fastfetch)
+
+<img src="assets/fastfetch2.png">
+
+
 
 **处理压缩文件：unrar，zip**
 
 当然了，在linux上碰到的可能更多是`.tar.gz`这种，你可以用`tar -czvf`和`tar -xzvf`去处理，只是有的时候，你也许也会遇到`.rar`，那么`unrar`是不错的工具
 
 linux工具那么多，也不可能在这里罗列全，需要啥的时候，直接上网查资料或者问ai，总有适合你的
+
+**一些有趣的工具和技巧 **
+
+1.  更新和技巧： 下载软件的时候，如果是arch,请不要使用 `pacman -S package`, 而是`pacman -Syu package`,这样保证下载的工具依赖都是最新的。 如果是apt, 在系统更新之后，最好使用`apt reinstall`强制更新某些落后的包，至于哪些出问题了，这里有个简单的方法，使用 `sudo dmesg | grep error`, 可以方便的找到报错的组件。或者最后的操作，用`apt --fix-broken`修复依赖
+2.  系统工具选择： 系统可以用一些东西进行维护，比如tlp管理你的电源计划，能够减少一部分发热（个人感觉不多），或者找类似rog control center这样的，厂商专门给linux做的配置管理软件。另外建议有需要的话用timeshift去备份几个，防止某一天真出意外了。
+3.  linux的隐藏好处： linux下系统占用比windows小多了，另一方面steam也全面兼容了linux,所以你在linux上基本上可以玩各种东西，比win帧率还高出不少。（评价是windows已经可以淘汰了）
 
 ### 后记
 
